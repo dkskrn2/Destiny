@@ -1,0 +1,79 @@
+- generic [ref=e3]:
+  - banner [ref=e4]:
+    - link "명리학 플랫폼 FO 컨셉" [ref=e5] [cursor=pointer]:
+      - /url: "#"
+      - generic [ref=e8]:
+        - strong [ref=e9]: 명리학 플랫폼
+        - generic [ref=e10]: FO 컨셉
+    - navigation "주요 메뉴" [ref=e11]:
+      - link "홈" [ref=e12] [cursor=pointer]:
+        - /url: "#start"
+      - link "사주풀이" [ref=e13] [cursor=pointer]:
+        - /url: "#services"
+      - link "VOD 클래스" [ref=e14] [cursor=pointer]:
+        - /url: "#vod"
+      - link "커뮤니티" [ref=e15] [cursor=pointer]:
+        - /url: "#community"
+      - link "상품" [ref=e16] [cursor=pointer]:
+        - /url: "#trust"
+      - link "마이페이지" [ref=e17] [cursor=pointer]:
+        - /url: "#trust"
+    - generic "사용자 도구" [ref=e18]:
+      - button "검색" [ref=e19] [cursor=pointer]: ⌕
+      - button "알림" [ref=e20] [cursor=pointer]: ◌
+      - button "프로필" [ref=e21] [cursor=pointer]
+  - main [ref=e22]:
+    - generic [ref=e25]:
+      - paragraph [ref=e27]: 명확하고 믿을 수 있는 명리학 플랫폼
+      - heading "내 삶의 흐름을 읽고, 더 나은 선택을 돕습니다" [level=1] [ref=e28]:
+        - text: 내 삶의 흐름을 읽고,
+        - text: 더 나은 선택을 돕습니다
+      - paragraph [ref=e29]: 복잡한 용어 대신 지금의 고민에 필요한 해석부터 보여주고, 무료 시작 이후 연애, 직업, 재물, 오늘 운세로 자연스럽게 이어집니다.
+      - generic [ref=e30]:
+        - link "무료 사주 보기" [ref=e31] [cursor=pointer]:
+          - /url: "#guide"
+        - link "샘플 해석 보기" [ref=e32] [cursor=pointer]:
+          - /url: "#preview"
+    - generic [ref=e33]:
+      - article [ref=e34]:
+        - generic [ref=e35]: ♡
+        - generic [ref=e36]
+        - generic [ref=e39]: ›
+      - article [ref=e40]:
+        - generic [ref=e41]: ▣
+        - generic [ref=e42]
+        - generic [ref=e45]: ›
+      - article [ref=e46]:
+        - generic [ref=e47]: ◍
+        - generic [ref=e48]
+        - generic [ref=e51]: ›
+      - article [ref=e52]:
+        - generic [ref=e53]: ▦
+        - generic [ref=e54]
+        - generic [ref=e57]: ›
+    - generic [ref=e58]:
+      - article [ref=e59]:
+        - generic [ref=e60]
+        - generic [ref=e63]
+        - link "VOD 클래스 더보기" [ref=e76] [cursor=pointer]:
+          - /url: "#preview"
+      - article [ref=e77]:
+        - generic [ref=e78]
+        - list [ref=e81]
+        - link "커뮤니티 더보기" [ref=e102] [cursor=pointer]:
+          - /url: "#trust"
+      - article [ref=e103]:
+        - heading "믿을 수 있는 플랫폼" [level=2] [ref=e105]
+        - generic [ref=e106]
+        - link "자주 묻는 질문(FAQ)" [ref=e122] [cursor=pointer]:
+          - /url: "#faq"
+    - generic [ref=e123]:
+      - article [ref=e124]:
+        - generic [ref=e125]
+        - generic [ref=e128]
+      - article [ref=e141]:
+        - generic [ref=e142]
+        - generic [ref=e145]
+      - article [ref=e148]:
+        - generic [ref=e149]
+        - list [ref=e152]
