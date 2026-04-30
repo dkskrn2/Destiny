@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="ko">
 <head>
   <meta charset="UTF-8">
@@ -14,7 +14,7 @@
     href="https://fonts.googleapis.com/css2?family=Pretendard:wght@400;500;600;700&family=Noto+Serif+KR:wght@500;700&display=swap"
     rel="stylesheet"
   >
-  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="assets/css/styles.css">
 </head>
 <body>
   <div class="page-shell">
@@ -34,7 +34,7 @@
           <a class="is-active" href="#start">홈</a>
           <a href="#services">사주풀이</a>
           <a href="#vod">VOD 클래스</a>
-          <a href="#community">커뮤니티</a>
+          <a href="pages/community.html">커뮤니티</a>
           <a href="#trust">상품</a>
           <a href="#trust">마이페이지</a>
         </nav>
@@ -65,102 +65,110 @@
         </section>
 
         <section class="quick-entry" id="services">
-          <article class="quick-card">
+          <a class="quick-card" href="pages/love.html">
             <div class="quick-icon heart"></div>
             <div class="quick-copy">
               <h2>연애/궁합</h2>
               <p>연인 또는 궁합을 확인하고 사랑의 흐름을 알아보세요</p>
             </div>
             <span class="quick-arrow">›</span>
-          </article>
-          <article class="quick-card">
+          </a>
+          <a class="quick-card" href="pages/career.html">
             <div class="quick-icon briefcase"></div>
             <div class="quick-copy">
               <h2>직업/이직</h2>
               <p>직업운과 이직 타이밍을 명확하게 알려드립니다</p>
             </div>
             <span class="quick-arrow">›</span>
-          </article>
-          <article class="quick-card">
+          </a>
+          <a class="quick-card" href="pages/wealth.html">
             <div class="quick-icon coin"></div>
             <div class="quick-copy">
               <h2>재물/사업</h2>
               <p>재물운과 사업운의 흐름을 기회와 함께 확인하세요</p>
             </div>
             <span class="quick-arrow">›</span>
-          </article>
-          <article class="quick-card">
+          </a>
+          <a class="quick-card" href="pages/today.html">
             <div class="quick-icon calendar"></div>
             <div class="quick-copy">
               <h2>오늘 운세</h2>
               <p>오늘과 이번 달의 흐름을 한눈에 확인하세요</p>
             </div>
             <span class="quick-arrow">›</span>
-          </article>
+          </a>
         </section>
 
         <section class="content-board">
           <article class="panel panel-vod" id="vod">
             <div class="panel-head">
               <h2>추천 VOD 클래스</h2>
-              <a href="#preview">전체보기</a>
+              <a href="pages/course-basic.html">전체보기</a>
             </div>
             <div class="vod-grid">
-              <article class="vod-card">
+              <a class="vod-card" href="pages/course-basic.html">
                 <div class="vod-thumb vod-a"></div>
                 <h3>왕초보도 이해하는 사주명리 기초</h3>
                 <p>★ 4.9 (1,872)</p>
-              </article>
-              <article class="vod-card">
+              </a>
+              <a class="vod-card" href="pages/course-sinsal.html">
                 <div class="vod-thumb vod-b"></div>
                 <h3>신살 완벽해석 실전 활용법</h3>
                 <p>★ 4.8 (1,256)</p>
-              </article>
-              <article class="vod-card">
+              </a>
+              <a class="vod-card" href="pages/course-flow.html">
                 <div class="vod-thumb vod-c"></div>
                 <h3>대운/세운 흐름의 실전 리딩</h3>
                 <p>★ 4.9 (1,048)</p>
-              </article>
+              </a>
             </div>
-            <a class="panel-footer-link" href="#preview">VOD 클래스 더보기</a>
+            <a class="panel-footer-link" href="pages/course-basic.html">VOD 클래스 더보기</a>
           </article>
 
           <article class="panel panel-community" id="community">
             <div class="panel-head">
               <h2>인기 커뮤니티 글</h2>
-              <a href="#trust">더보기</a>
+              <a href="pages/community.html">더보기</a>
             </div>
             <ul class="community-list">
               <li>
-                <div>
-                  <strong>올해 이직운이 보일까요?</strong>
-                  <p>별빛사주 · 댓글 32 · 좋아요 126</p>
-                </div>
-                <span>1시간 전</span>
+                <a href="pages/community-detail.html">
+                  <div>
+                    <strong>올해 이직운이 보일까요?</strong>
+                    <p>100대기업 소속 · IT/기획 · 댓글 32</p>
+                  </div>
+                  <span>1시간 전</span>
+                </a>
               </li>
               <li>
-                <div>
-                  <strong>재물운 들어오는 시기 궁금해요</strong>
-                  <p>지혜로운까치 · 댓글 18 · 좋아요 84</p>
-                </div>
-                <span>3시간 전</span>
+                <a href="pages/community-detail.html">
+                  <div>
+                    <strong>재물운 들어오는 시기 궁금해요</strong>
+                    <p>사업가 · 임인일주 · 댓글 18</p>
+                  </div>
+                  <span>3시간 전</span>
+                </a>
               </li>
               <li>
-                <div>
-                  <strong>궁합 궁금해요! 잘 맞을까요?</strong>
-                  <p>따뜻한봄날 · 댓글 27 · 좋아요 113</p>
-                </div>
-                <span>5시간 전</span>
+                <a href="pages/community-detail.html">
+                  <div>
+                    <strong>궁합 궁금해요! 잘 맞을까요?</strong>
+                    <p>크리에이터 · 도화 · 댓글 27</p>
+                  </div>
+                  <span>5시간 전</span>
+                </a>
               </li>
               <li>
-                <div>
-                  <strong>관재운 주의할 시기 언제일까요?</strong>
-                  <p>사주탐구중 · 댓글 15 · 좋아요 63</p>
-                </div>
-                <span>8시간 전</span>
+                <a href="pages/community-detail.html">
+                  <div>
+                    <strong>관재운 주의할 시기 언제일까요?</strong>
+                    <p>스타트업 임원 · 계약운 · 댓글 15</p>
+                  </div>
+                  <span>8시간 전</span>
+                </a>
               </li>
             </ul>
-            <a class="panel-footer-link" href="#trust">커뮤니티 더보기</a>
+            <a class="panel-footer-link" href="pages/community.html">커뮤니티 더보기</a>
           </article>
 
           <article class="panel panel-trust" id="trust">

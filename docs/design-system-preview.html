@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>명리학 플랫폼 디자인 시스템 미리보기</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Pretendard:wght@400;500;600;700;800&family=Noto+Serif+KR:wght@500;700&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --ink-950: #070711;
+      --ink-900: #0b0a12;
+      --panel-850: #13131d;
+      --panel-800: #181724;
+      --line: rgba(255,255,255,.12);
+      --text: #f5f2ff;
+      --muted: rgba(245,242,255,.7);
+      --gold: #e6bc7a;
+      --blue: #7f9cff;
+      --violet: #9d72ff;
+      --pink: #ff83c1;
+      --success: #71d6a5;
+      --error: #ff6b8b;
+    }
+
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      color: var(--text);
+      font-family: "Pretendard", sans-serif;
+      background:
+        radial-gradient(circle at 80% 0%, rgba(157,114,255,.18), transparent 24%),
+        linear-gradient(180deg, var(--ink-950), #050409);
+    }
+
+    main {
+      width: min(1180px, calc(100% - 36px));
+      margin: 0 auto;
+      padding: 52px 0 72px;
+    }
+
+    section {
+      margin-top: 24px;
+      padding: 32px;
+      border: 1px solid var(--line);
+      border-radius: 28px;
+      background: linear-gradient(180deg, rgba(24,23,36,.92), rgba(12,11,19,.98));
+      box-shadow: 0 24px 70px rgba(0,0,0,.28);
+    }
+
+    h1, h2 {
+      margin: 0;
+      font-family: "Noto Serif KR", serif;
+      letter-spacing: -.05em;
+    }
+
+    h1 {
+      max-width: 11ch;
+      font-size: clamp(3rem, 7vw, 6rem);
+      line-height: 1.05;
+    }
+
+    h1 span { color: var(--gold); }
+    h2 { font-size: clamp(1.8rem, 3vw, 2.7rem); }
+    p { color: var(--muted); line-height: 1.75; }
+
+    .hero {
+      min-height: 620px;
+      display: grid;
+      grid-template-columns: minmax(0, 1fr) minmax(280px, .45fr);
+      gap: 32px;
+      align-items: center;
+    }
+
+    .kicker {
+      display: inline-flex;
+      padding: 8px 12px;
+      border: 1px solid rgba(230,188,122,.35);
+      border-radius: 999px;
+      color: #ffe3ad;
+      background: rgba(230,188,122,.08);
+      font-weight: 800;
+      margin-bottom: 18px;
+    }
+
+    .actions {
+      display: flex;
+      gap: 12px;
+      flex-wrap: wrap;
+      margin-top: 28px;
+    }
+
+    .button {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      min-height: 52px;
+      padding: 0 22px;
+      border-radius: 16px;
+      color: #fff;
+      text-decoration: none;
+      font-weight: 800;
+    }
+
+    .button.primary { background: linear-gradient(135deg, var(--gold), #af7439); }
+    .button.secondary { border: 1px solid var(--line); background: rgba(255,255,255,.04); }
+
+    .orbit-card {
+      min-height: 360px;
+      display: grid;
+      place-items: center;
+      border: 1px solid rgba(255,255,255,.14);
+      border-radius: 28px;
+      background:
+        radial-gradient(circle at 30% 75%, rgba(127,156,255,.22), transparent 26%),
+        linear-gradient(145deg, rgba(230,188,122,.16), rgba(18,15,31,.96));
+    }
+
+    .orbit-card strong {
+      display: grid;
+      place-items: center;
+      width: 160px;
+      height: 160px;
+      border-radius: 50%;
+      border: 1px solid rgba(255,255,255,.22);
+      font-family: "Noto Serif KR", serif;
+      font-size: 4rem;
+    }
+
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 16px;
+    }
+
+    .card {
+      padding: 22px;
+      border: 1px solid var(--line);
+      border-radius: 22px;
+      background: rgba(255,255,255,.045);
+    }
+
+    .swatches {
+      display: grid;
+      grid-template-columns: repeat(6, minmax(0, 1fr));
+      gap: 12px;
+    }
+
+    .swatch {
+      min-height: 118px;
+      padding: 12px;
+      display: flex;
+      align-items: end;
+      border-radius: 18px;
+      font-weight: 800;
+      color: #fff;
+    }
+
+    .feed {
+      display: grid;
+      gap: 12px;
+    }
+
+    .post {
+      display: grid;
+      grid-template-columns: 1fr auto;
+      gap: 16px;
+      padding: 18px;
+      border: 1px solid var(--line);
+      border-radius: 18px;
+      background: rgba(255,255,255,.04);
+    }
+
+    .tags {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+      margin-bottom: 10px;
+    }
+
+    .tags span {
+      padding: 6px 9px;
+      border-radius: 999px;
+      color: #f2e9ff;
+      background: rgba(157,114,255,.16);
+      font-size: .78rem;
+      font-weight: 800;
+    }
+
+    @media (max-width: 860px) {
+      main { width: min(100% - 18px, 1180px); padding-top: 20px; }
+      section { padding: 22px 20px; }
+      .hero, .grid, .swatches, .post { grid-template-columns: 1fr; }
+      .swatches { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+    }
+  </style>
+</head>
+<body>
+  <main>
+    <section class="hero">
+      <div>
+        <span class="kicker">Scholarly Mysticism</span>
+        <h1>운세가 아니라,<br><span>구조를 읽는 경험</span></h1>
+        <p>신비감은 남기고, 판단 근거는 더 선명하게 보여주는 명리학 플랫폼 디자인 시스템입니다.</p>
+        <div class="actions">
+          <a class="button primary" href="#">상담 예약하기</a>
+          <a class="button secondary" href="#">샘플 해석 보기</a>
+        </div>
+      </div>
+      <div class="orbit-card"><strong>甲</strong></div>
+    </section>
+
+    <section>
+      <h2>Color Roles</h2>
+      <p>금색은 수익 행동, 파랑은 데이터와 해석, 보라색은 브랜드 분위기와 커뮤니티에 사용합니다.</p>
+      <div class="swatches">
+        <div class="swatch" style="background:#070711">Ink 950</div>
+        <div class="swatch" style="background:#181724">Panel</div>
+        <div class="swatch" style="background:#e6bc7a">Moon Gold</div>
+        <div class="swatch" style="background:#7f9cff">Insight Blue</div>
+        <div class="swatch" style="background:#9d72ff">Aura Violet</div>
+        <div class="swatch" style="background:#ff83c1">Love Pink</div>
+      </div>
+    </section>
+
+    <section>
+      <h2>Typography</h2>
+      <div class="grid">
+        <article class="card"><h2>내 삶의 흐름</h2><p>Noto Serif KR, 결과와 강의의 권위 있는 제목용.</p></article>
+        <article class="card"><strong>오늘 운세 점수 72</strong><p>Pretendard, 본문과 UI 전체에 사용.</p></article>
+        <article class="card"><strong style="font-variant-numeric:tabular-nums">조회 2,841 · 댓글 32</strong><p>숫자는 tabular-nums로 흔들림 없이 정렬.</p></article>
+      </div>
+    </section>
+
+    <section>
+      <h2>Community Feed</h2>
+      <p>커뮤니티는 이미지보다 제목, 태그, 댓글 수가 핵심입니다. 작성자 태그는 신뢰와 소속감을 만드는 장치입니다.</p>
+      <div class="feed">
+        <article class="post">
+          <div><div class="tags"><span>100대기업 소속</span><span>IT/기획</span><span>갑목</span></div><strong>갑목인데 올해 이직 신호가 너무 강하게 느껴져요</strong><p>전환기 대운에서 실제로 움직였던 분들의 기준이 궁금합니다.</p></div>
+          <strong>댓글 32</strong>
+        </article>
+        <article class="post">
+          <div><div class="tags"><span>사업가</span><span>재물/사업</span><span>임인일주</span></div><strong>사업 확장 타이밍, 기다리는 게 나을까요?</strong><p>계약은 들어오는데 리스크도 같이 커지고 있습니다.</p></div>
+          <strong>댓글 21</strong>
+        </article>
+      </div>
+    </section>
+  </main>
+</body>
+</html>
