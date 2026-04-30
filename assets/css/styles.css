@@ -210,8 +210,8 @@ body::before {
   padding: var(--space-72) var(--space-48) 56px;
   overflow: hidden;
   background:
-    linear-gradient(90deg, rgba(8, 6, 16, 0.88) 0%, rgba(9, 8, 18, 0.58) 44%, rgba(9, 8, 18, 0.24) 100%),
-    radial-gradient(circle at 78% 16%, rgba(211, 193, 255, 0.92), rgba(117, 87, 194, 0.28) 13%, transparent 14%),
+    linear-gradient(90deg, rgba(7, 6, 14, 0.96) 0%, rgba(8, 7, 16, 0.78) 42%, rgba(9, 8, 18, 0.34) 100%),
+    radial-gradient(circle at 82% 14%, rgba(214, 196, 255, 0.34), rgba(117, 87, 194, 0.1) 11%, transparent 18%),
     url("https://images.unsplash.com/photo-1500534314209-a25ddb2bd429?auto=format&fit=crop&w=1800&q=80") center/cover;
 }
 
@@ -219,8 +219,8 @@ body::before {
   position: absolute;
   inset: 0;
   background:
-    radial-gradient(circle at 72% 24%, rgba(255, 255, 255, 0.32), transparent 10%),
-    linear-gradient(180deg, transparent 58%, rgba(12, 10, 22, 0.58));
+    radial-gradient(circle at 80% 18%, rgba(255, 255, 255, 0.12), transparent 9%),
+    linear-gradient(180deg, rgba(5, 5, 10, 0.08) 0%, rgba(7, 7, 12, 0.12) 34%, rgba(11, 10, 20, 0.72) 100%);
 }
 
 .hero-copy {
@@ -239,7 +239,7 @@ body::before {
   border: 1px solid rgba(255,255,255,0.08);
   box-shadow:
     0 0 0 24px rgba(255,255,255,0.015);
-  opacity: 0.7;
+  opacity: 0.32;
 }
 
 .hero-kicker,
@@ -302,9 +302,9 @@ body::before {
 }
 
 .button-primary {
-  color: #fff;
-  background: linear-gradient(135deg, #8b66ff, #5e39de);
-  box-shadow: 0 14px 28px rgba(110, 70, 235, 0.24);
+  color: #21180c;
+  background: linear-gradient(135deg, #f0cb8e, var(--gold));
+  box-shadow: 0 14px 30px rgba(230, 188, 122, 0.24);
 }
 
 .button-secondary {
@@ -421,6 +421,7 @@ body::before {
   grid-template-areas:
     "vod community"
     "vod trust";
+  align-items: start;
   gap: var(--space-20);
   padding: var(--space-32) var(--space-48) 0;
 }
@@ -669,7 +670,12 @@ body::before {
   }
 
   .site-header {
-    grid-template-columns: 1fr;
+    grid-template-columns: minmax(0, 1fr) auto;
+    align-items: start;
+  }
+
+  .brand {
+    min-width: 0;
   }
 
   .main-nav,
@@ -678,12 +684,27 @@ body::before {
   }
 
   .main-nav {
-    gap: 4px 12px;
+    grid-column: 1 / -1;
+    overflow-x: auto;
+    flex-wrap: nowrap;
+    gap: 0;
+    padding-bottom: 4px;
+    scrollbar-width: none;
+  }
+
+  .main-nav::-webkit-scrollbar {
+    display: none;
   }
 
   .main-nav a {
-    padding: 8px 0 10px;
+    flex: 0 0 auto;
+    padding: 8px 14px 10px 0;
     font-size: 0.94rem;
+  }
+
+  .header-tools {
+    justify-self: end;
+    padding-top: 2px;
   }
 
   .hero {
@@ -705,9 +726,17 @@ body::before {
       "trust";
   }
 
-  .quick-card,
   .trust-item {
     grid-template-columns: 54px 1fr;
+  }
+
+  .quick-card {
+    grid-template-columns: 54px 1fr;
+    align-items: center;
+  }
+
+  .quick-arrow {
+    display: none;
   }
 
   .community-list a {
