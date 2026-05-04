@@ -1778,7 +1778,7 @@
 }
 
 .booking-main {
-  padding: 42px var(--space-48) var(--space-48);
+  padding: 32px var(--space-48) var(--space-48);
 }
 
 .booking-hero {
@@ -1786,7 +1786,7 @@
   grid-template-columns: minmax(0, 1fr) minmax(300px, 0.38fr);
   gap: var(--space-24);
   align-items: end;
-  padding: var(--space-48);
+  padding: var(--space-32) var(--space-48);
   border: 1px solid var(--line);
   border-radius: var(--radius-frame);
   background:
@@ -1798,7 +1798,7 @@
   max-width: 13ch;
   margin: 0;
   font-family: "Noto Serif KR", serif;
-  font-size: clamp(2.6rem, 4.2vw, 4.8rem);
+  font-size: clamp(2.35rem, 3.8vw, 4.1rem);
   line-height: 1.15;
 }
 
@@ -1808,7 +1808,7 @@
 
 .booking-lead {
   max-width: 62ch;
-  margin: var(--space-24) 0 0;
+  margin: var(--space-20) 0 0;
   color: var(--muted);
   line-height: 1.8;
 }
