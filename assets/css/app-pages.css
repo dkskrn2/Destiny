@@ -2550,10 +2550,19 @@
     grid-template-columns: 1fr;
   }
 
-  .booking-control-grid,
+  .booking-control-grid {
+    grid-template-columns: 1fr;
+  }
+
   .date-tabs,
   .time-table {
-    grid-template-columns: 1fr;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .date-tab,
+  .time-slot {
+    min-height: 68px;
+    padding: 12px;
   }
 
   .consultant-card {
