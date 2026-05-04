@@ -1888,6 +1888,7 @@
   border-radius: 18px;
   background: rgba(255, 255, 255, 0.035);
   cursor: pointer;
+  transition: border-color 160ms ease, background 160ms ease, transform 160ms ease;
 }
 
 .consultant-card input,
@@ -1903,6 +1904,20 @@
 .time-slot:has(input:checked) {
   border-color: color-mix(in srgb, var(--app-accent) 48%, transparent);
   background: color-mix(in srgb, var(--app-accent) 13%, rgba(255, 255, 255, 0.04));
+}
+
+.consultant-card:hover,
+.time-slot:not(.is-disabled):hover,
+.date-tab:hover {
+  border-color: color-mix(in srgb, var(--app-accent) 38%, transparent);
+  background: color-mix(in srgb, var(--app-accent) 8%, rgba(255, 255, 255, 0.04));
+}
+
+.consultant-card:focus-within,
+.time-slot:focus-within,
+.date-tab:focus-visible {
+  outline: 3px solid color-mix(in srgb, var(--app-accent) 32%, transparent);
+  outline-offset: 3px;
 }
 
 .consultant-avatar {
@@ -1994,6 +2009,7 @@
   font: inherit;
   text-align: left;
   cursor: pointer;
+  transition: border-color 160ms ease, background 160ms ease;
 }
 
 .date-tab span {
@@ -2027,6 +2043,7 @@
   border-radius: 16px;
   background: rgba(255, 255, 255, 0.035);
   cursor: pointer;
+  transition: border-color 160ms ease, background 160ms ease, transform 160ms ease;
 }
 
 .time-slot span {
