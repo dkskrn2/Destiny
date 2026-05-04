@@ -7,6 +7,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Pretendard:wght@400;500;600;700&family=Noto+Serif+KR:wght@500;700&display=swap" rel="stylesheet">
+  <link rel="icon" type="image/svg+xml" href="../assets/img/favicon.svg">
   <link rel="stylesheet" href="../assets/css/styles.css">
   <link rel="stylesheet" href="../assets/css/app-pages.css">
 </head>
@@ -20,15 +21,15 @@
         </a>
         <nav class="main-nav" aria-label="주요 메뉴">
           <a href="../index.html">홈</a>
-          <a href="today.html">사주풀이</a>
           <a href="../index.html#vod">VOD 클래스</a>
           <a class="is-active" href="community.html">커뮤니티</a>
-          <a href="../index.html#booking">상담예약</a>
+          <a href="booking.html">상담예약</a>
+          <a href="course-basic.html">상품</a>
         </nav>
         <div class="header-tools" aria-label="사용자 도구">
-          <button type="button" class="tool-button" aria-label="검색">⌕</button>
-          <button type="button" class="tool-button" aria-label="알림">◌</button>
-          <button type="button" class="profile-button" aria-label="프로필"></button>
+          <a class="tool-button" href="community.html" aria-label="검색">⌕</a>
+          <a class="tool-button" href="course-basic.html" aria-label="강의">◌</a>
+          <a class="profile-button" href="result.html" aria-label="내 학습"></a>
         </div>
       </header>
 
@@ -36,26 +37,26 @@
         <section class="community-hero">
           <div>
             <p class="app-kicker">커뮤니티 · 오늘 128개 글 업데이트</p>
-            <h1>나와 비슷한 사람들이<br><span>지금 고민하는 흐름</span></h1>
+            <h1>혼자 보기 막히는 지점을<br><span>함께 해석하는 학습 공간</span></h1>
             <p class="community-lead">
-              단순 인기글만 보여주지 않고, 일주와 직군 태그를 함께 노출해
-              “이 사람도 이 사이트를 쓰는구나”라는 신뢰와 소속감을 먼저 만듭니다.
+              단일 결과를 소비하는 게시판이 아니라, 강의에서 배운 개념을 질문하고
+              실제 사례와 학습 메모를 축적하는 토론형 커뮤니티입니다.
             </p>
           </div>
           <aside class="community-profile-card">
-            <span>내 추천 기준</span>
-            <strong>갑목 · IT/기획 · 전환기</strong>
-            <p>오늘은 이직, 재물 흐름, 관계 조율 글을 우선 추천합니다.</p>
+            <span>오늘 추천 피드</span>
+            <strong>입문자 질문 · 수강 후기 · 상담 준비</strong>
+            <p>지금은 강의 순서, 해석 기준, 상담 전에 정리할 질문 관련 글이 많이 올라오고 있습니다.</p>
           </aside>
         </section>
 
         <section class="community-filter-bar" aria-label="커뮤니티 필터">
-          <button class="filter-chip is-active">나와 비슷한 글</button>
-          <button class="filter-chip">오늘 인기</button>
-          <button class="filter-chip">조회수 베스트</button>
-          <button class="filter-chip">연애/궁합</button>
-          <button class="filter-chip">직업/이직</button>
-          <button class="filter-chip">재물/사업</button>
+          <button class="filter-chip is-active">지금 많이 보는 글</button>
+          <button class="filter-chip">입문 질문</button>
+          <button class="filter-chip">수강 후기</button>
+          <button class="filter-chip">해석 기준</button>
+          <button class="filter-chip">상담 준비</button>
+          <button class="filter-chip">운영 공지</button>
         </section>
 
         <section class="community-layout">
@@ -63,43 +64,43 @@
             <article class="feed-head">
               <div>
                 <p class="story-step">TARGETED FEED</p>
-                <h2>지금 뜨거운 명리 톡</h2>
+                <h2>지금 가장 활발한 대화</h2>
               </div>
-              <a class="write-link" href="community-detail.html">글쓰기</a>
+              <a class="write-link" href="community-detail.html">글 보기</a>
             </article>
 
             <a class="post-row featured-post" href="community-detail.html">
               <div class="post-main">
-                <div class="post-tags"><span>100대기업 소속</span><span>IT/기획</span><span>갑목</span></div>
-                <h3>갑목인데 올해 이직 신호가 너무 강하게 느껴져요</h3>
-                <p>대운이 바뀌는 구간이라고 들었는데, 지금 움직이는 게 맞을지 비슷한 분들 의견이 궁금합니다.</p>
+                <div class="post-tags"><span>초보 학습자</span><span>입문 강의</span><span>강의 순서</span></div>
+                <h3>입문 강의를 본 뒤 다음으로 어떤 강의를 들으면 좋을까요?</h3>
+                <p>기초를 막 본 상태인데 신살, 십성, 흐름 강의 중 무엇을 먼저 가야 덜 헤매는지 실제 수강 순서 경험이 궁금합니다.</p>
               </div>
               <div class="post-stats"><strong>댓글 32</strong><span>조회 2,841</span><span>1시간 전</span></div>
             </a>
 
             <a class="post-row" href="community-detail.html">
               <div class="post-main">
-                <div class="post-tags"><span>사업가</span><span>재물/사업</span><span>임인일주</span></div>
-                <h3>사업 확장 타이밍, 대운 바뀌는 구간이면 기다리는 게 나을까요?</h3>
-                <p>매출은 오르는데 계약 리스크도 같이 커져서 확장 시점을 조정해야 할지 고민입니다.</p>
+                <div class="post-tags"><span>수강생</span><span>학습 메모</span><span>오행</span></div>
+                <h3>오행 균형을 읽을 때 생활 언어로 바꾸는 기준이 있나요?</h3>
+                <p>용어 자체는 이해했는데 실제 삶의 패턴으로 연결할 때 막힙니다. 다들 어떤 질문으로 변환해서 읽는지 궁금합니다.</p>
               </div>
               <div class="post-stats"><strong>댓글 21</strong><span>조회 1,906</span><span>2시간 전</span></div>
             </a>
 
             <a class="post-row" href="community-detail.html">
               <div class="post-main">
-                <div class="post-tags"><span>크리에이터</span><span>연애/궁합</span><span>도화</span></div>
-                <h3>도화가 강하면 관계가 늘 불안정한가요?</h3>
-                <p>상대가 끌리긴 하는데 감정 기복이 커서, 신살을 어떻게 참고해야 할지 궁금해요.</p>
+                <div class="post-tags"><span>상담 준비</span><span>질문 정리</span><span>리포트</span></div>
+                <h3>상담 예약 전에 질문을 어떻게 정리하면 효율이 좋아지나요?</h3>
+                <p>막연하게 물으면 시간이 금방 가는 것 같아서, 미리 정리해두면 좋은 질문 템플릿이 있는지 보고 싶습니다.</p>
               </div>
               <div class="post-stats"><strong>댓글 18</strong><span>조회 1,248</span><span>3시간 전</span></div>
             </a>
 
             <a class="post-row" href="community-detail.html">
               <div class="post-main">
-                <div class="post-tags"><span>스타트업 임원</span><span>계약운</span><span>재성</span></div>
-                <h3>재물운 85점 나왔는데 이번 주 계약 잡아도 될까요?</h3>
-                <p>오늘 운세 점수는 좋은데 관성 쪽 조언이 조심스럽게 나와서 판단 기준을 찾고 있습니다.</p>
+                <div class="post-tags"><span>운영 공지</span><span>리뉴얼</span><span>서비스 방향</span></div>
+                <h3>개별 카테고리 페이지를 정리하고 강의 중심 구조로 바뀐 이유</h3>
+                <p>짧은 소비형 결과보다 학습과 질문 축적에 집중하기 위해 홈과 상세 흐름을 강의, 커뮤니티, 상담 중심으로 재구성했습니다.</p>
               </div>
               <div class="post-stats"><strong>댓글 15</strong><span>조회 984</span><span>5시간 전</span></div>
             </a>
@@ -108,11 +109,11 @@
           <aside class="community-sidebar" aria-label="커뮤니티 보조 정보">
             <article class="sidebar-card">
               <p class="story-step">MATCH</p>
-              <h2>나와 같은 태그</h2>
+              <h2>비슷한 질문 묶음</h2>
               <div class="match-list">
-                <a href="community-detail.html"><strong>갑목 유저들이 많이 본 글</strong><span>12개 업데이트</span></a>
-                <a href="community-detail.html"><strong>IT/기획 직군 고민</strong><span>조회수 4,204</span></a>
-                <a href="community-detail.html"><strong>전환기 대운 사례</strong><span>댓글 활발</span></a>
+                <a href="community-detail.html"><strong>입문 강의 다음 순서</strong><span>12개 업데이트</span></a>
+                <a href="community-detail.html"><strong>상담 전 질문 정리법</strong><span>조회수 4,204</span></a>
+                <a href="community-detail.html"><strong>오행을 생활 언어로 읽기</strong><span>댓글 43</span></a>
               </div>
             </article>
 
@@ -120,14 +121,14 @@
               <p class="story-step">TREND</p>
               <h2>오늘의 키워드</h2>
               <div class="trend-cloud">
-                <span>이직운</span><span>계약운</span><span>갑목</span><span>대운교체</span><span>궁합</span><span>도화</span>
+                <span>입문강의</span><span>오행</span><span>질문정리</span><span>상담준비</span><span>수강후기</span><span>해석기준</span>
               </div>
             </article>
 
             <article class="sidebar-card cta-card">
-              <h2>혼자 판단하기 어렵다면</h2>
-              <p>커뮤니티 반응을 본 뒤, 내 사주 구조와 현재 고민을 함께 상담할 수 있습니다.</p>
-              <a class="phone-cta" href="../index.html#booking">상담 예약하기</a>
+              <h2>혼자 정리하기 어려운 질문이라면</h2>
+              <p>커뮤니티에서 반응을 먼저 보고, 필요한 경우 상담 예약으로 이어서 질문을 정리할 수 있습니다.</p>
+              <a class="phone-cta" href="booking.html">상담 예약하기</a>
             </article>
           </aside>
         </section>

@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>명리결 | 상담 예약</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Pretendard:wght@400;500;600;700&family=Noto+Serif+KR:wght@500;700&display=swap" rel="stylesheet">
+  <link rel="icon" type="image/svg+xml" href="../assets/img/favicon.svg">
+  <link rel="stylesheet" href="../assets/css/styles.css">
+  <link rel="stylesheet" href="../assets/css/app-pages.css">
+</head>
+<body class="page-today booking-page">
+  <div class="page-shell">
+    <div class="site-frame">
+      <header class="site-header">
+        <a class="brand" href="../index.html">
+          <span class="brand-mark"><span></span></span>
+          <span class="brand-copy"><strong>명리학 플랫폼</strong><small>FO 컨셉</small></span>
+        </a>
+        <nav class="main-nav" aria-label="주요 메뉴">
+          <a href="../index.html">홈</a>
+          <a href="../index.html#vod">VOD 클래스</a>
+          <a href="community.html">커뮤니티</a>
+          <a class="is-active" href="booking.html">상담예약</a>
+          <a href="course-basic.html">상품</a>
+        </nav>
+        <div class="header-tools" aria-label="사용자 도구">
+          <a class="tool-button" href="community.html" aria-label="검색">⌕</a>
+          <a class="tool-button" href="course-basic.html" aria-label="강의">◌</a>
+          <a class="profile-button" href="result.html" aria-label="내 학습"></a>
+        </div>
+      </header>
+
+      <main class="booking-main">
+        <section class="booking-hero">
+          <div>
+            <p class="app-kicker">상담 예약</p>
+            <h1>상담자를 고르고,<br><span>가능한 시간을 선택하세요</span></h1>
+            <p class="booking-lead">
+              상담자는 한 명으로 고정하지 않습니다. 주제와 방식에 맞는 상담자를 먼저 선택한 뒤,
+              해당 상담자의 예약 가능한 시간표에서 원하는 슬롯을 고르는 흐름입니다.
+            </p>
+          </div>
+          <aside class="booking-summary-card" aria-label="예약 요약">
+            <span>선택 요약</span>
+            <strong id="booking-top-summary">한서윤 · 5월 4일 19:00</strong>
+            <p id="booking-top-detail">30분 집중 상담 · 질문 메모 기반으로 진행</p>
+          </aside>
+        </section>
+
+        <form class="booking-layout">
+          <section class="booking-panel" aria-labelledby="consultant-heading">
+            <div class="booking-section-head">
+              <p class="story-step">STEP 01</p>
+              <h2 id="consultant-heading">상담자 선택</h2>
+            </div>
+            <div class="consultant-grid">
+              <label class="consultant-card">
+                <input type="radio" name="consultant" value="한서윤" data-note="입문자 질문 정리" checked>
+                <span class="consultant-avatar">한</span>
+                <span class="consultant-info">
+                  <strong>한서윤</strong>
+                  <em>입문자 질문 정리 · 학습 흐름</em>
+                  <small>평균 응답 12분 · 오늘 3개 슬롯</small>
+                </span>
+              </label>
+              <label class="consultant-card">
+                <input type="radio" name="consultant" value="문도현" data-note="십성 패턴 상담">
+                <span class="consultant-avatar">문</span>
+                <span class="consultant-info">
+                  <strong>문도현</strong>
+                  <em>십성 패턴 · 관계 구조 해석</em>
+                  <small>평균 응답 18분 · 내일 5개 슬롯</small>
+                </span>
+              </label>
+              <label class="consultant-card">
+                <input type="radio" name="consultant" value="서라온" data-note="흐름 읽기 상담">
+                <span class="consultant-avatar">서</span>
+                <span class="consultant-info">
+                  <strong>서라온</strong>
+                  <em>흐름 읽기 · 상담 전 질문 압축</em>
+                  <small>평균 응답 24분 · 이번 주 8개 슬롯</small>
+                </span>
+              </label>
+            </div>
+          </section>
+
+          <section class="booking-panel" aria-labelledby="type-heading">
+            <div class="booking-section-head">
+              <p class="story-step">STEP 02</p>
+              <h2 id="type-heading">상담 방식</h2>
+            </div>
+            <div class="booking-control-grid">
+              <label class="app-field">
+                <span>상담 유형</span>
+                <select class="app-select" name="topic">
+                  <option selected>학습 질문 정리</option>
+                  <option>강의 내용 보완</option>
+                  <option>상담 전 질문 압축</option>
+                  <option>커뮤니티 사례 해석</option>
+                </select>
+              </label>
+              <label class="app-field">
+                <span>상담 길이</span>
+                <select class="app-select" name="duration" id="booking-duration">
+                  <option>20분</option>
+                  <option selected>30분</option>
+                  <option>50분</option>
+                </select>
+              </label>
+            </div>
+          </section>
+
+          <section class="booking-panel timetable-panel" aria-labelledby="time-heading">
+            <div class="booking-section-head">
+              <p class="story-step">STEP 03</p>
+              <h2 id="time-heading">타임테이블 선택</h2>
+            </div>
+            <div class="date-tabs" role="tablist" aria-label="예약 날짜">
+              <button class="date-tab is-active" type="button" data-date="2026년 5월 4일" data-label="5월 4일"><strong>오늘</strong><span>5월 4일</span></button>
+              <button class="date-tab" type="button" data-date="2026년 5월 5일" data-label="5월 5일"><strong>내일</strong><span>5월 5일</span></button>
+              <button class="date-tab" type="button" data-date="2026년 5월 6일" data-label="5월 6일"><strong>수요일</strong><span>5월 6일</span></button>
+              <button class="date-tab" type="button" data-date="2026년 5월 7일" data-label="5월 7일"><strong>목요일</strong><span>5월 7일</span></button>
+            </div>
+            <div class="time-table" aria-label="예약 가능한 시간">
+              <label class="time-slot">
+                <input type="radio" name="time" value="14:00">
+                <span>14:00</span>
+                <small>20분 가능</small>
+              </label>
+              <label class="time-slot is-disabled">
+                <input type="radio" name="time" value="15:30" disabled>
+                <span>15:30</span>
+                <small>예약 완료</small>
+              </label>
+              <label class="time-slot">
+                <input type="radio" name="time" value="17:00">
+                <span>17:00</span>
+                <small>30분 가능</small>
+              </label>
+              <label class="time-slot">
+                <input type="radio" name="time" value="19:00" checked>
+                <span>19:00</span>
+                <small>30분 가능</small>
+              </label>
+              <label class="time-slot">
+                <input type="radio" name="time" value="20:30">
+                <span>20:30</span>
+                <small>50분 가능</small>
+              </label>
+              <label class="time-slot">
+                <input type="radio" name="time" value="21:30">
+                <span>21:30</span>
+                <small>20분 가능</small>
+              </label>
+            </div>
+          </section>
+
+          <section class="booking-panel" aria-labelledby="request-heading">
+            <div class="booking-section-head">
+              <p class="story-step">STEP 04</p>
+              <h2 id="request-heading">예약 정보</h2>
+            </div>
+            <div class="booking-control-grid">
+              <label class="app-field">
+                <span>이름</span>
+                <input class="app-input" type="text" value="김민지">
+              </label>
+              <label class="app-field">
+                <span>연락처</span>
+                <input class="app-input" type="tel" value="010-0000-0000">
+              </label>
+            </div>
+            <label class="app-field booking-note-field">
+              <span>상담 전에 남길 질문</span>
+              <textarea class="app-textarea" rows="5">기초 강의는 들었는데 제 질문을 어떻게 좁혀야 할지 모르겠습니다. 상담 전에 봐야 할 강의 순서도 함께 확인하고 싶습니다.</textarea>
+            </label>
+          </section>
+
+          <aside class="booking-submit-panel">
+            <div class="booking-receipt">
+              <p class="story-step">예약 요약</p>
+              <h2>선택한 상담</h2>
+              <dl>
+                <div><dt>상담자</dt><dd id="receipt-consultant">한서윤</dd></div>
+                <div><dt>일시</dt><dd id="receipt-datetime">2026년 5월 4일 19:00</dd></div>
+                <div><dt>방식</dt><dd id="receipt-duration">30분 집중 상담</dd></div>
+                <div><dt>예상 금액</dt><dd>39,000원</dd></div>
+              </dl>
+              <button class="phone-cta booking-submit" type="button">예약 요청하기</button>
+              <p class="ai-note">퍼블리싱 화면입니다. 실제 결제와 예약 확정은 이후 API 연동 단계에서 처리합니다.</p>
+            </div>
+          </aside>
+        </form>
+      </main>
+    </div>
+  </div>
+  <script>
+    const bookingForm = document.querySelector(".booking-layout");
+    const dateTabs = [...document.querySelectorAll(".date-tab")];
+    const topSummary = document.querySelector("#booking-top-summary");
+    const topDetail = document.querySelector("#booking-top-detail");
+    const receiptConsultant = document.querySelector("#receipt-consultant");
+    const receiptDatetime = document.querySelector("#receipt-datetime");
+    const receiptDuration = document.querySelector("#receipt-duration");
+
+    function updateBookingSummary() {
+      const consultant = bookingForm.querySelector('input[name="consultant"]:checked');
+      const time = bookingForm.querySelector('input[name="time"]:checked');
+      const duration = bookingForm.querySelector("#booking-duration");
+      const activeDate = document.querySelector(".date-tab.is-active");
+      const consultantName = consultant?.value || "상담자 선택";
+      const dateLabel = activeDate?.dataset.label || "날짜 선택";
+      const dateFull = activeDate?.dataset.date || "날짜 선택";
+      const timeValue = time?.value || "시간 선택";
+      const durationValue = duration?.value || "상담 시간 선택";
+
+      topSummary.textContent = `${consultantName} · ${dateLabel} ${timeValue}`;
+      topDetail.textContent = `${durationValue} 집중 상담 · 질문 메모 기반으로 진행`;
+      receiptConsultant.textContent = consultantName;
+      receiptDatetime.textContent = `${dateFull} ${timeValue}`;
+      receiptDuration.textContent = `${durationValue} 집중 상담`;
+    }
+
+    dateTabs.forEach((tab) => {
+      tab.addEventListener("click", () => {
+        dateTabs.forEach((item) => item.classList.remove("is-active"));
+        tab.classList.add("is-active");
+        updateBookingSummary();
+      });
+    });
+
+    bookingForm.addEventListener("change", updateBookingSummary);
+  </script>
+</body>
+</html>
