@@ -1844,6 +1844,39 @@
   line-height: 1.6;
 }
 
+.booking-service-strip {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: var(--space-12);
+  margin-top: var(--space-16);
+}
+
+.booking-service-strip article,
+.booking-policy-box,
+.booking-consent {
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  background: rgba(255, 255, 255, 0.045);
+}
+
+.booking-service-strip article {
+  padding: var(--space-16);
+  border-radius: 16px;
+}
+
+.booking-service-strip strong,
+.booking-policy-box strong {
+  display: block;
+  margin-bottom: 6px;
+  color: #fff;
+}
+
+.booking-service-strip p {
+  margin: 0;
+  color: var(--muted);
+  font-size: 0.92rem;
+  line-height: 1.6;
+}
+
 .booking-layout {
   display: grid;
   grid-template-columns: minmax(0, 1fr) minmax(320px, 0.38fr);
@@ -1938,8 +1971,18 @@
 }
 
 .consultant-info strong {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+  align-items: baseline;
   color: var(--text);
   font-size: 1.08rem;
+}
+
+.consultant-info strong small {
+  color: var(--app-accent);
+  font-size: 0.78rem;
+  font-weight: 900;
 }
 
 .consultant-info em {
@@ -1984,6 +2027,38 @@
 
 .booking-note-field {
   margin-top: var(--space-16);
+}
+
+.booking-policy-box {
+  margin-top: var(--space-16);
+  padding: var(--space-16);
+  border-radius: 16px;
+}
+
+.booking-policy-box ul {
+  display: grid;
+  gap: 8px;
+  margin: 0;
+  padding-left: 18px;
+  color: var(--muted);
+  line-height: 1.6;
+}
+
+.booking-consent {
+  display: grid;
+  grid-template-columns: 18px minmax(0, 1fr);
+  gap: 10px;
+  align-items: start;
+  margin-top: var(--space-12);
+  padding: 14px;
+  border-radius: 14px;
+  color: var(--muted);
+  line-height: 1.55;
+}
+
+.booking-consent input {
+  margin-top: 3px;
+  accent-color: var(--app-accent);
 }
 
 .timetable-panel {
@@ -2098,6 +2173,13 @@
   cursor: pointer;
 }
 
+.booking-status-message {
+  margin: 12px 0 0;
+  color: #c9fff2;
+  font-size: 0.88rem;
+  line-height: 1.55;
+}
+
 @media (max-width: 1080px) {
   .app-shell {
     grid-template-columns: 1fr;
@@ -2134,6 +2216,7 @@
   .community-layout,
   .detail-layout,
   .booking-hero,
+  .booking-service-strip,
   .booking-layout {
     grid-template-columns: 1fr;
   }
@@ -2569,6 +2652,10 @@
 
   .booking-control-grid {
     grid-template-columns: 1fr;
+  }
+
+  .booking-service-strip {
+    gap: 10px;
   }
 
   .date-tabs,

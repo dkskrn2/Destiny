@@ -50,6 +50,21 @@
           </aside>
         </section>
 
+        <section class="booking-service-strip" aria-label="예약 전 핵심 안내">
+          <article>
+            <strong>상담 방식</strong>
+            <p>전화 또는 화상 상담 중 선택합니다. 확정 후 접속 안내를 발송합니다.</p>
+          </article>
+          <article>
+            <strong>예약 확정</strong>
+            <p>예약 요청 후 결제 안내를 받고, 30분 안에 결제하면 시간이 확정됩니다.</p>
+          </article>
+          <article>
+            <strong>변경/취소</strong>
+            <p>상담 24시간 전 전액 환불, 24시간 이내 50% 환불, 시작 후 환불 불가입니다.</p>
+          </article>
+        </section>
+
         <form class="booking-layout">
           <section class="booking-panel" aria-labelledby="consultant-heading">
             <div class="booking-section-head">
@@ -58,30 +73,30 @@
             </div>
             <div class="consultant-grid">
               <label class="consultant-card">
-                <input type="radio" name="consultant" value="한서윤" data-note="입문자 질문 정리" checked>
+                <input type="radio" name="consultant" value="한서윤" data-price-20="29000" data-price-30="39000" data-price-50="59000" checked>
                 <span class="consultant-avatar">한</span>
                 <span class="consultant-info">
-                  <strong>한서윤</strong>
+                  <strong>한서윤 <small>30분 39,000원</small></strong>
                   <em>입문자 질문 정리 · 학습 흐름</em>
-                  <small>평균 응답 12분 · 오늘 3개 슬롯</small>
+                  <small>전화/화상 · 평균 응답 12분 · 오늘 3개 슬롯</small>
                 </span>
               </label>
               <label class="consultant-card">
-                <input type="radio" name="consultant" value="문도현" data-note="십성 패턴 상담">
+                <input type="radio" name="consultant" value="문도현" data-price-20="35000" data-price-30="49000" data-price-50="79000">
                 <span class="consultant-avatar">문</span>
                 <span class="consultant-info">
-                  <strong>문도현</strong>
+                  <strong>문도현 <small>30분 49,000원</small></strong>
                   <em>십성 패턴 · 관계 구조 해석</em>
-                  <small>평균 응답 18분 · 내일 5개 슬롯</small>
+                  <small>화상 중심 · 평균 응답 18분 · 내일 5개 슬롯</small>
                 </span>
               </label>
               <label class="consultant-card">
-                <input type="radio" name="consultant" value="서라온" data-note="흐름 읽기 상담">
+                <input type="radio" name="consultant" value="서라온" data-price-20="39000" data-price-30="59000" data-price-50="89000">
                 <span class="consultant-avatar">서</span>
                 <span class="consultant-info">
-                  <strong>서라온</strong>
+                  <strong>서라온 <small>30분 59,000원</small></strong>
                   <em>흐름 읽기 · 상담 전 질문 압축</em>
-                  <small>평균 응답 24분 · 이번 주 8개 슬롯</small>
+                  <small>전화/화상 · 평균 응답 24분 · 이번 주 8개 슬롯</small>
                 </span>
               </label>
             </div>
@@ -105,9 +120,24 @@
               <label class="app-field">
                 <span>상담 길이</span>
                 <select class="app-select" name="duration" id="booking-duration">
-                  <option>20분</option>
-                  <option selected>30분</option>
-                  <option>50분</option>
+                  <option value="20">20분</option>
+                  <option value="30" selected>30분</option>
+                  <option value="50">50분</option>
+                </select>
+              </label>
+              <label class="app-field">
+                <span>진행 방식</span>
+                <select class="app-select" name="channel" id="booking-channel">
+                  <option selected>전화 상담</option>
+                  <option>화상 상담</option>
+                </select>
+              </label>
+              <label class="app-field">
+                <span>확정 안내 수신</span>
+                <select class="app-select" name="notice">
+                  <option selected>문자 안내</option>
+                  <option>이메일 안내</option>
+                  <option>문자 + 이메일 안내</option>
                 </select>
               </label>
             </div>
@@ -166,16 +196,41 @@
             <div class="booking-control-grid">
               <label class="app-field">
                 <span>이름</span>
-                <input class="app-input" type="text" value="김민지">
+                <input class="app-input" name="name" type="text" placeholder="예약자 이름" required>
               </label>
               <label class="app-field">
                 <span>연락처</span>
-                <input class="app-input" type="tel" value="010-0000-0000">
+                <input class="app-input" name="phone" type="tel" placeholder="010-0000-0000" required>
+              </label>
+              <label class="app-field">
+                <span>이메일</span>
+                <input class="app-input" name="email" type="email" placeholder="name@example.com">
+              </label>
+              <label class="app-field">
+                <span>상담 전 자료</span>
+                <select class="app-select" name="material">
+                  <option selected>학습 리포트 공유</option>
+                  <option>질문 메모만 공유</option>
+                  <option>자료 없이 진행</option>
+                </select>
               </label>
             </div>
             <label class="app-field booking-note-field">
               <span>상담 전에 남길 질문</span>
               <textarea class="app-textarea" rows="5">기초 강의는 들었는데 제 질문을 어떻게 좁혀야 할지 모르겠습니다. 상담 전에 봐야 할 강의 순서도 함께 확인하고 싶습니다.</textarea>
+            </label>
+            <div class="booking-policy-box">
+              <strong>예약 전 확인사항</strong>
+              <ul>
+                <li>예약 요청만으로 시간이 확정되지 않습니다. 결제 안내 후 30분 안에 결제해야 확정됩니다.</li>
+                <li>상담 24시간 전까지 일정 변경을 1회 요청할 수 있습니다.</li>
+                <li>상담 24시간 전 취소는 전액 환불, 24시간 이내 취소는 50% 환불, 시작 후 환불은 불가합니다.</li>
+                <li>상담 내용은 학습 보조 목적이며, 법률·의료·투자 판단을 대체하지 않습니다.</li>
+              </ul>
+            </div>
+            <label class="booking-consent">
+              <input type="checkbox" required>
+              <span>예약 처리와 상담 안내를 위한 개인정보 수집·이용 및 취소 정책을 확인했습니다.</span>
             </label>
           </section>
 
@@ -186,11 +241,14 @@
               <dl>
                 <div><dt>상담자</dt><dd id="receipt-consultant">한서윤</dd></div>
                 <div><dt>일시</dt><dd id="receipt-datetime">2026년 5월 4일 19:00</dd></div>
-                <div><dt>방식</dt><dd id="receipt-duration">30분 집중 상담</dd></div>
-                <div><dt>예상 금액</dt><dd>39,000원</dd></div>
+                <div><dt>방식</dt><dd id="receipt-duration">30분 · 전화 상담</dd></div>
+                <div><dt>예상 금액</dt><dd id="receipt-price">39,000원</dd></div>
+                <div><dt>확정 방식</dt><dd>결제 후 확정</dd></div>
+                <div><dt>환불 기준</dt><dd>24시간 전 전액</dd></div>
               </dl>
-              <button class="phone-cta booking-submit" type="button">예약 요청하기</button>
-              <p class="ai-note">퍼블리싱 화면입니다. 실제 결제와 예약 확정은 이후 API 연동 단계에서 처리합니다.</p>
+              <button class="phone-cta booking-submit" type="submit">예약 요청하기</button>
+              <p class="booking-status-message" id="booking-status-message" aria-live="polite"></p>
+              <p class="ai-note">요청 후 결제 안내가 발송되며, 30분 안에 결제해야 상담 시간이 확정됩니다.</p>
             </div>
           </aside>
         </form>
@@ -205,23 +263,32 @@
     const receiptConsultant = document.querySelector("#receipt-consultant");
     const receiptDatetime = document.querySelector("#receipt-datetime");
     const receiptDuration = document.querySelector("#receipt-duration");
+    const receiptPrice = document.querySelector("#receipt-price");
+    const channel = document.querySelector("#booking-channel");
+    const statusMessage = document.querySelector("#booking-status-message");
+
+    const formatPrice = (value) => `${Number(value).toLocaleString("ko-KR")}원`;
 
     function updateBookingSummary() {
       const consultant = bookingForm.querySelector('input[name="consultant"]:checked');
       const time = bookingForm.querySelector('input[name="time"]:checked');
       const duration = bookingForm.querySelector("#booking-duration");
+      const channelValue = channel?.value || "진행 방식 선택";
       const activeDate = document.querySelector(".date-tab.is-active");
       const consultantName = consultant?.value || "상담자 선택";
       const dateLabel = activeDate?.dataset.label || "날짜 선택";
       const dateFull = activeDate?.dataset.date || "날짜 선택";
       const timeValue = time?.value || "시간 선택";
-      const durationValue = duration?.value || "상담 시간 선택";
+      const durationValue = duration?.selectedOptions[0]?.textContent || "상담 시간 선택";
+      const priceKey = `price${duration?.value || "30"}`;
+      const priceValue = consultant?.dataset[priceKey] || "39000";
 
       topSummary.textContent = `${consultantName} · ${dateLabel} ${timeValue}`;
-      topDetail.textContent = `${durationValue} 집중 상담 · 질문 메모 기반으로 진행`;
+      topDetail.textContent = `${durationValue} · ${channelValue} · 결제 후 확정`;
       receiptConsultant.textContent = consultantName;
       receiptDatetime.textContent = `${dateFull} ${timeValue}`;
-      receiptDuration.textContent = `${durationValue} 집중 상담`;
+      receiptDuration.textContent = `${durationValue} · ${channelValue}`;
+      receiptPrice.textContent = formatPrice(priceValue);
     }
 
     dateTabs.forEach((tab) => {
@@ -233,6 +300,11 @@
     });
 
     bookingForm.addEventListener("change", updateBookingSummary);
+    bookingForm.addEventListener("submit", (event) => {
+      event.preventDefault();
+      if (!bookingForm.reportValidity()) return;
+      statusMessage.textContent = "예약 요청이 접수되었습니다. 결제 안내와 상담 확정 문자를 발송할 예정입니다.";
+    });
   </script>
 </body>
 </html>
