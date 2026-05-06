@@ -1350,6 +1350,12 @@
   background: rgba(255, 255, 255, 0.035);
 }
 
+.curriculum-list li.preview-lesson {
+  grid-template-columns: 62px 1fr;
+  border-color: color-mix(in srgb, var(--app-accent) 34%, transparent);
+  background: color-mix(in srgb, var(--app-accent) 9%, rgba(255, 255, 255, 0.035));
+}
+
 .curriculum-list span {
   display: grid;
   place-items: center;
@@ -1360,6 +1366,12 @@
   background: linear-gradient(135deg, var(--app-accent), var(--app-accent-dark));
   font-size: 0.82rem;
   font-weight: 900;
+}
+
+.curriculum-list li.preview-lesson span {
+  width: 58px;
+  color: #20170d;
+  background: linear-gradient(135deg, #f1d7aa, var(--app-accent));
 }
 
 .curriculum-list strong {
