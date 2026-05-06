@@ -398,25 +398,25 @@
   line-height: 1.6;
 }
 
-.page-love {
+.theme-rose {
   --app-accent: #ff7eb6;
   --app-accent-dark: #a83f78;
   --app-glow: rgba(255, 126, 182, 0.22);
 }
 
-.page-career {
+.theme-violet {
   --app-accent: #a779ff;
   --app-accent-dark: #5c35d8;
   --app-glow: rgba(167, 121, 255, 0.22);
 }
 
-.page-wealth {
+.theme-gold {
   --app-accent: #e6ad62;
   --app-accent-dark: #9b6630;
   --app-glow: rgba(230, 173, 98, 0.2);
 }
 
-.page-today {
+.theme-blue {
   --app-accent: #7f9cff;
   --app-accent-dark: #3f5fd9;
   --app-glow: rgba(127, 156, 255, 0.22);
