@@ -188,9 +188,25 @@ body::before {
 }
 
 .tool-button {
-  width: 34px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 46px;
   height: 34px;
-  font-size: 1.3rem;
+  padding: 0 12px;
+  border: 1px solid var(--line-soft);
+  border-radius: 999px;
+  background: rgba(255,255,255,0.035);
+  color: #ddd3ff;
+  font-size: 0;
+  font-weight: 800;
+  text-decoration: none;
+}
+
+.tool-button::before {
+  content: attr(aria-label);
+  font-size: 0.82rem;
+  letter-spacing: -0.03em;
 }
 
 .profile-button {
@@ -420,7 +436,7 @@ body::before {
   grid-template-columns: minmax(0, 1.3fr) minmax(0, 0.9fr);
   grid-template-areas:
     "vod community"
-    "vod trust";
+    "trust trust";
   align-items: start;
   gap: var(--space-20);
   padding: var(--space-32) var(--space-48) 0;
@@ -558,6 +574,7 @@ body::before {
 
 .trust-list {
   display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
   gap: var(--space-20);
 }
 
@@ -567,12 +584,14 @@ body::before {
   gap: var(--space-16);
   align-items: start;
   padding-bottom: var(--space-16);
-  border-bottom: 1px solid var(--line-soft);
+  padding-right: var(--space-20);
+  border-right: 1px solid var(--line-soft);
 }
 
 .trust-item:last-child {
   padding-bottom: 0;
-  border-bottom: 0;
+  padding-right: 0;
+  border-right: 0;
 }
 
 .trust-icon.shield::before,
@@ -715,8 +734,8 @@ body::before {
 
   .content-board {
     grid-template-areas:
-      "vod vod"
-      "community trust";
+      "vod community"
+      "trust trust";
   }
 }
 
@@ -799,6 +818,19 @@ body::before {
 
   .trust-item {
     grid-template-columns: 54px 1fr;
+    padding-right: 0;
+    padding-bottom: var(--space-16);
+    border-right: 0;
+    border-bottom: 1px solid var(--line-soft);
+  }
+
+  .trust-list {
+    grid-template-columns: 1fr;
+  }
+
+  .trust-item:last-child {
+    padding-bottom: 0;
+    border-bottom: 0;
   }
 
   .quick-card {

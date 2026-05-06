@@ -2904,23 +2904,39 @@
 }
 
 .policy-hero {
-  padding: var(--space-48);
-  border-radius: var(--radius-frame);
+  display: grid;
+  grid-template-columns: minmax(220px, 0.36fr) minmax(0, 1fr);
+  gap: 8px var(--space-32);
+  align-items: center;
+  padding: 28px 32px;
+  border-radius: 24px;
 }
 
 .policy-hero h1 {
-  max-width: 14ch;
+  grid-column: 1;
+  max-width: 18ch;
   margin: 0;
   font-family: "Noto Serif KR", serif;
-  font-size: clamp(2.5rem, 4vw, 4.2rem);
+  font-size: clamp(2rem, 2.8vw, 3rem);
   line-height: 1.16;
+  word-break: keep-all;
 }
 
 .policy-hero p {
-  max-width: 68ch;
-  margin: var(--space-20) 0 0;
+  max-width: 72ch;
+  margin: 0;
   color: var(--muted);
   line-height: 1.8;
+}
+
+.policy-hero .app-kicker {
+  grid-column: 1;
+  justify-self: start;
+}
+
+.policy-hero > p:not(.app-kicker) {
+  grid-column: 2;
+  grid-row: 1 / span 2;
 }
 
 .policy-layout {
@@ -3452,6 +3468,14 @@
   .policy-main {
     padding: 24px 18px 36px;
     overflow: hidden;
+  }
+
+  .policy-hero {
+    display: block;
+  }
+
+  .policy-hero > p:not(.app-kicker) {
+    margin-top: var(--space-16);
   }
 
   .community-hero,
