@@ -2213,6 +2213,7 @@
   font-size: clamp(2.5rem, 4vw, 4.4rem);
   line-height: 1.15;
   letter-spacing: -0.06em;
+  word-break: keep-all;
 }
 
 .vod-list-hero h1 span {
