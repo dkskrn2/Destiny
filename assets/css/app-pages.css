@@ -2180,6 +2180,118 @@
   line-height: 1.55;
 }
 
+.policy-main {
+  display: grid;
+  gap: var(--space-24);
+  padding: 42px var(--space-48) var(--space-48);
+}
+
+.policy-hero,
+.policy-section,
+.support-card {
+  border: 1px solid rgba(255, 255, 255, 0.11);
+  background: rgba(255, 255, 255, 0.055);
+  box-shadow: var(--shadow-soft);
+}
+
+.policy-hero {
+  padding: var(--space-48);
+  border-radius: var(--radius-frame);
+}
+
+.policy-hero h1 {
+  max-width: 14ch;
+  margin: 0;
+  font-family: "Noto Serif KR", serif;
+  font-size: clamp(2.5rem, 4vw, 4.2rem);
+  line-height: 1.16;
+}
+
+.policy-hero p {
+  max-width: 68ch;
+  margin: var(--space-20) 0 0;
+  color: var(--muted);
+  line-height: 1.8;
+}
+
+.policy-layout {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(280px, 0.34fr);
+  gap: var(--space-24);
+  align-items: start;
+}
+
+.policy-content {
+  display: grid;
+  gap: var(--space-16);
+}
+
+.policy-section,
+.support-card {
+  padding: var(--space-28, 28px);
+  border-radius: var(--radius-panel);
+}
+
+.policy-section h2,
+.support-card h2 {
+  margin: 0 0 var(--space-16);
+  font-family: "Noto Serif KR", serif;
+  font-size: clamp(1.45rem, 2vw, 2rem);
+}
+
+.policy-section p,
+.policy-section li,
+.support-card p,
+.support-card li {
+  color: var(--muted);
+  line-height: 1.75;
+}
+
+.policy-section ul,
+.support-card ul {
+  display: grid;
+  gap: 8px;
+  margin: 0;
+  padding-left: 18px;
+}
+
+.policy-sidebar {
+  position: sticky;
+  top: 24px;
+  display: grid;
+  gap: var(--space-12);
+}
+
+.policy-sidebar a {
+  display: block;
+  padding: 14px 16px;
+  border: 1px solid var(--line-soft);
+  border-radius: 14px;
+  color: #ddd3ff;
+  text-decoration: none;
+  background: rgba(255, 255, 255, 0.035);
+  font-weight: 800;
+}
+
+.policy-sidebar a:hover,
+.policy-sidebar a.is-active {
+  border-color: color-mix(in srgb, var(--app-accent) 42%, transparent);
+  color: #fff;
+  background: color-mix(in srgb, var(--app-accent) 10%, rgba(255, 255, 255, 0.035));
+}
+
+.support-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: var(--space-16);
+}
+
+.support-card strong {
+  display: block;
+  margin-bottom: 8px;
+  color: #fff;
+}
+
 @media (max-width: 1080px) {
   .app-shell {
     grid-template-columns: 1fr;
@@ -2216,8 +2328,18 @@
   .community-layout,
   .detail-layout,
   .booking-hero,
+  .policy-layout,
   .booking-service-strip,
   .booking-layout {
+    grid-template-columns: 1fr;
+  }
+
+  .policy-sidebar {
+    position: static;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .support-grid {
     grid-template-columns: 1fr;
   }
 
@@ -2588,10 +2710,18 @@
     overflow: hidden;
   }
 
+  .policy-main {
+    padding: 24px 18px 36px;
+    overflow: hidden;
+  }
+
   .community-hero,
   .community-feed,
   .post-detail-card,
   .booking-hero,
+  .policy-hero,
+  .policy-section,
+  .support-card,
   .booking-panel,
   .booking-submit-panel {
     padding: 28px 20px;
@@ -2600,7 +2730,8 @@
 
   .community-hero h1,
   .post-detail-card h1,
-  .booking-hero h1 {
+  .booking-hero h1,
+  .policy-hero h1 {
     max-width: 100%;
     font-size: clamp(2rem, 8vw, 2.75rem);
   }
@@ -2656,6 +2787,10 @@
 
   .booking-service-strip {
     gap: 10px;
+  }
+
+  .policy-sidebar {
+    grid-template-columns: 1fr;
   }
 
   .date-tabs,

@@ -637,6 +637,70 @@ body::before {
   grid-column: 1 / -1;
 }
 
+.site-footer {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(520px, 0.9fr);
+  gap: var(--space-32);
+  padding: var(--space-32) var(--space-48) var(--space-48);
+  border-top: 1px solid var(--line-soft);
+  background: rgba(5, 5, 10, 0.62);
+}
+
+.footer-brand {
+  display: grid;
+  gap: 10px;
+}
+
+.footer-brand strong {
+  font-family: "Noto Serif KR", serif;
+  font-size: 1.35rem;
+}
+
+.footer-brand p,
+.footer-meta,
+.footer-notice {
+  margin: 0;
+  color: var(--muted);
+  line-height: 1.7;
+}
+
+.footer-links {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-end;
+  gap: 10px 16px;
+}
+
+.footer-links a {
+  color: #ddd3ff;
+  text-decoration: none;
+  font-weight: 700;
+}
+
+.footer-links a:visited {
+  color: #b9a7e8;
+}
+
+.footer-links a:hover {
+  color: #fff;
+}
+
+.footer-meta {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-end;
+  gap: 6px 14px;
+  margin-top: var(--space-16);
+  font-size: 0.9rem;
+}
+
+.footer-notice {
+  grid-column: 1 / -1;
+  padding-top: var(--space-16);
+  border-top: 1px solid var(--line-soft);
+  font-size: 0.9rem;
+}
+
 @media (max-width: 1280px) {
   .quick-entry,
   .content-board,
@@ -664,7 +728,8 @@ body::before {
   .site-header,
   .quick-entry,
   .content-board,
-  .lower-sections {
+  .lower-sections,
+  .site-footer {
     padding-left: 18px;
     padding-right: 18px;
   }
@@ -715,8 +780,14 @@ body::before {
   .quick-entry,
   .content-board,
   .lower-sections,
+  .site-footer,
   .vod-grid {
     grid-template-columns: 1fr;
+  }
+
+  .footer-links,
+  .footer-meta {
+    justify-content: flex-start;
   }
 
   .content-board {
