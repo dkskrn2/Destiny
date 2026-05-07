@@ -11,7 +11,7 @@
   <link rel="stylesheet" href="../assets/css/styles.css">
   <link rel="stylesheet" href="../assets/css/app-pages.css">
 </head>
-<body class="theme-blue booking-page">
+<body class="theme-blue booking-page naver-reservation-page">
   <div class="page-shell">
     <div class="site-frame">
       <header class="site-header">
@@ -33,217 +33,120 @@
         </div>
       </header>
 
-      <main class="booking-main">
-        <section class="booking-hero">
-          <div>
-            <p class="app-kicker">상담 예약</p>
-            <h1>상담자를 고르고,<br><span>가능한 시간을 선택하세요</span></h1>
-            <p class="booking-lead">
-              상담자는 한 명으로 고정하지 않습니다. 주제와 방식에 맞는 상담자를 먼저 선택한 뒤,
-              해당 상담자의 예약 가능한 시간표에서 원하는 슬롯을 고르는 흐름입니다.
+      <main class="naver-reservation-main">
+        <section class="naver-reservation-shell" aria-label="명리결 상담 예약">
+          <a class="naver-back-link" href="../index.html">‹ 명리결</a>
+          <div class="naver-place-visual" aria-hidden="true"></div>
+
+          <section class="naver-place-intro">
+            <h1>명리결 상담 예약</h1>
+            <p>
+              강의와 커뮤니티에서 정리한 질문을 상담자와 함께 점검합니다.
+              예약 요청 후 결제 안내를 받고 30분 안에 결제하면 상담 시간이 확정됩니다.
+              <a href="refund-policy.html">더보기</a>
             </p>
-          </div>
-          <aside class="booking-summary-card" aria-label="예약 요약">
-            <span>선택 요약</span>
-            <strong id="booking-top-summary">한서윤 · 시간 선택 필요</strong>
-            <p id="booking-top-detail">상담자와 날짜를 고른 뒤 가능한 시간을 선택하세요.</p>
-          </aside>
+          </section>
+
+          <nav class="naver-reservation-tabs" aria-label="예약 정보 탭">
+            <a class="is-active" href="#reservation-form">예약하기</a>
+            <a href="#reservation-notice">상세정보</a>
+            <a href="community.html">리뷰 <span>18</span></a>
+          </nav>
+
+          <form class="naver-reservation-form" id="reservation-form">
+            <p class="naver-confirm-note">바로확정 예약과 동시에 일정이 확정됩니다.</p>
+
+            <section class="naver-reservation-section">
+              <h2>상담자를 선택해 주세요</h2>
+              <p>상담 주제에 맞는 상담자를 선택합니다.</p>
+              <div class="naver-segment-grid" role="radiogroup" aria-label="상담자 선택">
+                <label><input type="radio" name="consultant" value="한서윤" checked><span>한서윤</span></label>
+                <label><input type="radio" name="consultant" value="문도현"><span>문도현</span></label>
+                <label><input type="radio" name="consultant" value="서라온"><span>서라온</span></label>
+              </div>
+            </section>
+
+            <section class="naver-reservation-section">
+              <h2>5.15(금) · 시간을 선택해 주세요</h2>
+              <div class="naver-calendar-head">
+                <button type="button" aria-label="이전 달">‹</button>
+                <strong>2026.5</strong>
+                <button type="button" aria-label="다음 달">›</button>
+              </div>
+              <div class="naver-calendar" aria-label="2026년 5월 예약 달력">
+                <span>일</span><span>월</span><span>화</span><span>수</span><span>목</span><span>금</span><span>토</span>
+                <button type="button" class="is-muted">26</button><button type="button" class="is-muted">27</button><button type="button" class="is-muted">28</button><button type="button" class="is-muted">29</button><button type="button" class="is-muted">30</button><button type="button">1</button><button type="button">2</button>
+                <button type="button">3</button><button type="button">4</button><button type="button">5</button><button type="button">6</button><button type="button">7</button><button type="button">8</button><button type="button">9</button>
+                <button type="button" class="is-sunday">10</button><button type="button">11</button><button type="button">12</button><button type="button">13</button><button type="button">14</button><button type="button" class="is-selected" data-date="2026년 5월 15일">15</button><button type="button">16</button>
+                <button type="button" class="is-sunday">17</button><button type="button">18</button><button type="button">19</button><button type="button">20</button><button type="button">21</button><button type="button">22</button><button type="button">23</button>
+                <button type="button" class="is-sunday has-note" aria-label="5월 24일 부처님오신날">24<small>석탄일</small></button><button type="button" class="has-note" aria-label="5월 25일 대체공휴일">25<small>대체휴일</small></button><button type="button">26</button><button type="button">27</button><button type="button">28</button><button type="button">29</button><button type="button">30</button>
+              </div>
+
+              <div class="naver-time-groups" aria-label="예약 가능 시간">
+                <div>
+                  <strong>오전</strong>
+                  <label><input type="radio" name="time" value="11:30" required><span>11:30</span></label>
+                </div>
+                <div>
+                  <strong>오후</strong>
+                  <div class="naver-time-grid">
+                    <label><input type="radio" name="time" value="12:00"><span>12:00</span></label>
+                    <label><input type="radio" name="time" value="12:30"><span>12:30</span></label>
+                    <label><input type="radio" name="time" value="13:00"><span>1:00</span></label>
+                    <label><input type="radio" name="time" value="13:30"><span>1:30</span></label>
+                    <label><input type="radio" name="time" value="14:00"><span>2:00</span></label>
+                    <label><input type="radio" name="time" value="14:30"><span>2:30</span></label>
+                    <label><input type="radio" name="time" value="15:00"><span>3:00</span></label>
+                    <label><input type="radio" name="time" value="15:30"><span>3:30</span></label>
+                    <label class="is-disabled"><input type="radio" name="time" value="16:00" disabled><span>4:00</span></label>
+                    <label class="is-disabled"><input type="radio" name="time" value="16:30" disabled><span>4:30</span></label>
+                    <label><input type="radio" name="time" value="17:00"><span>5:00</span></label>
+                    <label><input type="radio" name="time" value="17:30"><span>5:30</span></label>
+                    <label><input type="radio" name="time" value="18:00"><span>6:00</span></label>
+                    <label><input type="radio" name="time" value="18:30"><span>6:30</span></label>
+                    <label><input type="radio" name="time" value="19:00"><span>7:00</span></label>
+                    <label><input type="radio" name="time" value="19:30"><span>7:30</span></label>
+                    <label><input type="radio" name="time" value="20:00"><span>8:00</span></label>
+                  </div>
+                </div>
+              </div>
+
+              <div class="naver-empty-help">
+                <p>원하는 예약시간이 마감되었나요?<br>빈자리가 생기면 알려드릴게요.</p>
+                <button type="button">빈자리 알림받기</button>
+              </div>
+            </section>
+
+            <section class="naver-reservation-section" id="reservation-notice">
+              <h2>예약 시 확인해 주세요</h2>
+              <details open>
+                <summary>꼭 확인해 주세요!</summary>
+                <div class="naver-notice-box">
+                  <p>* 상담은 학습 보조 목적이며 법률, 의료, 투자 판단을 대체하지 않습니다.</p>
+                  <p>* 예약 요청 후 30분 안에 결제하지 않으면 자동 취소될 수 있습니다.</p>
+                  <p>* 상담 24시간 전까지 1회 일정 변경을 요청할 수 있습니다.</p>
+                  <p>* 예약 취소 및 환불 기준은 환불/취소 정책을 따릅니다.</p>
+                </div>
+              </details>
+              <details>
+                <summary>이용시간 안내</summary>
+                <div class="naver-notice-box">
+                  <p>평일 11:30-20:00, 주말 상담은 상담자별 가능 시간에 따라 운영합니다.</p>
+                </div>
+              </details>
+              <details>
+                <summary>상담 준비 안내</summary>
+                <div class="naver-notice-box">
+                  <p>상담 전 질문 메모와 수강한 강의명을 정리하면 상담 시간이 더 효율적입니다.</p>
+                </div>
+              </details>
+            </section>
+
+            <button class="naver-next-button" type="submit" disabled>다음</button>
+          </form>
         </section>
-
-        <section class="booking-service-strip" aria-label="예약 전 핵심 안내">
-          <article><strong>1. 상담자 선택</strong><p>주제와 방식에 맞는 상담자를 고릅니다.</p></article>
-          <article><strong>2. 날짜와 시간 선택</strong><p>가능한 슬롯만 선택하고, 예약 완료 시간은 비활성화합니다.</p></article>
-          <article><strong>3. 정보 입력 후 요청</strong><p>연락처와 질문 메모를 남기면 결제 안내가 발송됩니다.</p></article>
-        </section>
-
-        <form class="booking-layout">
-          <section class="booking-panel" aria-labelledby="consultant-heading">
-            <div class="booking-section-head">
-              <p class="story-step">STEP 01</p>
-              <h2 id="consultant-heading">상담자 선택</h2>
-            </div>
-            <div class="consultant-grid">
-              <label class="consultant-card">
-                <input type="radio" name="consultant" value="한서윤" data-price-20="29000" data-price-30="39000" data-price-50="59000" checked>
-                <span class="consultant-avatar">한</span>
-                <span class="consultant-info">
-                  <strong>한서윤 <small>30분 39,000원</small></strong>
-                  <em>입문자 질문 정리 · 학습 흐름</em>
-                  <small>전화/화상 · 평균 응답 12분 · 오늘 3개 슬롯</small>
-                </span>
-              </label>
-              <label class="consultant-card">
-                <input type="radio" name="consultant" value="문도현" data-price-20="35000" data-price-30="49000" data-price-50="79000">
-                <span class="consultant-avatar">문</span>
-                <span class="consultant-info">
-                  <strong>문도현 <small>30분 49,000원</small></strong>
-                  <em>십성 패턴 · 관계 구조 해석</em>
-                  <small>화상 중심 · 평균 응답 18분 · 내일 5개 슬롯</small>
-                </span>
-              </label>
-              <label class="consultant-card">
-                <input type="radio" name="consultant" value="서라온" data-price-20="39000" data-price-30="59000" data-price-50="89000">
-                <span class="consultant-avatar">서</span>
-                <span class="consultant-info">
-                  <strong>서라온 <small>30분 59,000원</small></strong>
-                  <em>흐름 읽기 · 상담 전 질문 압축</em>
-                  <small>전화/화상 · 평균 응답 24분 · 이번 주 8개 슬롯</small>
-                </span>
-              </label>
-            </div>
-          </section>
-
-          <section class="booking-panel" aria-labelledby="type-heading">
-            <div class="booking-section-head">
-              <p class="story-step">STEP 02</p>
-              <h2 id="type-heading">상담 방식</h2>
-            </div>
-            <div class="booking-control-grid">
-              <label class="app-field">
-                <span>상담 유형</span>
-                <select class="app-select" name="topic">
-                  <option selected>학습 질문 정리</option>
-                  <option>강의 내용 보완</option>
-                  <option>상담 전 질문 압축</option>
-                  <option>커뮤니티 사례 해석</option>
-                </select>
-              </label>
-              <label class="app-field">
-                <span>상담 길이</span>
-                <select class="app-select" name="duration" id="booking-duration">
-                  <option value="20">20분</option>
-                  <option value="30" selected>30분</option>
-                  <option value="50">50분</option>
-                </select>
-              </label>
-              <label class="app-field">
-                <span>진행 방식</span>
-                <select class="app-select" name="channel" id="booking-channel">
-                  <option selected>전화 상담</option>
-                  <option>화상 상담</option>
-                </select>
-              </label>
-              <label class="app-field">
-                <span>확정 안내 수신</span>
-                <select class="app-select" name="notice">
-                  <option selected>문자 안내</option>
-                  <option>이메일 안내</option>
-                  <option>문자 + 이메일 안내</option>
-                </select>
-              </label>
-            </div>
-          </section>
-
-          <section class="booking-panel timetable-panel" aria-labelledby="time-heading">
-            <div class="booking-section-head">
-              <p class="story-step">STEP 03</p>
-              <h2 id="time-heading">타임테이블 선택</h2>
-            </div>
-            <div class="date-tabs" role="tablist" aria-label="예약 날짜">
-              <button class="date-tab is-active" type="button" data-date="2026년 5월 7일" data-label="5월 7일"><strong>오늘</strong><span>5월 7일</span></button>
-              <button class="date-tab" type="button" data-date="2026년 5월 8일" data-label="5월 8일"><strong>내일</strong><span>5월 8일</span></button>
-              <button class="date-tab" type="button" data-date="2026년 5월 9일" data-label="5월 9일"><strong>토요일</strong><span>5월 9일</span></button>
-              <button class="date-tab" type="button" data-date="2026년 5월 10일" data-label="5월 10일"><strong>일요일</strong><span>5월 10일</span></button>
-            </div>
-            <div class="time-table" aria-label="예약 가능한 시간">
-              <label class="time-slot">
-                <input type="radio" name="time" value="14:00" required>
-                <span>14:00</span>
-                <small>20분 가능</small>
-              </label>
-              <label class="time-slot is-disabled">
-                <input type="radio" name="time" value="15:30" disabled>
-                <span>15:30</span>
-                <small>예약 완료</small>
-              </label>
-              <label class="time-slot">
-                <input type="radio" name="time" value="17:00">
-                <span>17:00</span>
-                <small>30분 가능</small>
-              </label>
-              <label class="time-slot">
-                <input type="radio" name="time" value="19:00">
-                <span>19:00</span>
-                <small>30분 가능</small>
-              </label>
-              <label class="time-slot">
-                <input type="radio" name="time" value="20:30">
-                <span>20:30</span>
-                <small>50분 가능</small>
-              </label>
-              <label class="time-slot">
-                <input type="radio" name="time" value="21:30">
-                <span>21:30</span>
-                <small>20분 가능</small>
-              </label>
-            </div>
-          </section>
-
-          <section class="booking-panel" aria-labelledby="request-heading">
-            <div class="booking-section-head">
-              <p class="story-step">STEP 04</p>
-              <h2 id="request-heading">예약 정보</h2>
-            </div>
-            <div class="booking-control-grid">
-              <label class="app-field">
-                <span>이름</span>
-                <input class="app-input" name="name" type="text" placeholder="예약자 이름" required>
-              </label>
-              <label class="app-field">
-                <span>연락처</span>
-                <input class="app-input" name="phone" type="tel" placeholder="010-0000-0000" required>
-              </label>
-              <label class="app-field">
-                <span>이메일</span>
-                <input class="app-input" name="email" type="email" placeholder="name@example.com">
-              </label>
-              <label class="app-field">
-                <span>상담 전 자료</span>
-                <select class="app-select" name="material">
-                  <option selected>학습 리포트 공유</option>
-                  <option>질문 메모만 공유</option>
-                  <option>자료 없이 진행</option>
-                </select>
-              </label>
-            </div>
-            <label class="app-field booking-note-field">
-              <span>상담 전에 남길 질문</span>
-              <textarea class="app-textarea" rows="5">기초 강의는 들었는데 제 질문을 어떻게 좁혀야 할지 모르겠습니다. 상담 전에 봐야 할 강의 순서도 함께 확인하고 싶습니다.</textarea>
-            </label>
-            <div class="booking-policy-box">
-              <strong>예약 전 확인사항</strong>
-              <ul>
-                <li>예약 요청만으로 시간이 확정되지 않습니다. 결제 안내 후 30분 안에 결제해야 확정됩니다.</li>
-                <li>상담 24시간 전까지 일정 변경을 1회 요청할 수 있습니다.</li>
-                <li>상담 24시간 전 취소는 전액 환불, 24시간 이내 취소는 50% 환불, 시작 후 환불은 불가합니다.</li>
-                <li>상담 내용은 학습 보조 목적이며, 법률·의료·투자 판단을 대체하지 않습니다.</li>
-              </ul>
-            </div>
-            <label class="booking-consent">
-              <input type="checkbox" required>
-              <span>예약 처리와 상담 안내를 위한 개인정보 수집·이용 및 취소 정책을 확인했습니다.</span>
-            </label>
-          </section>
-
-          <aside class="booking-submit-panel">
-            <div class="booking-receipt">
-              <p class="story-step">예약 요약</p>
-              <h2>선택한 상담</h2>
-              <dl>
-                <div><dt>상담자</dt><dd id="receipt-consultant">한서윤</dd></div>
-                <div><dt>일시</dt><dd id="receipt-datetime">시간 선택 필요</dd></div>
-                <div><dt>방식</dt><dd id="receipt-duration">30분 · 전화 상담</dd></div>
-                <div><dt>예상 금액</dt><dd id="receipt-price">39,000원</dd></div>
-                <div><dt>확정 방식</dt><dd>결제 후 확정</dd></div>
-                <div><dt>환불 기준</dt><dd>24시간 전 전액</dd></div>
-              </dl>
-              <button class="phone-cta booking-submit" type="submit">예약 요청하기</button>
-              <p class="booking-status-message" id="booking-status-message" aria-live="polite"></p>
-              <p class="ai-note">요청 후 결제 안내가 발송되며, 30분 안에 결제해야 상담 시간이 확정됩니다.</p>
-            </div>
-          </aside>
-        </form>
       </main>
+
       <footer class="site-footer">
         <div class="footer-brand"><strong>명리결</strong><p>명리학 강의, 커뮤니티, 상담 예약을 연결하는 학습 플랫폼입니다.</p></div>
         <div><nav class="footer-links" aria-label="푸터 메뉴"><a href="about.html">회사소개</a><a href="support.html">고객센터</a><a href="terms.html">이용약관</a><a href="privacy.html">개인정보처리방침</a><a href="refund-policy.html">환불/취소 정책</a></nav><div class="footer-meta"><span>운영자 명리결</span><span>사업자 정보 준비 중</span><span>support@myeongrigyeol.kr</span></div></div>
@@ -252,54 +155,16 @@
     </div>
   </div>
   <script>
-    const bookingForm = document.querySelector(".booking-layout");
-    const dateTabs = [...document.querySelectorAll(".date-tab")];
-    const topSummary = document.querySelector("#booking-top-summary");
-    const topDetail = document.querySelector("#booking-top-detail");
-    const receiptConsultant = document.querySelector("#receipt-consultant");
-    const receiptDatetime = document.querySelector("#receipt-datetime");
-    const receiptDuration = document.querySelector("#receipt-duration");
-    const receiptPrice = document.querySelector("#receipt-price");
-    const channel = document.querySelector("#booking-channel");
-    const statusMessage = document.querySelector("#booking-status-message");
-
-    const formatPrice = (value) => `${Number(value).toLocaleString("ko-KR")}원`;
-
-    function updateBookingSummary() {
-      const consultant = bookingForm.querySelector('input[name="consultant"]:checked');
-      const time = bookingForm.querySelector('input[name="time"]:checked');
-      const duration = bookingForm.querySelector("#booking-duration");
-      const channelValue = channel?.value || "진행 방식 선택";
-      const activeDate = document.querySelector(".date-tab.is-active");
-      const consultantName = consultant?.value || "상담자 선택";
-      const dateLabel = activeDate?.dataset.label || "날짜 선택";
-      const dateFull = activeDate?.dataset.date || "날짜 선택";
-      const timeValue = time?.value || "시간 선택 필요";
-      const durationValue = duration?.selectedOptions[0]?.textContent || "상담 시간 선택";
-      const priceKey = `price${duration?.value || "30"}`;
-      const priceValue = consultant?.dataset[priceKey] || "39000";
-
-      topSummary.textContent = `${consultantName} · ${dateLabel} ${timeValue}`;
-      topDetail.textContent = time ? `${durationValue} · ${channelValue} · 결제 후 확정` : "상담 가능한 시간 중 하나를 선택하면 요약이 완성됩니다.";
-      receiptConsultant.textContent = consultantName;
-      receiptDatetime.textContent = time ? `${dateFull} ${timeValue}` : "시간 선택 필요";
-      receiptDuration.textContent = `${durationValue} · ${channelValue}`;
-      receiptPrice.textContent = formatPrice(priceValue);
-    }
-
-    dateTabs.forEach((tab) => {
-      tab.addEventListener("click", () => {
-        dateTabs.forEach((item) => item.classList.remove("is-active"));
-        tab.classList.add("is-active");
-        updateBookingSummary();
-      });
+    const reservationForm = document.querySelector(".naver-reservation-form");
+    const nextButton = document.querySelector(".naver-next-button");
+    reservationForm.addEventListener("change", () => {
+      const hasTime = Boolean(reservationForm.querySelector('input[name="time"]:checked'));
+      nextButton.disabled = !hasTime;
     });
-
-    bookingForm.addEventListener("change", updateBookingSummary);
-    bookingForm.addEventListener("submit", (event) => {
+    reservationForm.addEventListener("submit", (event) => {
       event.preventDefault();
-      if (!bookingForm.reportValidity()) return;
-      statusMessage.textContent = "예약 요청이 접수되었습니다. 결제 안내와 상담 확정 문자를 발송할 예정입니다.";
+      if (!reservationForm.reportValidity()) return;
+      nextButton.textContent = "예약 정보 입력으로 이동";
     });
   </script>
 </body>

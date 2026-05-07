@@ -2948,6 +2948,372 @@
   line-height: 1.55;
 }
 
+.naver-reservation-page {
+  --text: #111;
+  --muted: #666;
+  --line: rgba(0, 0, 0, 0.1);
+  --line-soft: rgba(0, 0, 0, 0.08);
+  --app-accent: #03c75a;
+  --app-accent-dark: #00a84d;
+  color: var(--text);
+}
+
+.naver-reservation-page .site-frame {
+  background: #f4f5f6;
+}
+
+.naver-reservation-page .site-header {
+  background: #fff;
+  border-bottom-color: #eceef1;
+  backdrop-filter: none;
+}
+
+.naver-reservation-page .main-nav a,
+.naver-reservation-page .brand,
+.naver-reservation-page .tool-button {
+  color: #111;
+}
+
+.naver-reservation-page .brand-copy small {
+  color: #777;
+}
+
+.naver-reservation-page .site-footer {
+  background: #f1f2f3;
+  border-top-color: #dedede;
+}
+
+.naver-reservation-page .footer-brand p,
+.naver-reservation-page .footer-meta,
+.naver-reservation-page .footer-notice {
+  color: #666;
+}
+
+.naver-reservation-page .footer-links a {
+  color: #222;
+}
+
+.naver-reservation-main {
+  background: #f4f5f6;
+  padding: 32px 18px 56px;
+}
+
+.naver-reservation-shell {
+  width: min(560px, 100%);
+  margin: 0 auto;
+  color: #111;
+}
+
+.naver-back-link {
+  display: inline-flex;
+  margin-bottom: 14px;
+  color: #111;
+  text-decoration: none;
+  font-size: 1.1rem;
+  font-weight: 800;
+}
+
+.naver-place-visual {
+  height: 178px;
+  border-radius: 12px;
+  background:
+    linear-gradient(180deg, rgba(0, 0, 0, 0.02), rgba(0, 0, 0, 0.12)),
+    radial-gradient(circle at 22% 18%, rgba(255, 255, 255, 0.95), transparent 10%),
+    linear-gradient(135deg, #d7c3a6 0%, #a77f57 35%, #efe5cf 36%, #b8c6c2 68%, #7c5a3d 100%);
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.08);
+}
+
+.naver-place-intro {
+  padding: 18px 12px 14px;
+  background: #fff;
+}
+
+.naver-place-intro h1 {
+  margin: 0 0 8px;
+  font-size: 1.08rem;
+  line-height: 1.35;
+}
+
+.naver-place-intro p {
+  margin: 0;
+  color: #666;
+  font-size: 0.84rem;
+  line-height: 1.55;
+}
+
+.naver-place-intro a {
+  color: #111;
+  font-weight: 800;
+}
+
+.naver-reservation-tabs {
+  position: sticky;
+  top: 0;
+  z-index: 4;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 3px;
+  padding: 0 12px;
+  background: #f4f5f6;
+  border-top: 8px solid #f4f5f6;
+  border-bottom: 1px solid #e5e5e5;
+}
+
+.naver-reservation-tabs a {
+  display: grid;
+  place-items: center;
+  min-height: 38px;
+  border-radius: 5px 5px 0 0;
+  color: #444;
+  background: #eee;
+  text-decoration: none;
+  font-size: 0.9rem;
+  font-weight: 800;
+}
+
+.naver-reservation-tabs a.is-active {
+  color: #fff;
+  background: #333;
+}
+
+.naver-reservation-tabs span {
+  color: var(--app-accent);
+}
+
+.naver-reservation-form {
+  display: grid;
+  gap: 0;
+  background: #fff;
+}
+
+.naver-confirm-note {
+  margin: 0;
+  padding: 14px 12px;
+  color: #008f45;
+  font-size: 0.86rem;
+  font-weight: 800;
+  border-bottom: 1px solid #eee;
+}
+
+.naver-confirm-note::before {
+  content: "✓ ";
+}
+
+.naver-reservation-section {
+  padding: 22px 12px;
+  border-bottom: 8px solid #f4f5f6;
+}
+
+.naver-reservation-section h2 {
+  margin: 0 0 8px;
+  font-size: 1rem;
+  line-height: 1.35;
+}
+
+.naver-reservation-section > p {
+  margin: 0 0 14px;
+  color: #777;
+  font-size: 0.84rem;
+}
+
+.naver-segment-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 4px;
+}
+
+.naver-segment-grid label,
+.naver-time-groups label {
+  position: relative;
+  cursor: pointer;
+}
+
+.naver-segment-grid input,
+.naver-time-groups input {
+  position: absolute;
+  opacity: 0;
+  pointer-events: none;
+}
+
+.naver-segment-grid span,
+.naver-time-groups label span {
+  display: grid;
+  place-items: center;
+  min-height: 36px;
+  border: 1px solid #e1e4e8;
+  border-radius: 6px;
+  background: #fff;
+  color: #222;
+  font-size: 0.9rem;
+  font-weight: 800;
+}
+
+.naver-segment-grid input:checked + span,
+.naver-time-groups input:checked + span,
+.naver-calendar button.is-selected {
+  border-color: var(--app-accent);
+  background: var(--app-accent);
+  color: #fff;
+}
+
+.naver-calendar-head {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+  margin: 10px 0 18px;
+}
+
+.naver-calendar-head button {
+  border: 0;
+  background: transparent;
+  color: #aaa;
+  font-size: 1.5rem;
+  cursor: pointer;
+}
+
+.naver-calendar-head strong {
+  font-size: 1.08rem;
+}
+
+.naver-calendar {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  gap: 8px 10px;
+  margin-bottom: 26px;
+}
+
+.naver-calendar span {
+  text-align: center;
+  color: #555;
+  font-size: 0.78rem;
+  font-weight: 800;
+}
+
+.naver-calendar button {
+  position: relative;
+  min-height: 38px;
+  border: 0;
+  border-radius: 6px;
+  background: transparent;
+  color: #222;
+  font: inherit;
+  cursor: pointer;
+}
+
+.naver-calendar button.is-muted {
+  color: #c7c7c7;
+}
+
+.naver-calendar button.is-sunday {
+  color: #ff4f59;
+}
+
+.naver-calendar button small {
+  position: absolute;
+  left: 50%;
+  top: 27px;
+  width: max-content;
+  transform: translateX(-50%);
+  color: #ff4f59;
+  font-size: 0.62rem;
+  font-weight: 700;
+}
+
+.naver-time-groups {
+  display: grid;
+  gap: 18px;
+}
+
+.naver-time-groups strong {
+  display: block;
+  margin-bottom: 8px;
+  color: #444;
+  font-size: 0.84rem;
+}
+
+.naver-time-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 8px;
+}
+
+.naver-time-groups label.is-disabled {
+  cursor: not-allowed;
+}
+
+.naver-time-groups label.is-disabled span {
+  color: #bbb;
+  background: #fafafa;
+}
+
+.naver-empty-help {
+  display: flex;
+  justify-content: space-between;
+  gap: 12px;
+  align-items: center;
+  margin-top: 22px;
+  padding-top: 18px;
+  border-top: 1px solid #eee;
+}
+
+.naver-empty-help p {
+  margin: 0;
+  color: #555;
+  font-size: 0.82rem;
+  line-height: 1.45;
+}
+
+.naver-empty-help button {
+  min-width: 118px;
+  height: 36px;
+  border: 1px solid #dde2e5;
+  border-radius: 8px;
+  color: #00a84d;
+  background: #fff;
+  font-weight: 800;
+}
+
+.naver-reservation-section details {
+  border-bottom: 1px solid #eee;
+}
+
+.naver-reservation-section summary {
+  padding: 16px 0;
+  cursor: pointer;
+  font-weight: 900;
+}
+
+.naver-notice-box {
+  padding: 16px;
+  border-radius: 8px;
+  background: #f6f6f6;
+  color: #333;
+  font-size: 0.86rem;
+  line-height: 1.7;
+}
+
+.naver-notice-box p {
+  margin: 0 0 6px;
+}
+
+.naver-next-button {
+  width: calc(100% - 24px);
+  height: 44px;
+  margin: 20px 12px 26px;
+  border: 0;
+  border-radius: 7px;
+  background: var(--app-accent);
+  color: #fff;
+  font-weight: 900;
+  cursor: pointer;
+}
+
+.naver-next-button:disabled {
+  background: #cfcfcf;
+  cursor: not-allowed;
+}
+
 .policy-main {
   display: grid;
   gap: var(--space-24);
@@ -3074,6 +3440,47 @@
   display: block;
   margin-bottom: 8px;
   color: #fff;
+}
+
+@media (max-width: 640px) {
+  .naver-reservation-main {
+    padding: 18px 0 34px;
+  }
+
+  .naver-reservation-shell {
+    width: min(100%, 560px);
+  }
+
+  .naver-place-intro,
+  .naver-reservation-form {
+    padding-right: 16px;
+    padding-left: 16px;
+  }
+
+  .naver-calendar {
+    gap: 8px 6px;
+  }
+
+  .naver-calendar button {
+    min-height: 44px;
+  }
+
+  .naver-calendar button small {
+    top: 26px;
+    width: 34px;
+    font-size: 0.48rem;
+    line-height: 1.05;
+    white-space: normal;
+  }
+
+  .naver-time-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .naver-empty-help {
+    align-items: flex-start;
+    flex-direction: column;
+  }
 }
 
 @media (max-width: 1080px) {
