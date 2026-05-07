@@ -17,7 +17,7 @@
       <header class="site-header">
         <a class="brand" href="../index.html">
           <span class="brand-mark"><span></span></span>
-          <span class="brand-copy"><strong>명리학 플랫폼</strong><small>FO 컨셉</small></span>
+          <span class="brand-copy"><strong>명리학 플랫폼</strong><small>명리학 학습</small></span>
         </a>
         <nav class="main-nav" aria-label="주요 메뉴">
           <a href="../index.html">홈</a>
@@ -45,8 +45,8 @@
           </div>
           <aside class="booking-summary-card" aria-label="예약 요약">
             <span>선택 요약</span>
-            <strong id="booking-top-summary">한서윤 · 5월 4일 19:00</strong>
-            <p id="booking-top-detail">30분 집중 상담 · 질문 메모 기반으로 진행</p>
+            <strong id="booking-top-summary">한서윤 · 시간 선택 필요</strong>
+            <p id="booking-top-detail">상담자와 날짜를 고른 뒤 가능한 시간을 선택하세요.</p>
           </aside>
         </section>
 
@@ -149,14 +149,14 @@
               <h2 id="time-heading">타임테이블 선택</h2>
             </div>
             <div class="date-tabs" role="tablist" aria-label="예약 날짜">
-              <button class="date-tab is-active" type="button" data-date="2026년 5월 4일" data-label="5월 4일"><strong>오늘</strong><span>5월 4일</span></button>
-              <button class="date-tab" type="button" data-date="2026년 5월 5일" data-label="5월 5일"><strong>내일</strong><span>5월 5일</span></button>
-              <button class="date-tab" type="button" data-date="2026년 5월 6일" data-label="5월 6일"><strong>수요일</strong><span>5월 6일</span></button>
-              <button class="date-tab" type="button" data-date="2026년 5월 7일" data-label="5월 7일"><strong>목요일</strong><span>5월 7일</span></button>
+              <button class="date-tab is-active" type="button" data-date="2026년 5월 7일" data-label="5월 7일"><strong>오늘</strong><span>5월 7일</span></button>
+              <button class="date-tab" type="button" data-date="2026년 5월 8일" data-label="5월 8일"><strong>내일</strong><span>5월 8일</span></button>
+              <button class="date-tab" type="button" data-date="2026년 5월 9일" data-label="5월 9일"><strong>토요일</strong><span>5월 9일</span></button>
+              <button class="date-tab" type="button" data-date="2026년 5월 10일" data-label="5월 10일"><strong>일요일</strong><span>5월 10일</span></button>
             </div>
             <div class="time-table" aria-label="예약 가능한 시간">
               <label class="time-slot">
-                <input type="radio" name="time" value="14:00">
+                <input type="radio" name="time" value="14:00" required>
                 <span>14:00</span>
                 <small>20분 가능</small>
               </label>
@@ -171,7 +171,7 @@
                 <small>30분 가능</small>
               </label>
               <label class="time-slot">
-                <input type="radio" name="time" value="19:00" checked>
+                <input type="radio" name="time" value="19:00">
                 <span>19:00</span>
                 <small>30분 가능</small>
               </label>
@@ -240,7 +240,7 @@
               <h2>선택한 상담</h2>
               <dl>
                 <div><dt>상담자</dt><dd id="receipt-consultant">한서윤</dd></div>
-                <div><dt>일시</dt><dd id="receipt-datetime">2026년 5월 4일 19:00</dd></div>
+                <div><dt>일시</dt><dd id="receipt-datetime">시간 선택 필요</dd></div>
                 <div><dt>방식</dt><dd id="receipt-duration">30분 · 전화 상담</dd></div>
                 <div><dt>예상 금액</dt><dd id="receipt-price">39,000원</dd></div>
                 <div><dt>확정 방식</dt><dd>결제 후 확정</dd></div>
@@ -255,7 +255,7 @@
       </main>
       <footer class="site-footer">
         <div class="footer-brand"><strong>명리결</strong><p>명리학 강의, 커뮤니티, 상담 예약을 연결하는 학습 플랫폼입니다.</p></div>
-        <div><nav class="footer-links" aria-label="푸터 메뉴"><a href="about.html">회사소개</a><a href="support.html">고객센터</a><a href="terms.html">이용약관</a><a href="privacy.html">개인정보처리방침</a><a href="refund-policy.html">환불/취소 정책</a></nav><div class="footer-meta"><span>대표 홍길동</span><span>사업자등록번호 000-00-00000</span><span>support@myeongrigyeol.kr</span></div></div>
+        <div><nav class="footer-links" aria-label="푸터 메뉴"><a href="about.html">회사소개</a><a href="support.html">고객센터</a><a href="terms.html">이용약관</a><a href="privacy.html">개인정보처리방침</a><a href="refund-policy.html">환불/취소 정책</a></nav><div class="footer-meta"><span>운영자 명리결</span><span>사업자 정보 준비 중</span><span>support@myeongrigyeol.kr</span></div></div>
         <p class="footer-notice">상담 서비스는 학습 보조 목적이며 법률, 의료, 투자 판단을 대체하지 않습니다.</p>
       </footer>
     </div>
@@ -283,15 +283,15 @@
       const consultantName = consultant?.value || "상담자 선택";
       const dateLabel = activeDate?.dataset.label || "날짜 선택";
       const dateFull = activeDate?.dataset.date || "날짜 선택";
-      const timeValue = time?.value || "시간 선택";
+      const timeValue = time?.value || "시간 선택 필요";
       const durationValue = duration?.selectedOptions[0]?.textContent || "상담 시간 선택";
       const priceKey = `price${duration?.value || "30"}`;
       const priceValue = consultant?.dataset[priceKey] || "39000";
 
       topSummary.textContent = `${consultantName} · ${dateLabel} ${timeValue}`;
-      topDetail.textContent = `${durationValue} · ${channelValue} · 결제 후 확정`;
+      topDetail.textContent = time ? `${durationValue} · ${channelValue} · 결제 후 확정` : "상담 가능한 시간 중 하나를 선택하면 요약이 완성됩니다.";
       receiptConsultant.textContent = consultantName;
-      receiptDatetime.textContent = `${dateFull} ${timeValue}`;
+      receiptDatetime.textContent = time ? `${dateFull} ${timeValue}` : "시간 선택 필요";
       receiptDuration.textContent = `${durationValue} · ${channelValue}`;
       receiptPrice.textContent = formatPrice(priceValue);
     }

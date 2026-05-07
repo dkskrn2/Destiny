@@ -1876,6 +1876,13 @@
   line-height: 1.65;
 }
 
+.content-byline {
+  margin: 0 0 8px;
+  color: var(--muted);
+  font-size: 0.9rem;
+  font-weight: 700;
+}
+
 .content-filter-bar {
   display: flex;
   gap: 10px;
