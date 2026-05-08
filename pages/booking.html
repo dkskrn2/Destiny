@@ -36,38 +36,50 @@
       <main class="naver-reservation-main">
         <section class="naver-reservation-shell" aria-label="명리결 상담 예약">
           <a class="naver-back-link" href="../index.html">‹ 명리결</a>
-          <div class="naver-place-visual" aria-hidden="true"></div>
+          <div class="naver-reservation-overview">
+            <div class="naver-place-visual" aria-hidden="true"></div>
 
-          <section class="naver-place-intro">
-            <h1>명리결 상담 예약</h1>
-            <p>
-              강의와 커뮤니티에서 정리한 질문을 상담자와 함께 점검합니다.
-              예약 요청 후 결제 안내를 받고 30분 안에 결제하면 상담 시간이 확정됩니다.
-              <a href="refund-policy.html">더보기</a>
-            </p>
-          </section>
+            <section class="naver-place-intro">
+              <h1>명리결 상담 예약</h1>
+              <p>
+                강의와 커뮤니티에서 정리한 질문을 상담자와 함께 점검합니다.
+                예약 요청 후 결제 안내를 받고 30분 안에 결제하면 상담 시간이 확정됩니다.
+                <a href="refund-policy.html">더보기</a>
+              </p>
+              <div class="naver-desktop-guide" aria-label="예약 진행 순서">
+                <strong>예약 진행</strong>
+                <ol>
+                  <li>상담자를 먼저 선택합니다.</li>
+                  <li>상담자별 가능한 날짜를 확인합니다.</li>
+                  <li>날짜를 선택하면 가능한 시간이 열립니다.</li>
+                </ol>
+              </div>
+            </section>
+          </div>
 
-          <nav class="naver-reservation-tabs" aria-label="예약 정보 탭">
-            <a class="is-active" href="#reservation-form">예약하기</a>
-            <a href="#reservation-notice">상세정보</a>
-            <a href="community.html">리뷰 <span>18</span></a>
-          </nav>
+          <div class="naver-reservation-booking">
+            <nav class="naver-reservation-tabs" aria-label="예약 정보 탭">
+              <a class="is-active" href="#reservation-form">예약하기</a>
+              <a href="#reservation-notice">상세정보</a>
+              <a href="community.html">리뷰 <span>18</span></a>
+            </nav>
 
-          <form class="naver-reservation-form" id="reservation-form">
+            <form class="naver-reservation-form" id="reservation-form">
             <p class="naver-confirm-note">바로확정 예약과 동시에 일정이 확정됩니다.</p>
 
             <section class="naver-reservation-section">
               <h2>상담자를 선택해 주세요</h2>
               <p>상담 주제에 맞는 상담자를 선택합니다.</p>
               <div class="naver-segment-grid" role="radiogroup" aria-label="상담자 선택">
-                <label><input type="radio" name="consultant" value="한서윤" checked><span>한서윤</span></label>
+                <label><input type="radio" name="consultant" value="한서윤"><span>한서윤</span></label>
                 <label><input type="radio" name="consultant" value="문도현"><span>문도현</span></label>
                 <label><input type="radio" name="consultant" value="서라온"><span>서라온</span></label>
               </div>
             </section>
 
-            <section class="naver-reservation-section">
-              <h2>5.15(금) · 시간을 선택해 주세요</h2>
+            <section class="naver-reservation-section naver-date-section" hidden>
+              <h2>날짜를 선택해 주세요</h2>
+              <p>선택한 상담자의 예약 가능한 날짜만 고릅니다.</p>
               <div class="naver-calendar-head">
                 <button type="button" aria-label="이전 달">‹</button>
                 <strong>2026.5</strong>
@@ -77,11 +89,15 @@
                 <span>일</span><span>월</span><span>화</span><span>수</span><span>목</span><span>금</span><span>토</span>
                 <button type="button" class="is-muted">26</button><button type="button" class="is-muted">27</button><button type="button" class="is-muted">28</button><button type="button" class="is-muted">29</button><button type="button" class="is-muted">30</button><button type="button">1</button><button type="button">2</button>
                 <button type="button">3</button><button type="button">4</button><button type="button">5</button><button type="button">6</button><button type="button">7</button><button type="button">8</button><button type="button">9</button>
-                <button type="button" class="is-sunday">10</button><button type="button">11</button><button type="button">12</button><button type="button">13</button><button type="button">14</button><button type="button" class="is-selected" data-date="2026년 5월 15일">15</button><button type="button">16</button>
+                <button type="button" class="is-sunday">10</button><button type="button">11</button><button type="button">12</button><button type="button">13</button><button type="button">14</button><button type="button" data-date="2026년 5월 15일" data-label="5.15(금)">15</button><button type="button">16</button>
                 <button type="button" class="is-sunday">17</button><button type="button">18</button><button type="button">19</button><button type="button">20</button><button type="button">21</button><button type="button">22</button><button type="button">23</button>
                 <button type="button" class="is-sunday has-note" aria-label="5월 24일 부처님오신날">24<small>석탄일</small></button><button type="button" class="has-note" aria-label="5월 25일 대체공휴일">25<small>대체휴일</small></button><button type="button">26</button><button type="button">27</button><button type="button">28</button><button type="button">29</button><button type="button">30</button>
               </div>
+            </section>
 
+            <section class="naver-reservation-section naver-time-section" hidden>
+              <h2 id="selected-date-heading">시간을 선택해 주세요</h2>
+              <p>선택한 날짜에 예약 가능한 시간만 표시됩니다.</p>
               <div class="naver-time-groups" aria-label="예약 가능 시간">
                 <div>
                   <strong>오전</strong>
@@ -143,7 +159,8 @@
             </section>
 
             <button class="naver-next-button" type="submit" disabled>다음</button>
-          </form>
+            </form>
+          </div>
         </section>
       </main>
 
@@ -157,10 +174,40 @@
   <script>
     const reservationForm = document.querySelector(".naver-reservation-form");
     const nextButton = document.querySelector(".naver-next-button");
+    const dateSection = document.querySelector(".naver-date-section");
+    const timeSection = document.querySelector(".naver-time-section");
+    const selectedDateHeading = document.querySelector("#selected-date-heading");
+    const dateButtons = [...document.querySelectorAll(".naver-calendar button:not(.is-muted)")];
+
+    function resetTimeSelection() {
+      reservationForm.querySelectorAll('input[name="time"]').forEach((input) => {
+        input.checked = false;
+      });
+      nextButton.disabled = true;
+    }
+
     reservationForm.addEventListener("change", () => {
+      const hasConsultant = Boolean(reservationForm.querySelector('input[name="consultant"]:checked'));
       const hasTime = Boolean(reservationForm.querySelector('input[name="time"]:checked'));
+      if (hasConsultant && dateSection.hidden) {
+        dateSection.hidden = false;
+        dateSection.classList.add("is-visible");
+      }
       nextButton.disabled = !hasTime;
     });
+
+    dateButtons.forEach((button) => {
+      button.addEventListener("click", () => {
+        dateButtons.forEach((item) => item.classList.remove("is-selected"));
+        button.classList.add("is-selected");
+        timeSection.hidden = false;
+        timeSection.classList.add("is-visible");
+        const label = button.dataset.label || `5.${button.childNodes[0].textContent.trim()}`;
+        selectedDateHeading.textContent = `${label} · 시간을 선택해 주세요`;
+        resetTimeSelection();
+      });
+    });
+
     reservationForm.addEventListener("submit", (event) => {
       event.preventDefault();
       if (!reservationForm.reportValidity()) return;

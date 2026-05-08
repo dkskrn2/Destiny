@@ -3518,6 +3518,100 @@
   color: rgba(245, 242, 255, 0.55);
 }
 
+.naver-desktop-guide {
+  display: grid;
+  gap: 12px;
+  margin-top: 24px;
+  padding: 18px;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 18px;
+  background: rgba(255, 255, 255, 0.04);
+}
+
+.naver-desktop-guide strong {
+  color: #fff;
+  font-family: "Noto Serif KR", serif;
+  font-size: 1.05rem;
+}
+
+.naver-desktop-guide ol {
+  display: grid;
+  gap: 8px;
+  margin: 0;
+  padding-left: 20px;
+  color: var(--muted);
+  line-height: 1.6;
+}
+
+.naver-date-section,
+.naver-time-section {
+  animation: bookingStepReveal 220ms ease both;
+}
+
+@keyframes bookingStepReveal {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@media (min-width: 1081px) {
+  .naver-reservation-shell {
+    display: grid;
+    grid-template-columns: minmax(320px, 0.9fr) minmax(580px, 680px);
+    gap: 0 34px;
+    align-items: start;
+    width: min(1180px, 100%);
+  }
+
+  .naver-back-link {
+    grid-column: 1 / -1;
+  }
+
+  .naver-reservation-overview {
+    grid-column: 1;
+    display: grid;
+    align-content: start;
+  }
+
+  .naver-reservation-booking {
+    grid-column: 2;
+    display: grid;
+    align-content: start;
+  }
+
+  .naver-place-visual {
+    min-height: 320px;
+  }
+
+  .naver-place-intro {
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-top: 0;
+    border-radius: 0 0 var(--radius-panel) var(--radius-panel);
+  }
+
+  .naver-reservation-tabs {
+    align-self: start;
+  }
+
+  .naver-reservation-form {
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  }
+
+  .naver-calendar {
+    gap: 10px 14px;
+  }
+
+  .naver-calendar button {
+    min-height: 46px;
+  }
+}
+
 .policy-main {
   display: grid;
   gap: var(--space-24);
