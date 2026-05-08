@@ -3314,6 +3314,210 @@
   cursor: not-allowed;
 }
 
+.booking-page.naver-reservation-page {
+  --text: #f5f2ff;
+  --muted: rgba(245, 242, 255, 0.72);
+  --line: rgba(255, 255, 255, 0.12);
+  --line-soft: rgba(255, 255, 255, 0.08);
+  --app-accent: #72d4bd;
+  --app-accent-dark: #247d71;
+  --app-glow: rgba(114, 212, 189, 0.18);
+  color: var(--text);
+}
+
+.naver-reservation-page .site-frame {
+  background:
+    linear-gradient(180deg, rgba(14, 13, 23, 0.96), rgba(7, 6, 13, 0.98));
+}
+
+.naver-reservation-page .site-header {
+  background: rgba(7, 7, 12, 0.88);
+  border-bottom-color: var(--line-soft);
+  backdrop-filter: blur(16px);
+}
+
+.naver-reservation-page .main-nav a,
+.naver-reservation-page .brand,
+.naver-reservation-page .tool-button {
+  color: var(--text);
+}
+
+.naver-reservation-page .brand-copy small,
+.naver-reservation-page .footer-brand p,
+.naver-reservation-page .footer-meta,
+.naver-reservation-page .footer-notice {
+  color: var(--muted);
+}
+
+.naver-reservation-page .site-footer {
+  background: rgba(255, 255, 255, 0.025);
+  border-top-color: var(--line-soft);
+}
+
+.naver-reservation-page .footer-links a {
+  color: #fff;
+}
+
+.naver-reservation-main {
+  background:
+    radial-gradient(circle at 28% 8%, color-mix(in srgb, var(--app-accent) 18%, transparent), transparent 26%),
+    linear-gradient(180deg, rgba(14, 13, 23, 0.92), rgba(7, 6, 13, 0.96));
+  padding: 32px var(--space-48) var(--space-48);
+}
+
+.naver-reservation-shell {
+  width: min(680px, 100%);
+  color: var(--text);
+}
+
+.naver-back-link {
+  color: #fff;
+}
+
+.naver-place-visual {
+  height: 216px;
+  border: 1px solid color-mix(in srgb, var(--app-accent) 24%, transparent);
+  border-radius: var(--radius-panel);
+  background:
+    radial-gradient(circle at 18% 24%, rgba(255, 255, 255, 0.22), transparent 12%),
+    radial-gradient(circle at 72% 12%, color-mix(in srgb, var(--app-accent) 28%, transparent), transparent 24%),
+    linear-gradient(135deg, rgba(114, 212, 189, 0.22), rgba(125, 100, 255, 0.16) 46%, rgba(241, 215, 170, 0.2));
+  box-shadow: var(--shadow-soft);
+}
+
+.naver-place-intro,
+.naver-reservation-form {
+  background: rgba(255, 255, 255, 0.055);
+  border-right: 1px solid rgba(255, 255, 255, 0.1);
+  border-left: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.naver-place-intro {
+  padding: 22px 20px 18px;
+}
+
+.naver-place-intro h1,
+.naver-reservation-section h2,
+.naver-calendar-head strong,
+.naver-reservation-section summary {
+  color: #fff;
+}
+
+.naver-place-intro h1,
+.naver-reservation-section h2 {
+  font-family: "Noto Serif KR", serif;
+}
+
+.naver-place-intro p,
+.naver-reservation-section > p,
+.naver-empty-help p {
+  color: var(--muted);
+}
+
+.naver-place-intro a,
+.naver-reservation-tabs span,
+.naver-confirm-note,
+.naver-empty-help button {
+  color: var(--app-accent);
+}
+
+.naver-reservation-tabs {
+  padding: 0;
+  background: transparent;
+  border-top: 0;
+  border-bottom-color: rgba(255, 255, 255, 0.1);
+}
+
+.naver-reservation-tabs a {
+  min-height: 44px;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-bottom: 0;
+  color: var(--muted);
+  background: rgba(255, 255, 255, 0.045);
+}
+
+.naver-reservation-tabs a.is-active {
+  color: #08110f;
+  background: linear-gradient(135deg, var(--app-accent), #d6f6ef);
+}
+
+.naver-confirm-note {
+  padding: 16px 20px;
+  border-bottom-color: rgba(255, 255, 255, 0.08);
+  background: color-mix(in srgb, var(--app-accent) 9%, rgba(255, 255, 255, 0.02));
+}
+
+.naver-confirm-note::before {
+  content: "✓ ";
+}
+
+.naver-reservation-section {
+  padding: 26px 20px;
+  border-bottom-color: rgba(255, 255, 255, 0.055);
+}
+
+.naver-segment-grid span,
+.naver-time-groups label span {
+  border-color: rgba(255, 255, 255, 0.12);
+  background: rgba(255, 255, 255, 0.045);
+  color: #fff;
+}
+
+.naver-segment-grid input:checked + span,
+.naver-time-groups input:checked + span,
+.naver-calendar button.is-selected {
+  border-color: color-mix(in srgb, var(--app-accent) 62%, transparent);
+  background: linear-gradient(135deg, var(--app-accent), var(--app-accent-dark));
+  color: #06110f;
+}
+
+.naver-calendar-head button {
+  color: var(--muted);
+}
+
+.naver-calendar span,
+.naver-calendar button,
+.naver-time-groups strong {
+  color: var(--text);
+}
+
+.naver-calendar button.is-muted,
+.naver-time-groups label.is-disabled span {
+  color: rgba(245, 242, 255, 0.35);
+}
+
+.naver-time-groups label.is-disabled span {
+  background: rgba(255, 255, 255, 0.025);
+}
+
+.naver-empty-help {
+  border-top-color: rgba(255, 255, 255, 0.08);
+}
+
+.naver-empty-help button {
+  border-color: color-mix(in srgb, var(--app-accent) 34%, transparent);
+  background: color-mix(in srgb, var(--app-accent) 10%, rgba(255, 255, 255, 0.035));
+}
+
+.naver-reservation-section details {
+  border-bottom-color: rgba(255, 255, 255, 0.08);
+}
+
+.naver-notice-box {
+  background: rgba(255, 255, 255, 0.055);
+  color: var(--muted);
+}
+
+.naver-next-button {
+  background: linear-gradient(135deg, var(--app-accent), var(--app-accent-dark));
+  color: #07110f;
+}
+
+.naver-next-button:disabled {
+  background: rgba(255, 255, 255, 0.16);
+  color: rgba(245, 242, 255, 0.55);
+}
+
 .policy-main {
   display: grid;
   gap: var(--space-24);
