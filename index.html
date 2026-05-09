@@ -46,14 +46,27 @@
         </div>
       </header>
 
-      <main>
-        <section class="hero" id="start">
-          <div class="hero-backdrop"></div>
-          <div class="hero-copy">
-            <div class="hero-orbit" aria-hidden="true"></div>
+      <main class="portal-home">
+        <section class="portal-topline" aria-label="오늘의 명리결 안내">
+          <strong>오늘의 학습 루트</strong>
+          <span>입문 VOD → 콘텐츠 읽기 → 커뮤니티 질문 → 상담 예약</span>
+          <a href="pages/course-basic.html">바로 시작</a>
+        </section>
+
+        <section class="portal-shortcuts" aria-label="빠른 메뉴">
+          <a href="pages/course-basic.html"><span>▣</span><strong>입문 VOD</strong></a>
+          <a href="pages/vod.html"><span>▶</span><strong>VOD 클래스</strong></a>
+          <a href="pages/content.html"><span>✦</span><strong>콘텐츠</strong></a>
+          <a href="pages/community.html"><span>◌</span><strong>커뮤니티</strong></a>
+          <a href="pages/booking.html"><span>✓</span><strong>상담예약</strong></a>
+          <a href="#guide"><span>?</span><strong>이용방법</strong></a>
+        </section>
+
+        <section class="portal-hero-grid" id="start">
+          <article class="portal-feature">
             <p class="hero-kicker">명확하고 믿을 수 있는 명리학 플랫폼</p>
             <h1>내 삶의 흐름을 읽고,<br><span>더 나은 선택을 돕습니다</span></h1>
-            <p class="hero-summary">
+            <p>
               짧은 결과 소비보다 구조를 이해하는 명리학 학습 경험에 집중하고,
               강의와 커뮤니티, 상담 예약으로 자연스럽게 이어집니다.
             </p>
@@ -61,238 +74,150 @@
               <a class="button button-primary" href="pages/course-basic.html">입문 강의 보기</a>
               <a class="button button-secondary" href="pages/content.html">콘텐츠 읽기</a>
             </div>
-          </div>
+          </article>
+
+          <aside class="portal-side-card" aria-label="예약과 학습 현황">
+            <div>
+              <span>이번 주 상담 가능</span>
+              <strong>14개 슬롯</strong>
+              <p>상담자를 선택하고 가능한 날짜와 시간을 확인하세요.</p>
+            </div>
+            <a href="pages/booking.html">상담 예약하기</a>
+          </aside>
         </section>
 
-        <section class="quick-entry">
-          <a class="quick-card" href="pages/course-basic.html">
-            <div class="quick-icon briefcase"></div>
-            <div class="quick-copy">
-              <h2>입문 VOD</h2>
-              <p>명리학의 기본 구조와 읽는 법을 차근히 배우는 시작 강의입니다.</p>
-            </div>
-            <span class="quick-arrow">›</span>
-          </a>
-          <a class="quick-card" href="pages/content.html">
-            <div class="quick-icon heart"></div>
-            <div class="quick-copy">
-              <h2>콘텐츠</h2>
-              <p>개념과 상담 준비법을 글로 읽고 커뮤니티에 인용해 토론합니다.</p>
-            </div>
-            <span class="quick-arrow">›</span>
-          </a>
-          <a class="quick-card" href="pages/community.html">
-            <div class="quick-icon calendar"></div>
-            <div class="quick-copy">
-              <h2>커뮤니티</h2>
-              <p>질문과 후기, 학습 포인트를 함께 나누며 해석 기준을 다듬습니다.</p>
-            </div>
-            <span class="quick-arrow">›</span>
-          </a>
-          <a class="quick-card" href="pages/booking.html">
-            <div class="quick-icon coin"></div>
-            <div class="quick-copy">
-              <h2>상담 예약</h2>
-              <p>혼자 해석이 막히는 지점은 예약 가능한 시간대에 맞춰 질문할 수 있습니다.</p>
-            </div>
-            <span class="quick-arrow">›</span>
-          </a>
+        <section class="portal-news-strip" aria-label="추천 영역">
+          <article>
+            <span>추천 VOD</span>
+            <strong>왕초보도 이해하는 사주명리 기초</strong>
+            <a href="pages/course-basic.html">수강하기</a>
+          </article>
+          <article>
+            <span>콘텐츠</span>
+            <strong>상담 전에 질문을 정리하는 법</strong>
+            <a href="pages/content.html">읽어보기</a>
+          </article>
+          <article>
+            <span>커뮤니티</span>
+            <strong>입문 강의 어디부터 시작하면 좋을까요?</strong>
+            <a href="pages/community.html">참여하기</a>
+          </article>
         </section>
 
-        <section class="content-board">
-          <article class="panel panel-vod" id="vod">
-            <div class="panel-head">
-              <h2>추천 VOD 클래스</h2>
+        <section class="portal-board-grid">
+          <article class="portal-panel portal-panel-wide" id="vod">
+            <div class="portal-panel-head">
+              <div>
+                <p>VOD 클래스</p>
+                <h2>추천 VOD 클래스</h2>
+              </div>
               <a href="pages/vod.html">전체보기</a>
             </div>
-            <div class="vod-grid">
-              <a class="vod-card" href="pages/course-basic.html">
-                <div class="vod-thumb vod-a"></div>
-                <h3>왕초보도 이해하는 사주명리 기초</h3>
-                <p>★ 4.9 (1,872)</p>
+            <div class="portal-course-row">
+              <a class="portal-course-card" href="pages/course-basic.html">
+                <span class="course-visual course-a"></span>
+                <strong>왕초보도 이해하는 사주명리 기초</strong>
+                <small>★ 4.9 · 1,872명 수강</small>
               </a>
-              <a class="vod-card" href="pages/course-sinsal.html">
-                <div class="vod-thumb vod-b"></div>
-                <h3>신살 완벽해석 실전 활용법</h3>
-                <p>★ 4.8 (1,256)</p>
+              <a class="portal-course-card" href="pages/course-sinsal.html">
+                <span class="course-visual course-b"></span>
+                <strong>신살 완벽해석 실전 활용법</strong>
+                <small>★ 4.8 · 1,256명 수강</small>
               </a>
-              <a class="vod-card" href="pages/course-flow.html">
-                <div class="vod-thumb vod-c"></div>
-                <h3>대운/세운 흐름의 실전 리딩</h3>
-                <p>★ 4.9 (1,048)</p>
+              <a class="portal-course-card" href="pages/course-flow.html">
+                <span class="course-visual course-c"></span>
+                <strong>대운/세운 흐름의 실전 리딩</strong>
+                <small>★ 4.9 · 1,048명 수강</small>
               </a>
             </div>
-            <a class="panel-footer-link" href="pages/vod.html">VOD 클래스 더보기</a>
           </article>
 
-          <article class="panel panel-community" id="community">
-            <div class="panel-head">
-              <h2>인기 커뮤니티 글</h2>
+          <article class="portal-panel portal-ranking">
+            <div class="portal-panel-head">
+              <div>
+                <p>커뮤니티</p>
+                <h2>인기 질문</h2>
+              </div>
               <a href="pages/community.html">더보기</a>
             </div>
-            <ul class="community-list">
-              <li>
-                <a href="pages/community-detail.html">
-                  <div>
-                    <strong>입문 강의 어디부터 시작하면 좋을까요?</strong>
-                    <p>강의 추천 · 초보 학습자 · 댓글 32</p>
-                  </div>
-                  <span>1시간 전</span>
-                </a>
-              </li>
-              <li>
-                <a href="pages/community-detail.html">
-                  <div>
-                    <strong>신살 강의가 기초 다음 순서로 괜찮나요?</strong>
-                    <p>커리큘럼 질문 · 수강생 · 댓글 18</p>
-                  </div>
-                  <span>3시간 전</span>
-                </a>
-              </li>
-              <li>
-                <a href="pages/community-detail.html">
-                  <div>
-                    <strong>커뮤니티 글을 읽을 때 기준을 어떻게 잡으세요?</strong>
-                    <p>해석 기준 · 토론 · 댓글 27</p>
-                  </div>
-                  <span>5시간 전</span>
-                </a>
-              </li>
-              <li>
-                <a href="pages/community-detail.html">
-                  <div>
-                    <strong>상담 전에 정리해두면 좋은 질문 목록 있을까요?</strong>
-                    <p>상담 준비 · 학습 메모 · 댓글 15</p>
-                  </div>
-                  <span>8시간 전</span>
-                </a>
-              </li>
-            </ul>
-            <a class="panel-footer-link" href="pages/community.html">커뮤니티 더보기</a>
-          </article>
-
-          <article class="panel panel-trust" id="trust">
-            <div class="panel-head">
-              <h2>믿을 수 있는 플랫폼</h2>
-            </div>
-            <div class="trust-list">
-              <article class="trust-item">
-                <div class="trust-icon shield"></div>
-                <div>
-                  <h3>운영 기준 공개</h3>
-                  <p>강의, 커뮤니티, 상담의 범위와 한계를 사용자가 먼저 확인할 수 있게 안내합니다.</p>
-                </div>
-              </article>
-              <article class="trust-item">
-                <div class="trust-icon lock"></div>
-                <div>
-                  <h3>개인정보 보호</h3>
-                  <p>철저한 보안으로 안전하게 보호하며 비식별화된 데이터만 활용</p>
-                </div>
-              </article>
-              <article class="trust-item">
-                <div class="trust-icon chart"></div>
-                <div>
-                  <h3>학습 기록 연결</h3>
-                  <p>읽은 글, 수강한 강의, 남긴 질문이 상담 준비 흐름으로 자연스럽게 이어집니다.</p>
-                </div>
-              </article>
-            </div>
-            <a class="panel-footer-link" href="#faq">자주 묻는 질문(FAQ)</a>
+            <ol>
+              <li><a href="pages/community-detail.html"><b>1</b> 입문 강의 어디부터 시작하면 좋을까요?</a></li>
+              <li><a href="pages/community-detail.html"><b>2</b> 신살 강의가 기초 다음 순서로 괜찮나요?</a></li>
+              <li><a href="pages/community-detail.html"><b>3</b> 커뮤니티 글을 읽을 때 기준을 어떻게 잡으세요?</a></li>
+              <li><a href="pages/community-detail.html"><b>4</b> 상담 전에 정리해두면 좋은 질문 목록 있을까요?</a></li>
+            </ol>
           </article>
         </section>
 
-        <section class="lower-sections">
-          <article class="sub-panel" id="guide">
-            <div class="sub-panel-head">
-              <p>이용 방법</p>
-              <h2>서비스 이용 흐름</h2>
-            </div>
-            <div class="guide-steps">
-              <article>
-                <span>01</span>
-                <strong>기초 강의 선택</strong>
-                <p>왕초보용 강의부터 명리학의 기본 구조를 익힙니다.</p>
-              </article>
-              <article>
-                <span>02</span>
-                <strong>커뮤니티로 확장</strong>
-                <p>질문과 후기, 다른 학습자의 관점을 함께 보며 기준을 넓힙니다.</p>
-              </article>
-              <article>
-                <span>03</span>
-                <strong>필요하면 상담 예약</strong>
-                <p>혼자 정리되지 않는 지점만 예약 가능한 시간에 맞춰 질문합니다.</p>
-              </article>
-            </div>
-          </article>
+        <section class="portal-banner">
+          <div>
+            <span>명리결 상담 예약</span>
+            <strong>상담자와 시간을 선택하는 단계형 예약</strong>
+            <p>질문 메모와 연락처를 남기면 결제 확인 후 예약이 확정됩니다.</p>
+          </div>
+          <a href="pages/booking.html">예약 페이지로 이동</a>
+        </section>
 
-          <article class="sub-panel" id="preview">
-            <div class="sub-panel-head">
-              <p>플랫폼 운영 방향</p>
-              <h2>짧은 결과보다 구조 이해에 집중합니다</h2>
-            </div>
-            <div class="preview-copy">
-              <p>
-                이 서비스는 짧은 결과를 반복 소비하게 만드는 대신,
-                명리학의 구조를 배우고 질문을 축적하며 이해를 깊게 만드는 흐름으로 설계합니다.
-              </p>
-              <p>
-                그래서 홈의 핵심 진입도 강의, 커뮤니티, 상담 예약 중심으로 단순하게 정리했습니다.
-              </p>
-            </div>
-          </article>
-
-          <article class="sub-panel" id="content">
-            <div class="sub-panel-head">
+        <section class="portal-card-section" id="content">
+          <div class="portal-section-head">
+            <div>
               <p>콘텐츠</p>
               <h2>읽고 인용하며 기준을 쌓습니다</h2>
             </div>
-            <div class="preview-copy">
-              <p>
-                콘텐츠는 명리학 개념을 생활 언어로 풀어내고,
-                마음에 남는 문장은 커뮤니티에 인용해 질문과 의견으로 확장할 수 있습니다.
-              </p>
+            <a href="pages/content.html">콘텐츠 목록</a>
+          </div>
+          <div class="portal-content-cards">
+            <a href="pages/content-detail.html"><span></span><strong>명리학 개념을 생활 언어로 이해하는 법</strong><small>기초 개념 · 8분 읽기</small></a>
+            <a href="pages/content-detail.html"><span></span><strong>상담 전에 질문을 좁히는 체크리스트</strong><small>상담 준비 · 6분 읽기</small></a>
+            <a href="pages/content-detail.html"><span></span><strong>대운과 세운을 학습할 때 흔한 오해</strong><small>흐름 읽기 · 10분 읽기</small></a>
+            <a href="pages/content-detail.html"><span></span><strong>커뮤니티 글을 인용해 토론하는 방법</strong><small>커뮤니티 · 5분 읽기</small></a>
+          </div>
+        </section>
+
+        <section class="portal-split-section">
+          <article class="portal-panel" id="guide">
+            <div class="portal-panel-head">
+              <div>
+                <p>이용 방법</p>
+                <h2>서비스 이용 흐름</h2>
+              </div>
             </div>
-            <a class="panel-footer-link" href="pages/content.html">콘텐츠 목록으로 이동</a>
+            <div class="portal-step-list">
+              <article><span>01</span><strong>기초 강의 선택</strong><p>왕초보용 강의부터 명리학의 기본 구조를 익힙니다.</p></article>
+              <article><span>02</span><strong>커뮤니티로 확장</strong><p>질문과 후기, 다른 학습자의 관점을 보며 기준을 넓힙니다.</p></article>
+              <article><span>03</span><strong>필요하면 상담 예약</strong><p>혼자 정리되지 않는 지점만 예약 가능한 시간에 맞춰 질문합니다.</p></article>
+            </div>
           </article>
 
-          <article class="sub-panel" id="faq">
-            <div class="sub-panel-head">
-              <p>신뢰 기준</p>
-              <h2>정책과 안내</h2>
+          <article class="portal-panel" id="trust">
+            <div class="portal-panel-head">
+              <div>
+                <p>신뢰 기준</p>
+                <h2>믿을 수 있는 플랫폼</h2>
+              </div>
             </div>
-            <ul class="faq-list">
-              <li>무료와 유료의 차이: 기본 해석과 심화 리포트의 범위를 분명하게 안내합니다.</li>
-              <li>상담 안전 정책: 외부 거래 유도 없이 플랫폼 안에서만 진행합니다.</li>
-              <li>사주 계산 기준 공개: 입력 기준과 해석 출발점을 먼저 보여줍니다.</li>
-            </ul>
+            <div class="portal-trust-list">
+              <article><strong>운영 기준 공개</strong><p>강의, 커뮤니티, 상담의 범위와 한계를 먼저 안내합니다.</p></article>
+              <article><strong>개인정보 보호</strong><p>상담과 예약에 필요한 정보만 수집하고 정책 페이지에서 기준을 확인할 수 있습니다.</p></article>
+              <article><strong>학습 기록 연결</strong><p>읽은 글, 수강한 강의, 남긴 질문이 상담 준비 흐름으로 이어집니다.</p></article>
+            </div>
           </article>
+        </section>
 
-          <article class="sub-panel" id="booking">
-            <div class="sub-panel-head">
-              <p>상담 예약</p>
-              <h2>상담자와 시간을 선택하는 예약</h2>
+        <section class="portal-card-section" id="booking">
+          <div class="portal-section-head">
+            <div>
+              <p>상담자</p>
+              <h2>상담 주제에 맞는 상담자를 선택하세요</h2>
             </div>
-            <div class="guide-steps">
-              <article>
-                <span>상담자</span>
-                <strong>주제에 맞는 상담자 선택</strong>
-                <p>입문 질문, 흐름 읽기, 상담 전 질문 정리 등 목적에 맞춰 상담자를 고릅니다.</p>
-              </article>
-              <article>
-                <span>시간표</span>
-                <strong>가능한 날짜와 시간 선택</strong>
-                <p>상담자별 타임테이블에서 가능한 슬롯을 확인하고 원하는 시간을 선택합니다.</p>
-              </article>
-              <article>
-                <span>요청</span>
-                <strong>예약 전 확인</strong>
-                <p>질문 메모와 연락처를 남기면 플랫폼 내부 절차에 따라 예약 요청이 접수됩니다.</p>
-              </article>
-            </div>
-            <a class="panel-footer-link" href="pages/booking.html">상담 예약 페이지로 이동</a>
-          </article>
+            <a href="pages/booking.html">상담 예약</a>
+          </div>
+          <div class="portal-consultant-grid">
+            <a href="pages/booking.html"><span>한</span><strong>한서윤</strong><small>입문 질문 정리 · 오늘 3개 슬롯</small></a>
+            <a href="pages/booking.html"><span>문</span><strong>문도현</strong><small>십성 패턴 · 내일 5개 슬롯</small></a>
+            <a href="pages/booking.html"><span>서</span><strong>서라온</strong><small>흐름 읽기 · 이번 주 8개 슬롯</small></a>
+            <a href="pages/booking.html"><span>+</span><strong>상담 준비</strong><small>질문 메모와 일정 확인 후 예약</small></a>
+          </div>
         </section>
       </main>
       <footer class="site-footer">
