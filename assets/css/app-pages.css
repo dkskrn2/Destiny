@@ -1697,6 +1697,65 @@
   margin: 0;
 }
 
+.post-author-line {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  align-items: center;
+  margin-top: 14px;
+}
+
+.author-name {
+  color: #fff;
+  font-size: 0.88rem;
+  font-weight: 900;
+}
+
+.element-tag {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 28px;
+  padding: 5px 10px;
+  border: 1px solid transparent;
+  border-radius: 999px;
+  font: inherit;
+  font-size: 0.78rem;
+  font-weight: 900;
+  line-height: 1;
+  white-space: nowrap;
+}
+
+.element-wood {
+  border-color: rgba(114, 212, 148, 0.38);
+  color: #bdf7cd;
+  background: rgba(114, 212, 148, 0.14);
+}
+
+.element-fire {
+  border-color: rgba(255, 126, 126, 0.4);
+  color: #ffd0c8;
+  background: rgba(255, 126, 126, 0.14);
+}
+
+.element-earth {
+  border-color: rgba(230, 188, 122, 0.42);
+  color: #ffe1ae;
+  background: rgba(230, 188, 122, 0.14);
+}
+
+.element-metal {
+  border-color: rgba(220, 225, 238, 0.36);
+  color: #eef3ff;
+  background: rgba(220, 225, 238, 0.12);
+}
+
+.element-water {
+  border-color: rgba(108, 139, 255, 0.42);
+  color: #cbd6ff;
+  background: rgba(108, 139, 255, 0.16);
+}
+
 .post-stats {
   display: grid;
   gap: 8px;
@@ -1759,6 +1818,25 @@
   font-weight: 800;
 }
 
+.element-filter-list {
+  display: grid;
+  grid-template-columns: repeat(5, minmax(0, 1fr));
+  gap: 8px;
+}
+
+.element-filter-list .element-tag {
+  width: 100%;
+  min-height: 38px;
+  cursor: pointer;
+}
+
+.element-filter-note {
+  margin: 14px 0 0;
+  color: var(--muted);
+  font-size: 0.88rem;
+  line-height: 1.6;
+}
+
 .cta-card .phone-cta {
   margin-top: var(--space-16);
 }
@@ -1777,6 +1855,7 @@
 .detail-meta {
   display: flex;
   flex-wrap: wrap;
+  align-items: center;
   gap: 8px 14px;
   margin: var(--space-20) 0;
 }
@@ -1809,6 +1888,19 @@
   margin: 4px 0 0;
   color: var(--muted);
   line-height: 1.55;
+}
+
+.author-element-summary {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px 10px;
+  align-items: center;
+  margin-top: 12px;
+}
+
+.author-element-summary small {
+  color: var(--muted);
+  line-height: 1.5;
 }
 
 .post-body {
