@@ -919,7 +919,12 @@ body::before {
   font-weight: 800;
 }
 
-.portal-board-grid,
+.portal-board-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: var(--space-20);
+}
+
 .portal-split-section {
   display: grid;
   grid-template-columns: minmax(0, 1.35fr) minmax(320px, 0.65fr);
