@@ -1476,45 +1476,12 @@
   padding: 42px var(--space-48) var(--space-48);
 }
 
-.community-hero {
-  display: grid;
-  grid-template-columns: minmax(0, 1fr) minmax(320px, 0.42fr);
-  gap: var(--space-24);
-  align-items: end;
-  padding: var(--space-48);
-  border: 1px solid var(--line);
-  border-radius: var(--radius-frame);
-  background:
-    radial-gradient(circle at 78% 18%, var(--app-glow), transparent 24%),
-    linear-gradient(180deg, rgba(20, 19, 30, 0.96), rgba(12, 11, 19, 0.98));
-  box-shadow: var(--shadow-soft);
-}
-
-.community-hero h1,
 .post-detail-card h1 {
   margin: 0;
   font-family: "Noto Serif KR", serif;
   letter-spacing: -0.05em;
 }
 
-.community-hero h1 {
-  max-width: 12ch;
-  font-size: clamp(2.7rem, 4.2vw, 4.8rem);
-  line-height: 1.15;
-}
-
-.community-hero h1 span {
-  color: var(--app-accent);
-}
-
-.community-lead {
-  max-width: 58ch;
-  margin: var(--space-24) 0 0;
-  color: var(--muted);
-  line-height: 1.8;
-}
-
-.community-profile-card,
 .community-filter-bar,
 .community-feed,
 .sidebar-card,
@@ -1525,33 +1492,14 @@
   background: rgba(255, 255, 255, 0.055);
 }
 
-.community-profile-card {
-  display: grid;
-  gap: 8px;
-  padding: var(--space-24);
-  border-radius: var(--radius-panel);
-}
-
-.community-profile-card span,
 .post-stats span,
 .detail-meta span {
   color: var(--muted);
 }
 
-.community-profile-card strong {
-  font-size: 1.25rem;
-}
-
-.community-profile-card p {
-  margin: 0;
-  color: var(--muted);
-  line-height: 1.65;
-}
-
 .community-filter-bar {
   display: flex;
   gap: 10px;
-  margin-top: var(--space-20);
   padding: 12px;
   border-radius: 20px;
   overflow-x: auto;
@@ -4281,7 +4229,6 @@
     grid-template-columns: 1fr;
   }
 
-  .community-hero,
   .community-layout,
   .detail-layout,
   .content-hero,
@@ -4710,7 +4657,6 @@
     margin-top: var(--space-16);
   }
 
-  .community-hero,
   .community-feed,
   .post-detail-card,
   .content-hero,
@@ -4734,7 +4680,6 @@
     border-radius: 28px;
   }
 
-  .community-hero h1,
   .post-detail-card h1,
   .content-hero h1,
   .article-card h1,
@@ -4747,7 +4692,6 @@
     font-size: clamp(2rem, 8vw, 2.75rem);
   }
 
-  .community-lead,
   .content-lead,
   .booking-lead,
   .content-row p,
