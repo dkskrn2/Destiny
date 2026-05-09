@@ -750,7 +750,7 @@ body::before {
 
 .portal-shortcuts {
   display: grid;
-  grid-template-columns: repeat(6, minmax(0, 1fr));
+  grid-template-columns: repeat(5, minmax(0, 1fr));
   gap: var(--space-16);
   padding-top: var(--space-24);
 }
@@ -925,12 +925,6 @@ body::before {
   gap: var(--space-20);
 }
 
-.portal-split-section {
-  display: grid;
-  grid-template-columns: minmax(0, 1.35fr) minmax(320px, 0.65fr);
-  gap: var(--space-20);
-}
-
 .portal-panel,
 .portal-card-section {
   border-radius: var(--radius-panel);
@@ -1085,39 +1079,6 @@ body::before {
   padding: 0 18px;
 }
 
-.portal-step-list,
-.portal-trust-list {
-  display: grid;
-  gap: var(--space-12);
-}
-
-.portal-step-list article,
-.portal-trust-list article {
-  padding: var(--space-16);
-  border: 1px solid var(--line-soft);
-  border-radius: 14px;
-  background: rgba(255, 255, 255, 0.03);
-}
-
-.portal-step-list span {
-  color: #8be6d4;
-  font-weight: 900;
-}
-
-.portal-step-list strong,
-.portal-trust-list strong {
-  display: block;
-  margin: 8px 0;
-  color: #fff;
-}
-
-.portal-step-list p,
-.portal-trust-list p {
-  margin: 0;
-  color: var(--muted);
-  line-height: 1.65;
-}
-
 .portal-consultant-grid a {
   min-height: 210px;
   align-content: end;
@@ -1164,8 +1125,7 @@ body::before {
   }
 
   .portal-hero-grid,
-  .portal-board-grid,
-  .portal-split-section {
+  .portal-board-grid {
     grid-template-columns: 1fr;
   }
 }
