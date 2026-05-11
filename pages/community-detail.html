@@ -46,6 +46,10 @@
               <span>조회 2,841</span>
               <span>댓글 32</span>
             </div>
+            <div class="community-report-bar" aria-label="게시글 운영 액션">
+              <p>부적절한 글이거나 개인정보 노출이 있으면 운영팀에 검토를 요청할 수 있습니다.</p>
+              <a class="report-trigger" href="#post-report-panel">게시글 신고</a>
+            </div>
 
             <div class="author-proof">
               <span class="avatar-dot">●</span>
@@ -73,6 +77,31 @@
               </p>
             </div>
 
+            <section class="community-report-panel" id="post-report-panel" aria-label="게시글 신고">
+              <div class="report-panel-head">
+                <div>
+                  <p class="story-step">REPORT</p>
+                  <h2>게시글 신고하기</h2>
+                </div>
+                <span class="report-status-chip">운영팀 검토 요청</span>
+              </div>
+              <p class="report-guide">신고는 운영 정책 위반 여부를 확인하기 위한 요청입니다. 단순한 의견 차이보다는 욕설, 광고, 개인정보 노출, 허위 정보처럼 서비스 이용을 해치는 내용을 기준으로 접수해 주세요.</p>
+              <div class="report-reason-grid">
+                <label><input type="radio" name="post-report-reason" checked> 욕설/비방</label>
+                <label><input type="radio" name="post-report-reason"> 광고/홍보</label>
+                <label><input type="radio" name="post-report-reason"> 개인정보 노출</label>
+                <label><input type="radio" name="post-report-reason"> 허위 정보</label>
+              </div>
+              <label class="report-textarea">
+                <span>상세 내용</span>
+                <textarea placeholder="운영팀이 확인해야 할 내용을 간단히 적어주세요."></textarea>
+              </label>
+              <div class="report-submit-row">
+                <p>접수 후에는 BO 신고 관리에서 신규 신고로 표시됩니다.</p>
+                <button type="button">신고 접수</button>
+              </div>
+            </section>
+
             <div class="insight-box">
               <p class="story-step">AI SUMMARY</p>
               <h2>이 글의 핵심 질문</h2>
@@ -85,11 +114,17 @@
                 <button type="button">댓글 쓰기</button>
               </div>
               <article class="comment-card">
-                <strong>수강생 · 기초→십성 순서</strong>
+                <div class="comment-card-head">
+                  <strong>수강생 · 기초→십성 순서</strong>
+                  <button type="button">댓글 신고</button>
+                </div>
                 <p>저는 기초 다음에 십성 강의를 먼저 봤습니다. 커뮤니티에서 사람들이 말하는 성향과 역할 이야기를 이해하기 쉬워졌고, 그 다음에 흐름 강의를 보니 덜 추상적이었습니다.</p>
               </article>
               <article class="comment-card">
-                <strong>운영팀 · 커리큘럼 가이드</strong>
+                <div class="comment-card-head">
+                  <strong>운영팀 · 커리큘럼 가이드</strong>
+                  <button type="button">댓글 신고</button>
+                </div>
                 <p>지금 막히는 지점이 용어인지 적용인지에 따라 추천 순서가 달라집니다. 용어를 더 정리하고 싶으면 기초 복습과 십성, 사례 적용이 필요하면 흐름 강의가 더 잘 맞습니다.</p>
               </article>
             </section>
@@ -114,6 +149,12 @@
                 <a href="course-ten.html">십성 강의 커리큘럼 보기</a>
                 <a href="booking.html">상담 예약하기</a>
               </div>
+            </article>
+
+            <article class="sidebar-card">
+              <p class="story-step">SAFETY</p>
+              <h2>커뮤니티 운영 기준</h2>
+              <p class="report-side-copy">신고된 글은 즉시 삭제되지 않고 운영팀 검토 후 숨김, 삭제, 기각 중 하나로 처리됩니다.</p>
             </article>
           </aside>
         </section>

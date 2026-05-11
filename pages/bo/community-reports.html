@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>명리결 BO | 신고 관리</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Pretendard:wght@400;500;600;700;800;900&family=Noto+Serif+KR:wght@600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../../assets/css/bo.css">
+</head>
+<body>
+  <div class="bo-shell">
+    <aside class="bo-sidebar">
+      <a class="bo-brand" href="index.html"><strong>명리결 BO</strong><small>운영 콘솔</small></a>
+      <nav class="bo-nav" aria-label="BO 메뉴">
+        <a href="index.html">대시보드<span>홈</span></a>
+        <a href="bookings.html">예약 관리<span>32</span></a>
+        <a href="counselors.html">상담자<span>3</span></a>
+        <a href="courses.html">VOD<span>4</span></a>
+        <a href="content.html">콘텐츠<span>18</span></a>
+        <a href="community.html">커뮤니티<span>128</span></a>
+        <a class="is-active" href="community-reports.html">신고 관리<span>3</span></a>
+        <a href="users.html">회원<span>2.8k</span></a>
+      </nav>
+    </aside>
+    <main class="bo-main">
+      <header class="bo-topbar">
+        <div>
+          <h1>커뮤니티 신고 관리</h1>
+          <p>FO에서 접수된 게시글/댓글 신고를 조회하고 숨김, 삭제, 기각 상태로 처리합니다.</p>
+        </div>
+        <div class="bo-actions">
+          <a class="bo-button" href="../community-detail.html">신고 대상 보기</a>
+          <a class="bo-button is-primary" href="community.html">커뮤니티 관리</a>
+        </div>
+      </header>
+
+      <section class="bo-grid cols-4">
+        <article class="bo-kpi"><span>신규 신고</span><strong>3</strong><small class="bo-muted">오늘 접수 2건</small></article>
+        <article class="bo-kpi"><span>검토 중</span><strong>5</strong><small class="bo-muted">24시간 초과 1건</small></article>
+        <article class="bo-kpi"><span>숨김 처리</span><strong>12</strong><small class="bo-muted">최근 30일 기준</small></article>
+        <article class="bo-kpi"><span>삭제 처리</span><strong>4</strong><small class="bo-muted">운영자 확인 완료</small></article>
+      </section>
+
+      <section class="bo-report-layout" style="margin-top:18px">
+        <article class="bo-panel">
+          <div class="bo-panel-head">
+            <h2>신고 접수 목록</h2>
+            <div class="bo-actions">
+              <span class="bo-status danger">긴급 1</span>
+              <span class="bo-status wait">검토 필요 3</span>
+            </div>
+          </div>
+          <div class="bo-filter">
+            <label class="bo-field"><span>검색</span><input placeholder="작성자, 신고자, 신고 ID"></label>
+            <label class="bo-field"><span>상태</span><select><option>전체</option><option>신규</option><option>검토 중</option><option>숨김</option><option>삭제</option><option>기각</option></select></label>
+            <label class="bo-field"><span>대상</span><select><option>전체</option><option>게시글</option><option>댓글</option></select></label>
+            <label class="bo-field"><span>사유</span><select><option>전체</option><option>욕설/비방</option><option>광고/홍보</option><option>개인정보</option><option>허위 정보</option></select></label>
+          </div>
+          <div class="bo-table-wrap">
+            <table class="bo-table bo-report-table">
+              <thead>
+                <tr>
+                  <th>신고 ID</th>
+                  <th>신고 대상</th>
+                  <th>작성자/신고자</th>
+                  <th>사유</th>
+                  <th>누적</th>
+                  <th>상태</th>
+                  <th>처리</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td><strong>RPT-2405-031</strong><small>오늘 10:42</small></td>
+                  <td>
+                    <div class="bo-report-target">
+                      <strong>댓글 · 입문 강의 다음 순서</strong>
+                      <p>상대방을 비하하는 표현이 포함되어 있다는 신고가 접수되었습니다.</p>
+                    </div>
+                  </td>
+                  <td><strong>작성자: 별빛노트</strong><small>신고자: 수강생42</small></td>
+                  <td><div class="bo-report-reasons"><span class="bo-report-chip">욕설/비방</span><span class="bo-report-chip">분쟁 유도</span></div></td>
+                  <td>3건</td>
+                  <td><span class="bo-status danger">신규</span></td>
+                  <td><div class="bo-actions bo-table-actions"><a class="bo-button" href="../community-detail.html">원문</a><button class="bo-button is-danger" type="button">숨김</button></div></td>
+                </tr>
+                <tr>
+                  <td><strong>RPT-2405-030</strong><small>오늘 09:15</small></td>
+                  <td>
+                    <div class="bo-report-target">
+                      <strong>게시글 · 상담 예약 전 질문 정리법</strong>
+                      <p>외부 상담 채널로 유도하는 홍보 문구가 포함되어 있습니다.</p>
+                    </div>
+                  </td>
+                  <td><strong>작성자: 흐름상담소</strong><small>신고자: 정리하는밤</small></td>
+                  <td><div class="bo-report-reasons"><span class="bo-report-chip">광고/홍보</span></div></td>
+                  <td>1건</td>
+                  <td><span class="bo-status wait">검토 중</span></td>
+                  <td><div class="bo-actions bo-table-actions"><a class="bo-button" href="../community-detail.html">원문</a><button class="bo-button is-danger" type="button">삭제</button></div></td>
+                </tr>
+                <tr>
+                  <td><strong>RPT-2405-029</strong><small>어제 18:08</small></td>
+                  <td>
+                    <div class="bo-report-target">
+                      <strong>게시글 · 오행 해석 기준 질문</strong>
+                      <p>개인 생년월일과 연락처가 본문에 포함되어 개인정보 노출 신고가 접수되었습니다.</p>
+                    </div>
+                  </td>
+                  <td><strong>작성자: 초록달</strong><small>신고자: 운영 모니터링</small></td>
+                  <td><div class="bo-report-reasons"><span class="bo-report-chip">개인정보</span></div></td>
+                  <td>2건</td>
+                  <td><span class="bo-status review">숨김 완료</span></td>
+                  <td><div class="bo-actions bo-table-actions"><a class="bo-button" href="../community-detail.html">원문</a><button class="bo-button" type="button">기각</button></div></td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </article>
+
+        <aside class="bo-panel bo-review-card">
+          <div class="bo-panel-head">
+            <h2>선택 신고 상세</h2>
+            <span class="bo-status danger">신규</span>
+          </div>
+          <div class="bo-review-source">
+            <h3>신고된 댓글 미리보기</h3>
+            <p>“이런 식으로 공부하는 건 시간 낭비입니다. 질문 수준이 너무 낮네요.”</p>
+          </div>
+          <label class="bo-field">
+            <span>운영 메모</span>
+            <textarea placeholder="처리 기준과 판단 근거를 남겨주세요.">비방 표현 포함. 동일 글 내 대화 맥락 확인 후 댓글 숨김 처리 권장.</textarea>
+          </label>
+          <div class="bo-actions">
+            <button class="bo-button" type="button">기각</button>
+            <button class="bo-button" type="button">검토 중</button>
+            <button class="bo-button is-danger" type="button">숨김 처리</button>
+            <button class="bo-button is-danger" type="button">삭제 처리</button>
+          </div>
+          <div>
+            <h3>처리 이력</h3>
+            <ul class="bo-timeline">
+              <li><strong>오늘 10:42</strong>수강생42 사용자가 욕설/비방으로 신고했습니다.</li>
+              <li><strong>오늘 10:45</strong>동일 댓글에 추가 신고 2건이 누적되었습니다.</li>
+              <li><strong>현재</strong>운영자 검토 대기 상태입니다.</li>
+            </ul>
+          </div>
+        </aside>
+      </section>
+    </main>
+  </div>
+</body>
+</html>
