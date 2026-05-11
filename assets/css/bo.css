@@ -448,6 +448,84 @@ a {
   color: var(--bo-text);
 }
 
+.bo-popup-preview-panel {
+  margin-top: 18px;
+}
+
+.bo-popup-preview {
+  display: grid;
+  grid-template-columns: minmax(220px, 0.38fr) minmax(0, 1fr);
+  overflow: hidden;
+  max-width: 760px;
+  border: 1px solid var(--bo-line);
+  border-radius: 22px;
+  background: rgba(255, 255, 255, 0.04);
+}
+
+.bo-popup-visual {
+  min-height: 220px;
+  padding: 24px;
+  background:
+    radial-gradient(circle at 18% 20%, rgba(240, 203, 142, 0.28), transparent 30%),
+    radial-gradient(circle at 82% 28%, rgba(157, 114, 255, 0.34), transparent 26%),
+    linear-gradient(135deg, rgba(127, 156, 255, 0.22), rgba(139, 230, 212, 0.14));
+}
+
+.bo-popup-visual span {
+  display: inline-flex;
+  min-height: 28px;
+  align-items: center;
+  padding: 4px 10px;
+  border-radius: 999px;
+  color: #07110f;
+  background: var(--bo-accent);
+  font-size: 0.76rem;
+  font-weight: 900;
+}
+
+.bo-popup-visual strong {
+  display: block;
+  margin-top: 18px;
+  font-family: "Noto Serif KR", serif;
+  font-size: 2rem;
+  line-height: 1.18;
+}
+
+.bo-popup-copy {
+  display: grid;
+  gap: 12px;
+  align-content: center;
+  padding: 24px;
+}
+
+.bo-popup-copy > strong {
+  font-size: 1.25rem;
+  line-height: 1.45;
+}
+
+.bo-popup-copy p {
+  margin: 0;
+  color: var(--bo-muted);
+  line-height: 1.65;
+}
+
+.bo-popup-copy div {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.bo-popup-copy button {
+  min-height: 40px;
+  padding: 0 12px;
+  border: 1px solid var(--bo-line);
+  border-radius: 12px;
+  color: var(--bo-text);
+  background: rgba(255, 255, 255, 0.045);
+  font: inherit;
+  font-weight: 900;
+}
+
 @media (max-width: 1080px) {
   .bo-shell {
     grid-template-columns: 1fr;
@@ -521,5 +599,9 @@ a {
 
   .bo-table-actions {
     grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .bo-popup-preview {
+    grid-template-columns: 1fr;
   }
 }

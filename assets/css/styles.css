@@ -1079,6 +1079,117 @@ body::before {
   padding: 0 18px;
 }
 
+.site-popup {
+  position: fixed;
+  right: 28px;
+  bottom: 28px;
+  z-index: 50;
+  width: min(420px, calc(100vw - 36px));
+}
+
+.site-popup[hidden] {
+  display: none;
+}
+
+.site-popup-card {
+  overflow: hidden;
+  border: 1px solid rgba(255, 255, 255, 0.16);
+  border-radius: 28px;
+  background:
+    radial-gradient(circle at 86% 8%, rgba(139, 230, 212, 0.18), transparent 28%),
+    linear-gradient(180deg, rgba(24, 22, 35, 0.98), rgba(10, 9, 15, 0.98));
+  box-shadow: 0 28px 80px rgba(0, 0, 0, 0.46);
+}
+
+.site-popup-visual {
+  min-height: 150px;
+  padding: 24px;
+  background:
+    radial-gradient(circle at 18% 22%, rgba(240, 203, 142, 0.28), transparent 28%),
+    radial-gradient(circle at 82% 28%, rgba(157, 114, 255, 0.32), transparent 26%),
+    linear-gradient(135deg, rgba(127, 156, 255, 0.18), rgba(139, 230, 212, 0.14));
+}
+
+.site-popup-visual span {
+  display: inline-flex;
+  min-height: 28px;
+  align-items: center;
+  padding: 4px 10px;
+  border-radius: 999px;
+  color: #171019;
+  background: #8be6d4;
+  font-size: 0.76rem;
+  font-weight: 900;
+}
+
+.site-popup-visual strong {
+  display: block;
+  margin-top: 18px;
+  color: #fff;
+  font-family: "Noto Serif KR", serif;
+  font-size: 2rem;
+  line-height: 1.18;
+  letter-spacing: -0.06em;
+}
+
+.site-popup-content {
+  padding: 24px 24px 20px;
+}
+
+.site-popup-kicker {
+  margin: 0 0 8px;
+  color: #8be6d4;
+  font-size: 0.82rem;
+  font-weight: 900;
+}
+
+.site-popup-content h2 {
+  margin: 0;
+  color: #fff;
+  font-size: 1.22rem;
+  line-height: 1.45;
+  letter-spacing: -0.04em;
+}
+
+.site-popup-content p:not(.site-popup-kicker) {
+  margin: 12px 0 0;
+  color: var(--muted);
+  line-height: 1.65;
+}
+
+.site-popup-content a {
+  display: grid;
+  place-items: center;
+  min-height: 48px;
+  margin-top: 18px;
+  border-radius: 14px;
+  color: #171019;
+  background: linear-gradient(135deg, #f0cb8e, #8be6d4);
+  text-decoration: none;
+  font-weight: 900;
+}
+
+.site-popup-actions {
+  display: grid;
+  grid-template-columns: 1fr auto;
+  gap: 8px;
+  padding: 12px;
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+  background: rgba(0, 0, 0, 0.16);
+}
+
+.site-popup-actions button {
+  min-height: 42px;
+  padding: 0 12px;
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  border-radius: 12px;
+  color: var(--text);
+  background: rgba(255, 255, 255, 0.045);
+  font: inherit;
+  font-weight: 900;
+  cursor: pointer;
+}
+
 .portal-consultant-grid a {
   min-height: 210px;
   align-content: end;
@@ -1313,5 +1424,28 @@ body::before {
 
   .portal-banner {
     padding: 22px;
+  }
+
+  .site-popup {
+    right: 12px;
+    bottom: 12px;
+    width: calc(100vw - 24px);
+  }
+
+  .site-popup-visual {
+    min-height: 120px;
+    padding: 20px;
+  }
+
+  .site-popup-visual strong {
+    font-size: 1.55rem;
+  }
+
+  .site-popup-content {
+    padding: 20px;
+  }
+
+  .site-popup-actions {
+    grid-template-columns: 1fr;
   }
 }
