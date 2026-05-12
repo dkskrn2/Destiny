@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>철공소닷컴 BO | 고객문의</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Pretendard:wght@400;500;600;700;800;900&family=Noto+Serif+KR:wght@600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../../assets/css/bo.css?v=20260512">
+</head>
+<body>
+  <div class="bo-shell">
+    <aside class="bo-sidebar">
+      <a class="bo-brand" href="index.html"><strong>철공소닷컴 BO</strong><small>운영 콘솔</small></a>
+      <nav class="bo-nav" aria-label="BO 메뉴">
+        <a href="index.html">대시보드<span>홈</span></a>
+        <a href="bookings.html">예약 관리<span>32</span></a>
+        <a href="payments.html">결제 관리<span>9</span></a>
+        <a href="counselors.html">상담자<span>3</span></a>
+        <a href="courses.html">VOD<span>4</span></a>
+        <a href="content.html">콘텐츠<span>18</span></a>
+        <a href="community.html">커뮤니티<span>128</span></a>
+        <a href="community-reports.html">신고 관리<span>3</span></a>
+        <a class="is-active" href="support.html">고객문의<span>7</span></a>
+        <a href="popup.html">팝업 관리<span>1</span></a>
+        <a href="users.html">회원<span>2.8k</span></a>
+      </nav>
+    </aside>
+    <main class="bo-main">
+      <header class="bo-topbar">
+        <div><h1>고객문의</h1><p>예약, 결제/환불, VOD 수강, 커뮤니티, 계정 문의를 접수 상태별로 관리합니다.</p></div>
+        <div class="bo-actions"><a class="bo-button" href="../support-history.html">FO 문의 내역</a><a class="bo-button is-primary" href="support-detail.html">문의 상세</a></div>
+      </header>
+      <section class="bo-grid cols-4">
+        <a class="bo-kpi" href="support.html"><span>답변 대기</span><strong>7</strong><small class="bo-muted">오늘 접수 3건</small></a>
+        <a class="bo-kpi" href="support.html"><span>확인 중</span><strong>5</strong><small class="bo-muted">결제 확인 2건</small></a>
+        <a class="bo-kpi" href="support.html"><span>답변 완료</span><strong>26</strong><small class="bo-muted">최근 7일</small></a>
+        <a class="bo-kpi" href="support.html"><span>평균 응답</span><strong>2.4h</strong><small class="bo-muted">운영 시간 기준</small></a>
+      </section>
+      <section class="bo-panel" style="margin-top:18px">
+        <div class="bo-panel-head"><h2>문의 목록</h2><div class="bo-actions"><span class="bo-status wait">답변 대기 7</span><span class="bo-status danger">긴급 1</span></div></div>
+        <div class="bo-filter">
+          <label class="bo-field"><span>검색</span><input placeholder="접수번호, 회원명, 제목"></label>
+          <label class="bo-field"><span>문의 유형</span><select><option>전체</option><option>예약/변경</option><option>결제/환불</option><option>강의 수강</option><option>커뮤니티</option><option>계정</option></select></label>
+          <label class="bo-field"><span>처리 상태</span><select><option>전체</option><option>답변 대기</option><option>확인 중</option><option>답변 완료</option></select></label>
+          <label class="bo-field"><span>접수일</span><input type="date"></label>
+        </div>
+        <div class="bo-table-wrap">
+          <table class="bo-table">
+            <thead><tr><th>접수번호</th><th>문의 제목</th><th>회원</th><th>유형</th><th>연결 항목</th><th>상태</th><th>처리</th></tr></thead>
+            <tbody>
+              <tr><td><strong>CS-20260511-087</strong><small>오늘 14:21</small></td><td><strong>예약 변경 가능한 시간을 확인하고 싶습니다</strong><small>같은 주 토요일 오전으로 변경 가능 여부 문의</small></td><td>유창희<small>USR-10284</small></td><td>예약/변경</td><td><a href="booking-detail.html">R-20260515-014</a></td><td><span class="bo-status wait">답변 대기</span></td><td><a class="bo-button" href="support-detail.html">답변</a></td></tr>
+              <tr><td><strong>CS-20260510-044</strong><small>어제 16:08</small></td><td><strong>카드 결제 취소가 언제 반영되나요?</strong><small>상담 취소 후 환불 처리 상태 확인 요청</small></td><td>정리하는밤<small>환불 진행</small></td><td>결제/환불</td><td><a href="payment-detail.html">PAY-20260513-066</a></td><td><span class="bo-status review">확인 중</span></td><td><a class="bo-button" href="support-detail.html">상세</a></td></tr>
+              <tr><td><strong>CS-20260508-019</strong><small>2026.05.08</small></td><td><strong>VOD 시청 기록이 이어지지 않습니다</strong><small>이어보기 진도 반영 오류 문의</small></td><td>봄별사주<small>목 기운 강함</small></td><td>강의 수강</td><td><a href="course-detail.html">사주명리 기초</a></td><td><span class="bo-status ok">답변 완료</span></td><td><a class="bo-button" href="support-detail.html">보기</a></td></tr>
+              <tr><td><strong>CS-20260507-011</strong><small>2026.05.07</small></td><td><strong>커뮤니티 글에 생년월일을 잘못 올렸습니다</strong><small>개인정보가 포함된 게시글 숨김 요청</small></td><td>초록결<small>커뮤니티 작성자</small></td><td>커뮤니티</td><td><a href="community-detail.html">글 상세</a></td><td><span class="bo-status danger">긴급</span></td><td><a class="bo-button is-danger" href="support-detail.html">처리</a></td></tr>
+            </tbody>
+          </table>
+        </div>
+      </section>
+    </main>
+  </div>
+</body>
+</html>

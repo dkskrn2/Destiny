@@ -876,6 +876,46 @@ body::before {
   line-height: 1.65;
 }
 
+.portal-element-tag {
+  display: inline-flex;
+  padding: 3px 8px;
+  border-radius: 999px;
+  color: #171019;
+  background: #8be6d4;
+  font-style: normal;
+  font-weight: 900;
+}
+
+.portal-side-summary {
+  display: grid;
+  gap: 12px;
+}
+
+.portal-side-summary p {
+  margin: 0;
+  padding: 14px;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 14px;
+  background: rgba(255, 255, 255, 0.05);
+}
+
+.portal-side-summary b {
+  display: block;
+  margin-bottom: 4px;
+  color: #fff;
+}
+
+.portal-side-summary span {
+  margin: 0;
+  letter-spacing: 0;
+}
+
+.portal-side-actions {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 10px;
+}
+
 .portal-side-card a,
 .portal-banner a,
 .portal-panel-head a,
@@ -966,6 +1006,65 @@ body::before {
   grid-template-columns: repeat(3, minmax(0, 1fr));
 }
 
+.portal-course-featured {
+  display: grid;
+  grid-template-columns: minmax(0, 1.1fr) minmax(280px, 0.9fr);
+  gap: var(--space-16);
+  align-items: stretch;
+}
+
+.portal-main-course {
+  position: relative;
+  display: grid;
+  gap: 12px;
+  min-width: 0;
+  padding: var(--space-16);
+  border: 1px solid rgba(139, 230, 212, 0.24);
+  border-radius: 18px;
+  color: var(--text);
+  background: linear-gradient(145deg, rgba(255, 255, 255, 0.08), rgba(139, 230, 212, 0.06));
+  text-decoration: none;
+}
+
+.portal-main-course .course-visual {
+  min-height: 220px;
+}
+
+.course-badge {
+  display: inline-flex;
+  width: fit-content;
+  padding: 7px 10px;
+  border-radius: 999px;
+  color: #171019;
+  background: #8be6d4;
+  font-size: 0.78rem;
+  font-weight: 900;
+}
+
+.portal-course-list {
+  display: grid;
+  gap: 10px;
+}
+
+.portal-course-list a {
+  display: grid;
+  gap: 6px;
+  padding: 14px;
+  border: 1px solid var(--line-soft);
+  border-radius: 14px;
+  color: var(--text);
+  background: rgba(255, 255, 255, 0.03);
+  text-decoration: none;
+}
+
+.portal-course-list span,
+.question-chip span {
+  width: fit-content;
+  color: #8be6d4;
+  font-size: var(--text-meta);
+  font-weight: 900;
+}
+
 .portal-course-card,
 .portal-content-cards a,
 .portal-consultant-grid a {
@@ -1003,6 +1102,8 @@ body::before {
 }
 
 .portal-course-card strong,
+.portal-main-course strong,
+.portal-course-list strong,
 .portal-content-cards strong,
 .portal-consultant-grid strong {
   color: #fff;
@@ -1010,6 +1111,9 @@ body::before {
 }
 
 .portal-course-card small,
+.portal-main-course small,
+.portal-course-list small,
+.question-chip small,
 .portal-content-cards small,
 .portal-consultant-grid small {
   color: var(--muted);
@@ -1024,7 +1128,7 @@ body::before {
   list-style: none;
 }
 
-.portal-ranking a {
+.portal-ranking ol a {
   display: grid;
   grid-template-columns: 28px 1fr;
   gap: 10px;
@@ -1042,6 +1146,51 @@ body::before {
   border-radius: 50%;
   color: #171019;
   background: #8be6d4;
+}
+
+.portal-question-cloud {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+}
+
+.question-chip {
+  display: grid;
+  grid-template-columns: 1fr;
+  align-items: start;
+  gap: 7px;
+  flex: 1 1 220px;
+  min-width: 0;
+  padding: 15px;
+  border: 1px solid var(--line-soft);
+  border-radius: 20px 20px 20px 6px;
+  color: var(--text);
+  background: rgba(255, 255, 255, 0.04);
+  text-decoration: none;
+}
+
+.question-chip.is-hot {
+  flex-basis: 100%;
+  border-color: rgba(240, 203, 142, 0.34);
+  background: linear-gradient(135deg, rgba(240, 203, 142, 0.16), rgba(157, 114, 255, 0.08));
+}
+
+.question-chip span {
+  display: inline-flex;
+  max-width: 100%;
+  white-space: normal;
+}
+
+.question-chip strong {
+  color: #fff;
+  line-height: 1.45;
+}
+
+.question-author {
+  color: #d9d1e8;
+  font-size: 0.84rem;
+  font-style: normal;
+  line-height: 1.45;
 }
 
 .portal-banner {
@@ -1397,9 +1546,14 @@ body::before {
 
   .portal-news-strip,
   .portal-course-row,
+  .portal-course-featured,
   .portal-content-cards,
   .portal-consultant-grid {
     grid-template-columns: 1fr;
+  }
+
+  .portal-main-course .course-visual {
+    min-height: 180px;
   }
 
   .portal-panel,
@@ -1420,6 +1574,10 @@ body::before {
   .portal-banner a {
     width: 100%;
     text-align: center;
+  }
+
+  .portal-side-actions {
+    grid-template-columns: 1fr;
   }
 
   .portal-banner {

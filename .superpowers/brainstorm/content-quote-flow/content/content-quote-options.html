@@ -1,0 +1,65 @@
+<h2>콘텐츠/블로그와 커뮤니티 인용 플로우 설계안</h2>
+<p class="subtitle">블로그는 읽기 중심, 커뮤니티는 토론 중심으로 분리하고 “인용하기”로 두 영역을 연결하는 구조입니다.</p>
+
+<div class="split">
+  <div class="mockup">
+    <div class="mockup-header">콘텐츠 목록 / 상세</div>
+    <div class="mockup-body">
+      <div class="mock-nav">명리결 | VOD | 콘텐츠 | 커뮤니티 | 상담예약</div>
+      <div style="display:grid;grid-template-columns:1fr 280px;gap:16px;margin-top:16px;">
+        <div class="mock-content">
+          <div class="label">BLOG</div>
+          <h3>명리학을 생활 언어로 읽는 글</h3>
+          <div class="placeholder">추천 글 카드: 제목, 요약, 태그, 읽는 시간</div>
+          <div class="placeholder">게시물 목록: 입문 / 학습법 / 상담준비 / 사례읽기</div>
+          <div class="placeholder">상세 본문: 목차, 본문, 핵심 요약, 관련 강의</div>
+        </div>
+        <div class="mock-sidebar">
+          <strong>상세 CTA</strong>
+          <button class="mock-button">커뮤니티에 인용하기</button>
+          <p>로그인한 유저는 버튼으로 인용 작성 페이지 이동</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="mockup">
+    <div class="mockup-header">커뮤니티 인용 작성 / 피드 케이스</div>
+    <div class="mockup-body">
+      <div class="mock-nav">커뮤니티 | 글쓰기 | 인용 작성</div>
+      <div style="display:grid;gap:14px;margin-top:16px;">
+        <div class="placeholder">
+          인용 원문 카드: 콘텐츠 제목, 출처, 핵심 문장, 원문 보기 링크
+        </div>
+        <input class="mock-input" placeholder="내 의견 제목">
+        <div class="placeholder">내 생각 작성 영역: 이 글을 읽고 든 질문/의견</div>
+        <button class="mock-button">인용 글 등록</button>
+        <div class="placeholder">피드 표시: 인용 배지 + 원문 카드 + 작성자 의견</div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="options">
+  <div class="option" data-choice="recommended" onclick="toggleSelect(this)">
+    <div class="letter">A</div>
+    <div class="content">
+      <h3>추천: 정적 HTML로 화면 흐름 완성</h3>
+      <p>현재 사이트 구조에 맞춰 `content.html`, `content-detail.html`, `community-write-quote.html`을 만들고 커뮤니티 목록에 인용 글 케이스를 추가합니다. 지금 단계에 가장 빠르고 명확합니다.</p>
+    </div>
+  </div>
+  <div class="option" data-choice="dynamic-ready" onclick="toggleSelect(this)">
+    <div class="letter">B</div>
+    <div class="content">
+      <h3>데이터 모델까지 염두에 둔 정적 화면</h3>
+      <p>화면은 정적이지만 글 ID, 작성자, 인용 원문, 로그인 상태 같은 데이터 필드를 UI에 명확히 드러냅니다. 추후 백엔드 연결을 더 쉽게 만듭니다.</p>
+    </div>
+  </div>
+  <div class="option" data-choice="minimal" onclick="toggleSelect(this)">
+    <div class="letter">C</div>
+    <div class="content">
+      <h3>최소 구현</h3>
+      <p>목록과 상세만 추가하고 인용 작성 페이지는 버튼/상태 정도로 단순 처리합니다. 빠르지만 서비스 플로우 검증에는 약합니다.</p>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>철공소닷컴 BO | 결제 관리</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Pretendard:wght@400;500;600;700;800;900&family=Noto+Serif+KR:wght@600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../../assets/css/bo.css?v=20260512">
+</head>
+<body>
+  <div class="bo-shell">
+    <aside class="bo-sidebar">
+      <a class="bo-brand" href="index.html"><strong>철공소닷컴 BO</strong><small>운영 콘솔</small></a>
+      <nav class="bo-nav" aria-label="BO 메뉴">
+        <a href="index.html">대시보드<span>홈</span></a>
+        <a href="bookings.html">예약 관리<span>32</span></a>
+        <a class="is-active" href="payments.html">결제 관리<span>9</span></a>
+        <a href="counselors.html">상담자<span>3</span></a>
+        <a href="courses.html">VOD<span>4</span></a>
+        <a href="content.html">콘텐츠<span>18</span></a>
+        <a href="community.html">커뮤니티<span>128</span></a>
+        <a href="community-reports.html">신고 관리<span>3</span></a>
+        <a href="support.html">고객문의<span>7</span></a>
+        <a href="popup.html">팝업 관리<span>1</span></a>
+        <a href="users.html">회원<span>2.8k</span></a>
+      </nav>
+    </aside>
+    <main class="bo-main">
+      <header class="bo-topbar">
+        <div><h1>결제 관리</h1><p>상담 예약 결제, VOD 수강권, 입금대기, 실패, 환불 상태를 한 화면에서 확인합니다.</p></div>
+        <div class="bo-actions"><a class="bo-button" href="../purchase-history.html">FO 구매 내역</a><a class="bo-button is-primary" href="payment-detail.html">결제 상세</a></div>
+      </header>
+      <section class="bo-grid cols-4">
+        <a class="bo-kpi" href="payments.html"><span>오늘 결제</span><strong>18</strong><small class="bo-muted">상담 9 · VOD 9</small></a>
+        <a class="bo-kpi" href="payments.html"><span>입금대기</span><strong>5</strong><small class="bo-muted">30분 초과 1건</small></a>
+        <a class="bo-kpi" href="payments.html"><span>결제 실패</span><strong>3</strong><small class="bo-muted">카드 인증 만료 2건</small></a>
+        <a class="bo-kpi" href="payments.html"><span>환불 진행</span><strong>4</strong><small class="bo-muted">상담 3 · VOD 1</small></a>
+      </section>
+      <section class="bo-panel" style="margin-top:18px">
+        <div class="bo-panel-head"><h2>결제 목록</h2><div class="bo-actions"><span class="bo-status wait">확인 필요 4</span><span class="bo-status danger">실패 3</span></div></div>
+        <div class="bo-filter">
+          <label class="bo-field"><span>검색</span><input placeholder="주문번호, 회원명, 예약번호"></label>
+          <label class="bo-field"><span>상품 유형</span><select><option>전체</option><option>상담 예약</option><option>VOD 클래스</option></select></label>
+          <label class="bo-field"><span>결제 상태</span><select><option>전체</option><option>결제 완료</option><option>입금대기</option><option>결제 실패</option><option>환불 진행</option></select></label>
+          <label class="bo-field"><span>결제일</span><input type="date"></label>
+        </div>
+        <div class="bo-table-wrap">
+          <table class="bo-table">
+            <thead><tr><th>주문번호</th><th>회원</th><th>상품</th><th>금액</th><th>수단</th><th>상태</th><th>처리</th></tr></thead>
+            <tbody>
+              <tr><td><strong>PAY-20260515-091</strong><small>오늘 10:11</small></td><td>유창희<small>USR-10284</small></td><td><strong>한서윤 상담 30분</strong><small>예약 R-20260515-014</small></td><td>35,000원</td><td>카드</td><td><span class="bo-status ok">결제 완료</span></td><td><a class="bo-button" href="payment-detail.html">상세</a></td></tr>
+              <tr><td><strong>PAY-20260515-089</strong><small>오늘 09:20</small></td><td>김민재<small>입금 링크 발송</small></td><td><strong>문도현 상담 30분</strong><small>예약 R-250515-002</small></td><td>40,000원</td><td>계좌이체</td><td><span class="bo-status wait">입금대기</span></td><td><a class="bo-button" href="payment-detail.html">확인</a></td></tr>
+              <tr><td><strong>PAY-20260514-077</strong><small>어제 18:03</small></td><td>서하린<small>카드 인증 실패</small></td><td><strong>대운 세운 흐름의 실전 리딩</strong><small>VOD 수강권</small></td><td>42,000원</td><td>카드</td><td><span class="bo-status danger">결제 실패</span></td><td><a class="bo-button is-danger" href="payment-detail.html">상세</a></td></tr>
+              <tr><td><strong>PAY-20260513-066</strong><small>환불 접수</small></td><td>정리하는밤<small>예약 취소</small></td><td><strong>문도현 상담 30분 취소</strong><small>예약 R-20260513-021</small></td><td>35,000원</td><td>카드</td><td><span class="bo-status review">환불 진행</span></td><td><a class="bo-button" href="payment-detail.html">상세</a></td></tr>
+            </tbody>
+          </table>
+        </div>
+      </section>
+    </main>
+  </div>
+</body>
+</html>

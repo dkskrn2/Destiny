@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>철공소닷컴 | 통합 검색</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Pretendard:wght@400;500;600;700&family=Noto+Serif+KR:wght@500;700&display=swap" rel="stylesheet">
+  <link rel="icon" type="image/svg+xml" href="../assets/img/favicon.svg">
+  <link rel="stylesheet" href="../assets/css/styles.css">
+  <link rel="stylesheet" href="../assets/css/app-pages.css">
+</head>
+<body class="theme-blue flow-page">
+  <div class="page-shell">
+    <div class="site-frame">
+      <header class="site-header">
+        <a class="brand" href="../index.html"><span class="brand-mark"><span></span></span><span class="brand-copy"><strong>철공소닷컴</strong><small>명리학 학습</small></span></a>
+        <nav class="main-nav" aria-label="주요 메뉴">
+          <a href="result.html">만세력</a><a href="vod.html">VOD 클래스</a><a href="content.html">콘텐츠</a><a href="community.html">커뮤니티</a><a href="booking.html">상담예약</a></nav>
+        <div class="header-tools" aria-label="사용자 도구"><a class="tool-button" href="search.html" aria-label="검색">⌕</a><a class="profile-button" href="mypage.html" aria-label="내 학습"></a></div>
+      </header>
+      <main class="flow-main">
+        <section class="flow-hero">
+          <p class="app-kicker">SEARCH</p>
+          <h1>강의, 글, 질문을 한 번에 찾기</h1>
+          <p>입문 개념부터 상담 준비 질문까지 철공소닷컴 안의 학습 경로를 통합 검색하는 화면입니다.</p>
+          <form class="flow-search-box" action="search.html">
+            <input class="app-input" type="search" value="오행 질문 정리" aria-label="검색어">
+            <button class="flow-primary-button" type="submit">검색</button>
+          </form>
+        </section>
+        <section class="search-assist-grid" aria-label="검색 보조 도구">
+          <article class="flow-panel">
+            <div class="flow-section-head"><p class="story-step">RECENT</p><h2>최근 검색어</h2></div>
+            <div class="flow-chip-list"><a href="search.html">오행 질문</a><a href="search.html">상담 준비</a><a href="search.html">다른 검색어 찾기</a></div>
+          </article>
+          <article class="flow-panel">
+            <div class="flow-section-head"><p class="story-step">SUGGEST</p><h2>추천 태그</h2></div>
+            <div class="flow-chip-list"><a href="content.html">입문</a><a href="vod.html">수강 중</a><a href="community.html">질문정리</a><a href="booking.html">예약 전 메모</a></div>
+          </article>
+        </section>
+        <section class="search-section-stack" aria-label="통합 검색 결과">
+          <article class="flow-panel search-result-section">
+            <div class="search-section-head">
+              <div><p class="story-step">COMMUNITY</p><h2>커뮤니티 결과</h2></div>
+              <a class="flow-inline-button" href="community.html">전체 보기</a>
+            </div>
+            <div class="search-result-list">
+              <a href="community-detail.html"><span>콘텐츠 인용</span><strong>오행을 질문 언어로 바꾼다는 말이 와닿았습니다</strong><small>댓글 28 · 방금 전 · 달빛메모</small></a>
+              <a href="community-detail.html"><span>강의 질문</span><strong>오행을 질문 문장으로 바꾸는 부분에서 예시를 더 보고 싶습니다</strong><small>댓글 16 · 27분 전 · 흐름노트</small></a>
+              <a href="community-detail.html"><span>상담 준비</span><strong>상담 예약 전에 질문을 어떻게 정리하면 효율이 좋아지나요?</strong><small>댓글 18 · 3시간 전 · 정리하는밤</small></a>
+            </div>
+          </article>
+
+          <article class="flow-panel search-result-section">
+            <div class="search-section-head">
+              <div><p class="story-step">VOD</p><h2>VOD 결과</h2></div>
+              <a class="flow-inline-button" href="vod.html">전체 보기</a>
+            </div>
+            <div class="search-result-list search-course-results">
+              <a href="vod-watch.html"><span>03강</span><strong>오행을 질문 문장으로 바꾸기</strong><small>사주명리 기초 · 현재 진도 46%</small></a>
+              <a href="course-basic.html"><span>입문</span><strong>왕초보도 이해하는 사주명리 기초</strong><small>총 32분 · 미리보기 11개 · ★ 4.9</small></a>
+              <a href="course-flow.html"><span>흐름 읽기</span><strong>대운/세운 흐름의 실전 리딩</strong><small>상담 질문 우선순위 정리에 도움</small></a>
+            </div>
+          </article>
+
+          <article class="flow-panel search-result-section">
+            <div class="search-section-head">
+              <div><p class="story-step">CONTENT</p><h2>콘텐츠 결과</h2></div>
+              <a class="flow-inline-button" href="content.html">전체 보기</a>
+            </div>
+            <div class="search-result-list">
+              <a href="content-detail.html"><span>입문</span><strong>오행을 외우지 않고 생활 언어로 읽는 법</strong><small>질문 문장으로 바꾸는 예시가 포함되어 있습니다.</small></a>
+              <a href="content-detail.html"><span>학습법</span><strong>커뮤니티 글을 읽을 때 기준을 잃지 않는 메모법</strong><small>다른 사람의 해석을 내 질문으로 바꾸는 방법</small></a>
+              <a href="content-detail.html"><span>상담 준비</span><strong>상담 전에 질문을 3개로 줄이는 체크리스트</strong><small>막연한 고민을 상담 가능한 문장으로 정리하는 순서</small></a>
+            </div>
+          </article>
+        </section>
+      </main>
+      <footer class="site-footer"><div class="footer-brand"><strong>(주)철공소닷컴</strong><p>명리학 강의, 커뮤니티, 상담 예약을 연결하는 학습 플랫폼입니다.</p></div><div><nav class="footer-links" aria-label="푸터 메뉴"><a href="about.html">회사소개</a><a href="support.html">고객센터</a><a href="support-inquiry.html">고객문의</a><a href="terms.html">이용약관</a><a href="privacy.html">개인정보처리방침</a><a href="refund-policy.html">환불/취소 정책</a></nav><div class="footer-meta"><span>상호 (주)철공소닷컴</span><span>대표자 강헌</span><span>사업자등록번호 563-88-01319</span><span>경기도 용인시 수지구 풍덕천로 187 삼정빌딩 3층</span><span>전화 02-6467-5000 (평일 오후 3시-7시)</span><span>E-mail chulgongso@gmail.com</span><span>카카오톡 http://pf.kakao.com/_icIRxj/chat</span></div></div><p class="footer-notice">수업 준비로 통화가 원활하지 않을 수 있습니다. 상담 서비스는 학습 보조 목적이며 법률, 의료, 투자 판단을 대체하지 않습니다.</p></footer>
+    </div>
+  </div>
+</body>
+</html>

@@ -1,0 +1,78 @@
+<h2>콘텐츠, 커뮤니티 인용, VOD 시청까지 포함한 페이지 세트</h2>
+<p class="subtitle">서비스 관점에서는 “읽기 콘텐츠”, “강의 시청”, “커뮤니티 토론”이 서로 이어져야 합니다.</p>
+
+<div class="mockup">
+  <div class="mockup-header">전체 사용자 흐름</div>
+  <div class="mockup-body">
+    <div style="display:grid;grid-template-columns:repeat(5,1fr);gap:12px;align-items:stretch;">
+      <div class="placeholder"><strong>콘텐츠 목록</strong><br>블로그 글 탐색</div>
+      <div class="placeholder"><strong>콘텐츠 상세</strong><br>본문 읽기 + 인용하기</div>
+      <div class="placeholder"><strong>인용 작성</strong><br>원문 카드 + 내 의견</div>
+      <div class="placeholder"><strong>커뮤니티 피드</strong><br>인용 글 케이스 표시</div>
+      <div class="placeholder"><strong>상담 예약</strong><br>질문 정리 후 예약</div>
+    </div>
+    <div style="height:18px"></div>
+    <div style="display:grid;grid-template-columns:repeat(4,1fr);gap:12px;align-items:stretch;">
+      <div class="placeholder"><strong>강의 상세</strong><br>커리큘럼/가격/CTA</div>
+      <div class="placeholder"><strong>VOD 시청</strong><br>영상 플레이어 + 목차</div>
+      <div class="placeholder"><strong>학습 노트</strong><br>현재 강의 메모/진도</div>
+      <div class="placeholder"><strong>커뮤니티 공유</strong><br>강의 기반 질문 작성</div>
+    </div>
+  </div>
+</div>
+
+<div class="split">
+  <div class="mockup">
+    <div class="mockup-header">VOD 시청 페이지 구성</div>
+    <div class="mockup-body">
+      <div class="placeholder" style="height:180px;">영상 플레이어 영역<br>현재는 정적 mock: 재생 버튼, 진행률, 강의 제목</div>
+      <div style="display:grid;grid-template-columns:1fr 260px;gap:14px;margin-top:14px;">
+        <div class="mock-content">
+          <h3>사주명리 기초 3강</h3>
+          <p>강의 설명, 핵심 개념, 다음 행동 CTA</p>
+          <div class="placeholder">내 학습 메모 입력 영역</div>
+        </div>
+        <div class="mock-sidebar">
+          <strong>강의 목차</strong>
+          <div class="placeholder">1강 완료</div>
+          <div class="placeholder">2강 완료</div>
+          <div class="placeholder">3강 시청 중</div>
+          <button class="mock-button">커뮤니티에 질문하기</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="mockup">
+    <div class="mockup-header">커뮤니티 인용/공유 케이스</div>
+    <div class="mockup-body">
+      <div class="placeholder">콘텐츠 인용 글: 원문 제목 + 인용 문장 + 작성자 의견</div>
+      <div class="placeholder">강의 질문 글: 강의명 + 차시 + 질문 내용</div>
+      <div class="placeholder">일반 커뮤니티 글: 기존 자유 질문</div>
+    </div>
+  </div>
+</div>
+
+<div class="options">
+  <div class="option" data-choice="service-flow" onclick="toggleSelect(this)">
+    <div class="letter">A</div>
+    <div class="content">
+      <h3>추천: 서비스 흐름 전체 구현</h3>
+      <p>`content.html`, `content-detail.html`, `community-write-quote.html`, `vod-watch.html`을 추가하고, 메인/강의/커뮤니티 네비게이션까지 연결합니다. 실제 서비스처럼 보이는 최소 완성 범위입니다.</p>
+    </div>
+  </div>
+  <div class="option" data-choice="content-first" onclick="toggleSelect(this)">
+    <div class="letter">B</div>
+    <div class="content">
+      <h3>콘텐츠/인용 먼저, VOD는 다음 단계</h3>
+      <p>블로그와 인용 플로우를 먼저 만들고 VOD 시청 페이지는 링크 자리만 둡니다. 범위는 작지만 강의 서비스 완성도는 부족합니다.</p>
+    </div>
+  </div>
+  <div class="option" data-choice="vod-first" onclick="toggleSelect(this)">
+    <div class="letter">C</div>
+    <div class="content">
+      <h3>VOD 시청 먼저</h3>
+      <p>강의 상세에서 이어지는 VOD 시청 경험을 먼저 완성합니다. 다만 사용자가 요청한 콘텐츠 인용 흐름은 뒤로 밀립니다.</p>
+    </div>
+  </div>
+</div>

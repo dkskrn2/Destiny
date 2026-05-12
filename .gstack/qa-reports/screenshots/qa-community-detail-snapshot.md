@@ -1,0 +1,37 @@
+- generic [ref=e3] [box=210,20,1500,1580]:
+  - banner [ref=e4] [box=211,21,1498,83]:
+    - link "명리학 플랫폼 FO 컨셉" [ref=e5] [cursor=pointer] [box=243,41,149,42]:
+      - /url: ../index.html
+      - generic [ref=e8] [box=301,43,91,38]:
+        - strong [ref=e9] [box=301,43,91,20]: 명리학 플랫폼
+        - generic [ref=e10] [box=301,65,91,16]: FO 컨셉
+    - navigation "주요 메뉴" [ref=e11] [box=416,42,1103,41]:
+      - link "홈" [ref=e12] [cursor=pointer] [box=765,42,38,41]:
+        - /url: ../index.html
+      - link "사주풀이" [ref=e13] [cursor=pointer] [box=810,42,78,41]:
+        - /url: today.html
+      - link "VOD 클래스" [ref=e14] [cursor=pointer] [box=897,42,101,41]:
+        - /url: ../index.html#vod
+      - link "커뮤니티" [ref=e15] [cursor=pointer] [box=1006,42,78,41]:
+        - /url: community.html
+      - link "상담예약" [ref=e16] [cursor=pointer] [box=1092,42,78,41]:
+        - /url: ../index.html#booking
+    - generic "사용자 도구" [ref=e17] [box=1543,41,134,42]:
+      - button "검색" [ref=e18] [cursor=pointer] [box=1543,45,34,34]: ⌕
+      - button "알림" [active] [ref=e19] [cursor=pointer] [box=1589,45,34,34]: ◌
+      - button "프로필" [ref=e20] [cursor=pointer] [box=1635,41,42,42]
+  - main [ref=e21] [box=211,104,1498,1495]:
+    - generic [ref=e22] [box=259,146,1402,1405]:
+      - article [ref=e23] [box=259,146,1013,1405]:
+        - link "커뮤니티 목록으로" [ref=e24] [cursor=pointer] [box=292,180,105,18]:
+          - /url: community.html
+        - generic [ref=e25] [box=292,218,947,29]
+        - heading "갑목인데 올해 이직 신호가 너무 강하게 느껴져요" [level=1] [ref=e30] [box=292,259,584,232]
+        - generic [ref=e31] [box=292,511,947,19]
+        - generic [ref=e36] [box=292,550,947,88]
+        - generic [ref=e41] [box=292,670,947,179]
+        - generic [ref=e45] [box=292,881,947,241]
+        - generic [ref=e49] [box=292,1146,947,372]
+      - complementary [ref=e59] [box=1296,146,365,703]:
+        - article [ref=e60] [box=1296,146,365,375]
+        - article [ref=e73] [box=1296,537,365,312]

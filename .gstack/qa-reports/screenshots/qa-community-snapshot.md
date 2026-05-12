@@ -1,0 +1,54 @@
+- generic [ref=e3] [box=210,20,1500,1771]:
+  - banner [ref=e4] [box=211,21,1498,83]:
+    - link "명리학 플랫폼 FO 컨셉" [ref=e5] [cursor=pointer] [box=243,41,149,42]:
+      - /url: ../index.html
+      - generic [ref=e8] [box=301,43,91,38]:
+        - strong [ref=e9] [box=301,43,91,20]: 명리학 플랫폼
+        - generic [ref=e10] [box=301,65,91,16]: FO 컨셉
+    - navigation "주요 메뉴" [ref=e11] [box=416,42,1103,41]:
+      - link "홈" [ref=e12] [cursor=pointer] [box=765,42,38,41]:
+        - /url: ../index.html
+      - link "사주풀이" [ref=e13] [cursor=pointer] [box=810,42,78,41]:
+        - /url: today.html
+      - link "VOD 클래스" [ref=e14] [cursor=pointer] [box=897,42,101,41]:
+        - /url: ../index.html#vod
+      - link "커뮤니티" [ref=e15] [cursor=pointer] [box=1006,42,78,41]:
+        - /url: community.html
+      - link "상담예약" [ref=e16] [cursor=pointer] [box=1092,42,78,41]:
+        - /url: ../index.html#booking
+    - generic "사용자 도구" [ref=e17] [box=1543,41,134,42]:
+      - button "검색" [ref=e18] [cursor=pointer] [box=1543,45,34,34]: ⌕
+      - button "알림" [ref=e19] [cursor=pointer] [box=1589,45,34,34]: ◌
+      - button "프로필" [ref=e20] [cursor=pointer] [box=1635,41,42,42]
+  - main [ref=e21] [box=211,104,1498,1686]:
+    - generic [ref=e22] [box=259,146,1402,588]:
+      - generic [ref=e23] [box=308,195,901,490]:
+        - paragraph [ref=e24] [box=308,195,221,35]: 커뮤니티 · 오늘 128개 글 업데이트
+        - heading "나와 비슷한 사람들이 지금 고민하는 흐름" [level=1] [ref=e25] [box=308,250,547,353]
+        - paragraph [ref=e26] [box=308,627,553,58]: 단순 인기글만 보여주지 않고, 일주와 직군 태그를 함께 노출해 “이 사람도 이 사이트를 쓰는구나”라는 신뢰와 소속감을 먼저 만듭니다.
+      - complementary [ref=e27] [box=1233,523,379,162]:
+        - generic [ref=e28] [box=1258,548,329,19]: 내 추천 기준
+        - strong [ref=e29] [box=1258,575,329,24]: 갑목 · IT/기획 · 전환기
+        - paragraph [ref=e30] [box=1258,607,329,53]: 오늘은 이직, 재물 흐름, 관계 조율 글을 우선 추천합니다.
+    - region "커뮤니티 필터" [ref=e31] [box=259,754,1402,68]:
+      - button "나와 비슷한 글" [ref=e32] [box=272,767,124,42]
+      - button "오늘 인기" [ref=e33] [box=406,767,93,42]
+      - button "조회수 베스트" [ref=e34] [box=509,767,121,42]
+      - button "연애/궁합" [ref=e35] [box=640,767,95,42]
+      - button "직업/이직" [ref=e36] [box=745,767,95,42]
+      - button "재물/사업" [ref=e37] [box=850,767,95,42]
+    - generic [ref=e38] [box=259,846,1402,896]:
+      - generic "커뮤니티 글 목록" [ref=e39] [box=259,846,1013,802]:
+        - article [ref=e40] [box=292,879,947,95]
+        - link "100대기업 소속 IT/기획 갑목 갑목인데 올해 이직 신호가 너무 강하게 느껴져요 대운이 바뀌는 구간이라고 들었는데, 지금 움직이는 게 맞을지 비슷한 분들 의견이 궁금합니다. 댓글 32 조회 2,841 1시간 전" [ref=e45] [cursor=pointer] [box=292,994,947,146]:
+          - /url: community-detail.html
+        - link "사업가 재물/사업 임인일주 사업 확장 타이밍, 대운 바뀌는 구간이면 기다리는 게 나을까요? 매출은 오르는데 계약 리스크도 같이 커져서 확장 시점을 조정해야 할지 고민입니다. 댓글 21 조회 1,906 2시간 전" [ref=e57] [cursor=pointer] [box=292,1152,947,146]:
+          - /url: community-detail.html
+        - link "크리에이터 연애/궁합 도화 도화가 강하면 관계가 늘 불안정한가요? 상대가 끌리긴 하는데 감정 기복이 커서, 신살을 어떻게 참고해야 할지 궁금해요. 댓글 18 조회 1,248 3시간 전" [ref=e69] [cursor=pointer] [box=292,1311,947,146]:
+          - /url: community-detail.html
+        - link "스타트업 임원 계약운 재성 재물운 85점 나왔는데 이번 주 계약 잡아도 될까요? 오늘 운세 점수는 좋은데 관성 쪽 조언이 조심스럽게 나와서 판단 기준을 찾고 있습니다. 댓글 15 조회 984 5시간 전" [ref=e81] [cursor=pointer] [box=292,1469,947,146]:
+          - /url: community-detail.html
+      - complementary "커뮤니티 보조 정보" [ref=e93] [box=1296,846,365,896]:
+        - article [ref=e94] [box=1296,846,365,375]
+        - article [ref=e107] [box=1296,1237,365,223]
+        - article [ref=e117] [box=1296,1476,365,266]

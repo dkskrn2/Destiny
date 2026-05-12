@@ -1,0 +1,45 @@
+- generic [ref=e3] [box=210,20,1500,2955]:
+  - banner [ref=e4] [box=211,21,1498,83]:
+    - link "명리학 플랫폼 FO 컨셉" [ref=e5] [cursor=pointer] [box=243,41,149,42]:
+      - /url: "#"
+      - generic [ref=e8] [box=301,43,91,38]
+    - navigation "주요 메뉴" [ref=e11] [box=416,42,1103,41]:
+      - link "홈" [ref=e12] [cursor=pointer] [box=728,42,38,41]:
+        - /url: "#start"
+      - link "사주풀이" [ref=e13] [cursor=pointer] [box=774,42,78,41]:
+        - /url: "#services"
+      - link "VOD 클래스" [ref=e14] [cursor=pointer] [box=860,42,101,41]:
+        - /url: "#vod"
+      - link "커뮤니티" [ref=e15] [cursor=pointer] [box=969,42,78,41]:
+        - /url: pages/community.html
+      - link "상품" [ref=e16] [cursor=pointer] [box=1056,42,51,41]:
+        - /url: "#trust"
+      - link "마이페이지" [ref=e17] [cursor=pointer] [box=1115,42,92,41]:
+        - /url: "#trust"
+    - generic "사용자 도구" [ref=e18] [box=1543,41,134,42]:
+      - button "검색" [ref=e19] [cursor=pointer] [box=1543,45,34,34]: ⌕
+      - button "알림" [ref=e20] [cursor=pointer] [box=1589,45,34,34]: ◌
+      - button "프로필" [ref=e21] [cursor=pointer] [box=1635,41,42,42]
+  - main [ref=e22] [box=211,104,1498,2870]:
+    - generic [ref=e25] [box=259,176,620,561]:
+      - paragraph [ref=e27] [box=259,176,620,16]: 명확하고 믿을 수 있는 명리학 플랫폼
+      - heading "내 삶의 흐름을 읽고, 더 나은 선택을 돕습니다" [level=1] [ref=e28] [box=259,208,501,362]
+      - paragraph [ref=e29] [box=259,594,520,54]: 복잡한 용어 대신 지금의 고민에 필요한 해석부터 보여주고, 무료 시작 이후 연애, 직업, 재물, 오늘 운세로 자연스럽게 이어집니다.
+      - generic [ref=e30] [box=259,681,620,56]
+    - generic [ref=e33] [box=211,793,1498,185]:
+      - link "♡ 연애/궁합 연인 또는 궁합을 확인하고 사랑의 흐름을 알아보세요 ›" [ref=e34] [cursor=pointer] [box=259,817,336,161]:
+        - /url: pages/love.html
+      - link "▣ 직업/이직 직업운과 이직 타이밍을 명확하게 알려드립니다 ›" [ref=e40] [cursor=pointer] [box=615,817,336,161]:
+        - /url: pages/career.html
+      - link "◍ 재물/사업 재물운과 사업운의 흐름을 기회와 함께 확인하세요 ›" [ref=e46] [cursor=pointer] [box=970,817,336,161]:
+        - /url: pages/wealth.html
+      - link "▦ 오늘 운세 오늘과 이번 달의 흐름을 한눈에 확인하세요 ›" [ref=e52] [cursor=pointer] [box=1326,817,336,161]:
+        - /url: pages/today.html
+    - generic [ref=e58] [box=211,977,1498,1142]:
+      - article [ref=e59] [box=259,1009,817,478]
+      - article [ref=e77] [box=1096,1009,565,607]
+      - article [ref=e107] [box=1096,1637,565,483]
+    - generic [ref=e127] [box=211,2119,1498,855]:
+      - article [ref=e128] [box=259,2151,691,536]
+      - article [ref=e145] [box=970,2151,691,536]
+      - article [ref=e152] [box=259,2707,1402,219]
